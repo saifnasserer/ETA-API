@@ -1,0 +1,87 @@
+{
+  "document": "{\n      \"issuer\": {\n        \"address\": {\n          \"branchID\": \"0\",\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم اول مدينة نصر\",\n          \"street\": \"ش مكرم عبيد مدينه نصر القاهره\",\n          \"buildingNumber\": \"30\",\n          \"postalCode\": \"\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767886712\",\n        \"name\": \"ايوال لتوريد اجهزه الكمبيوتر والمحمول\"\n      },\n      \"receiver\": {\n        \"address\": {\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم المرج\",\n          \"street\": \"ش الحرم المكي كفر الشرفاء المرج القاهره\",\n          \"buildingNumber\": \"8\",\n          \"postalCode\": \"00000\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767043545\",\n        \"name\": \"لابك لتجاره الالكترونيات\"\n      },\n      \"documentType\": \"i\",\n      \"documentTypeVersion\": \"1.0\",\n      \"dateTimeIssued\": \"2025-12-03T22:20:00Z\",\n      \"taxpayerActivityCode\": \"4741\",\n      \"internalID\": \"2035\",\n      \"payment\": {},\n      \"delivery\": {},\n      \"invoiceLines\": [\n        {\n          \"description\": \"Dell precision 3551\\n\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767886712-COM1\",\n          \"unitType\": \"EA\",\n          \"quantity\": 2,\n          \"internalCode\": \"\",\n          \"salesTotal\": 42000,\n          \"total\": 47880,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 42000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 21000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 5880,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"HP Z440 PC\\n\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767886712-COM1\",\n          \"unitType\": \"EA\",\n          \"quantity\": 5,\n          \"internalCode\": \"\",\n          \"salesTotal\": 75000,\n          \"total\": 85500,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 75000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 15000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 10500,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"Autodesk license \\n\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767886712-COM1\",\n          \"unitType\": \"EA\",\n          \"quantity\": 2,\n          \"internalCode\": \"\",\n          \"salesTotal\": 6000,\n          \"total\": 6840,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 6000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 3000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 840,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        }\n      ],\n      \"totalDiscountAmount\": 0,\n      \"totalSalesAmount\": 123000,\n      \"netAmount\": 123000,\n      \"taxTotals\": [\n        {\n          \"taxType\": \"T1\",\n          \"amount\": 17220\n        }\n      ],\n      \"totalAmount\": 140220,\n      \"extraDiscountAmount\": 0,\n      \"totalItemsDiscountAmount\": 0,\n      \"signatures\": [\n        {\n          \"signatureType\": \"I\",\n          \"value\": \"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\"\n        }\n      ],\n      \"references\": []\n    }",
+  "transformationStatus": "original",
+  "validationResults": {
+    "status": "Valid",
+    "validationSteps": [
+      {
+        "name": "Step-03.ITIDA Signature Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-04.NationalID Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-05.TaxpayerProfile Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-06.Simple Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-07.Code Field Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-08. Duplicate Submission Validator",
+        "status": "Valid",
+        "error": null
+      }
+    ]
+  },
+  "maxPercision": 2,
+  "invoiceLineItemCodes": [
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767886712-COM1",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "كمبيوتر / قطع غيار كمبيوتر "
+    },
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767886712-COM1",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "كمبيوتر / قطع غيار كمبيوتر "
+    },
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767886712-COM1",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "كمبيوتر / قطع غيار كمبيوتر "
+    }
+  ],
+  "documentLinesTotalCount": 3,
+  "additionalMetadata": [],
+  "lateSubmissionRequestNumber": null,
+  "serviceDeliveryDate": null,
+  "uuid": "0BZB5V1FQ6S8J9Q73X4ZDMBK10",
+  "submissionUUID": "EXW4TPGJYP5Y2T723X4ZDMBK10",
+  "longId": "Q633YN7Y9YH4ACHS3X4ZDMBK10OMJmI31764843557",
+  "internalId": "2035",
+  "typeName": "i",
+  "typeVersionName": "1.0",
+  "issuerId": "767886712",
+  "issuerName": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+  "receiverId": "767043545",
+  "receiverName": "لابك لتجاره الالكترونيات",
+  "dateTimeIssued": "2025-12-03T22:20:00Z",
+  "dateTimeReceived": "2025-12-04T10:19:17.7949484Z",
+  "totalSales": 123000,
+  "totalDiscount": 0,
+  "netAmount": 123000,
+  "total": 140220,
+  "status": "Valid"
+}

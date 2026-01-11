@@ -1,0 +1,95 @@
+{
+  "document": "{\n      \"issuer\": {\n        \"address\": {\n          \"branchID\": \"0\",\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم مصر الجديدة\",\n          \"street\": \"عمارات العبور صلاح سالم مصر الجديده القاهره\",\n          \"buildingNumber\": \"9\",\n          \"postalCode\": \"\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"762874295\",\n        \"name\": \"تشيمو للتوريدات و التجارة العامة\"\n      },\n      \"receiver\": {\n        \"address\": {\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم المرج\",\n          \"street\": \"كفر الشرفا\",\n          \"buildingNumber\": \"8\",\n          \"floor\": \"\",\n          \"room\": \"\",\n          \"additionalInformation\": \"\"\n        },\n        \"type\": \"B\",\n        \"id\": \"767043545\",\n        \"name\": \"لابك لتجاره الالكترونيات\"\n      },\n      \"documentType\": \"i\",\n      \"documentTypeVersion\": \"1.0\",\n      \"dateTimeIssued\": \"2024-11-13T10:48:08Z\",\n      \"taxpayerActivityCode\": \"4690\",\n      \"internalID\": \"2233\",\n      \"payment\": {},\n      \"delivery\": {},\n      \"invoiceLines\": [\n        {\n          \"description\": \"dell precision 3351 intel core i7-10h nvidia p620 4gb 16gb ddrs 512 gb ssd m.2\",\n          \"itemType\": \"GS1\",\n          \"itemCode\": \"10001118\",\n          \"unitType\": \"EA\",\n          \"quantity\": 2,\n          \"internalCode\": \"\",\n          \"salesTotal\": 44000,\n          \"total\": 50160,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 44000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 22000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 6160,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"security cam + installation  ezviz ty1\",\n          \"itemType\": \"GS1\",\n          \"itemCode\": \"10001118\",\n          \"unitType\": \"EA\",\n          \"quantity\": 3,\n          \"internalCode\": \"\",\n          \"salesTotal\": 5700,\n          \"total\": 6498,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 5700,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 1900,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 798,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"dell p2418d monitor 2k\",\n          \"itemType\": \"GS1\",\n          \"itemCode\": \"10001118\",\n          \"unitType\": \"EA\",\n          \"quantity\": 1,\n          \"internalCode\": \"\",\n          \"salesTotal\": 4300,\n          \"total\": 4902,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 4300,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 4300,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 602,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"hp probook600 g4 with hp monitor 24 inch fhd\\n intel core i5-8h 16gb ddrs 512 gb ssd+1tb hdd keyboard+mouse \",\n          \"itemType\": \"GS1\",\n          \"itemCode\": \"10001118\",\n          \"unitType\": \"EA\",\n          \"quantity\": 4,\n          \"internalCode\": \"\",\n          \"salesTotal\": 48400,\n          \"total\": 55176,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 48400,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 12100,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 6776,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        }\n      ],\n      \"totalDiscountAmount\": 0,\n      \"totalSalesAmount\": 102400,\n      \"netAmount\": 102400,\n      \"taxTotals\": [\n        {\n          \"taxType\": \"T1\",\n          \"amount\": 14336\n        }\n      ],\n      \"totalAmount\": 116736,\n      \"extraDiscountAmount\": 0,\n      \"totalItemsDiscountAmount\": 0,\n      \"signatures\": [\n        {\n          \"signatureType\": \"I\",\n          \"value\": \"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\"\n        }\n      ],\n      \"references\": []\n    }",
+  "transformationStatus": "original",
+  "validationResults": {
+    "status": "Valid",
+    "validationSteps": [
+      {
+        "name": "Step-08. Duplicate Submission Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-07.Code Field Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-06.Simple Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-05.TaxpayerProfile Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-04.NationalID Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-03.ITIDA Signature Validator",
+        "status": "Valid",
+        "error": null
+      }
+    ]
+  },
+  "maxPercision": 2,
+  "invoiceLineItemCodes": [
+    {
+      "codeTypeId": 2,
+      "codeTypeNamePrimaryLang": "GS1",
+      "codeTypeNameSecondaryLang": "GS1",
+      "itemCode": "10001118",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "مكونات أجهزة الكمبيوتر - قطع إستبدال / ملحقات"
+    },
+    {
+      "codeTypeId": 2,
+      "codeTypeNamePrimaryLang": "GS1",
+      "codeTypeNameSecondaryLang": "GS1",
+      "itemCode": "10001118",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "مكونات أجهزة الكمبيوتر - قطع إستبدال / ملحقات"
+    },
+    {
+      "codeTypeId": 2,
+      "codeTypeNamePrimaryLang": "GS1",
+      "codeTypeNameSecondaryLang": "GS1",
+      "itemCode": "10001118",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "مكونات أجهزة الكمبيوتر - قطع إستبدال / ملحقات"
+    },
+    {
+      "codeTypeId": 2,
+      "codeTypeNamePrimaryLang": "GS1",
+      "codeTypeNameSecondaryLang": "GS1",
+      "itemCode": "10001118",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "مكونات أجهزة الكمبيوتر - قطع إستبدال / ملحقات"
+    }
+  ],
+  "documentLinesTotalCount": 4,
+  "additionalMetadata": [],
+  "lateSubmissionRequestNumber": null,
+  "serviceDeliveryDate": null,
+  "uuid": "1BTEJ0YYRSQWJAH3AZA8JJCJ10",
+  "submissionUUID": "RB9AM5WF2W116MEJAZA8JJCJ10",
+  "longId": "VDRD0FFS29WPKMD8AZA8JJCJ10yNL8iX1731494947",
+  "internalId": "2233",
+  "typeName": "i",
+  "typeVersionName": "1.0",
+  "issuerId": "762874295",
+  "issuerName": "تشيمو للتوريدات و التجارة العامة",
+  "receiverId": "767043545",
+  "receiverName": "لابك لتجاره الالكترونيات",
+  "dateTimeIssued": "2024-11-13T10:48:08Z",
+  "dateTimeReceived": "2024-11-13T10:49:07.8176651Z",
+  "totalSales": 102400,
+  "totalDiscount": 0,
+  "netAmount": 102400,
+  "total": 116736,
+  "status": "Valid"
+}

@@ -1,0 +1,87 @@
+{
+  "document": "{\n      \"issuer\": {\n        \"address\": {\n          \"branchID\": \"0\",\n          \"country\": \"EG\",\n          \"governate\": \"Cairo\",\n          \"regionCity\": \"El Marg\",\n          \"street\": \"ش الحرم المكي كفر الشرفاء المرج القاهره\",\n          \"buildingNumber\": \"8\",\n          \"postalCode\": \"00000\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767043545\",\n        \"name\": \"لابك لتجاره الالكترونيات\"\n      },\n      \"receiver\": {\n        \"address\": {\n          \"country\": \"EG\",\n          \"governate\": \"Cairo\",\n          \"regionCity\": \"Nasr City 1\",\n          \"street\": \"95ش حافظ رمضان متفرع من ش احمد فخرى مدينه نصر 1115  \",\n          \"buildingNumber\": \"0\",\n          \"postalCode\": \"\",\n          \"floor\": \"\",\n          \"room\": \"\",\n          \"landmark\": \"\",\n          \"additionalInformation\": \"\"\n        },\n        \"type\": \"B\",\n        \"id\": \"200152556\",\n        \"name\": \"الشركه الهندسيه لخدمات المشاريع    بروسيرفيس\"\n      },\n      \"documentType\": \"i\",\n      \"documentTypeVersion\": \"1.0\",\n      \"dateTimeIssued\": \"2024-11-27T11:43:54Z\",\n      \"taxpayerActivityCode\": \"4741\",\n      \"internalID\": \"0004\",\n      \"references\": [],\n      \"payment\": {},\n      \"delivery\": {},\n      \"invoiceLines\": [\n        {\n          \"description\": \"Dell Latitude 7490\\nintel core i5-8TH\\n8GB Ram\\n256GB SSD\\ntouch screen\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767043545-1001\",\n          \"unitType\": \"EA\",\n          \"quantity\": 3,\n          \"internalCode\": \"\",\n          \"salesTotal\": 28500,\n          \"total\": 32205,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 28500,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 9500,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 3990,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            },\n            {\n              \"taxType\": \"T4\",\n              \"amount\": 285,\n              \"subType\": \"W002\",\n              \"rate\": 1\n            }\n          ]\n        },\n        {\n          \"description\": \"HP Elitebook 1040 G7\\nintel core i7-10TH\\n16GB Ram\\n256GB SSD\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767043545-1002\",\n          \"unitType\": \"EA\",\n          \"quantity\": 1,\n          \"internalCode\": \"\",\n          \"salesTotal\": 22400,\n          \"total\": 25312,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 22400,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 22400,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 3136,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            },\n            {\n              \"taxType\": \"T4\",\n              \"amount\": 224,\n              \"subType\": \"W002\",\n              \"rate\": 1\n            }\n          ]\n        },\n        {\n          \"description\": \"HP Elitebook 1040 G7\\nintel core i7-10TH\\n16GB Ram\\n512GB SSD\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767043545-1002\",\n          \"unitType\": \"EA\",\n          \"quantity\": 1,\n          \"internalCode\": \"\",\n          \"salesTotal\": 23000,\n          \"total\": 25990,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 23000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 23000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 3220,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            },\n            {\n              \"taxType\": \"T4\",\n              \"amount\": 230,\n              \"subType\": \"W002\",\n              \"rate\": 1\n            }\n          ]\n        }\n      ],\n      \"totalSalesAmount\": 73900,\n      \"totalDiscountAmount\": 0,\n      \"netAmount\": 73900,\n      \"taxTotals\": [\n        {\n          \"taxType\": \"T1\",\n          \"amount\": 10346\n        },\n        {\n          \"taxType\": \"T4\",\n          \"amount\": 739\n        }\n      ],\n      \"totalAmount\": 83507,\n      \"totalItemsDiscountAmount\": 0,\n      \"extraDiscountAmount\": 0,\n      \"signatures\": [\n        {\n          \"signatureType\": \"I\",\n          \"value\": \"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\"\n        }\n      ]\n    }",
+  "transformationStatus": "original",
+  "validationResults": {
+    "status": "Valid",
+    "validationSteps": [
+      {
+        "name": "Step-03.ITIDA Signature Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-04.NationalID Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-05.TaxpayerProfile Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-06.Simple Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-07.Code Field Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-08. Duplicate Submission Validator",
+        "status": "Valid",
+        "error": null
+      }
+    ]
+  },
+  "maxPercision": 2,
+  "invoiceLineItemCodes": [
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767043545-1001",
+      "codeNamePrimaryLang": "Dell Laptop",
+      "codeNameSecondaryLang": "لابتوب دل"
+    },
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767043545-1002",
+      "codeNamePrimaryLang": "HP Laptop ",
+      "codeNameSecondaryLang": "لابتوب اتش بي"
+    },
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767043545-1002",
+      "codeNamePrimaryLang": "HP Laptop ",
+      "codeNameSecondaryLang": "لابتوب اتش بي"
+    }
+  ],
+  "documentLinesTotalCount": 3,
+  "additionalMetadata": [],
+  "lateSubmissionRequestNumber": null,
+  "serviceDeliveryDate": null,
+  "uuid": "A8Q2W982F2JYVNYYMCA5QPDJ10",
+  "submissionUUID": "4AA2FAHGB75EG9PNMCA5QPDJ10",
+  "longId": "MQQQ04CT6W8QNBNRMCA5QPDJ10MDeEqJ1732708051",
+  "internalId": "0004",
+  "typeName": "i",
+  "typeVersionName": "1.0",
+  "issuerId": "767043545",
+  "issuerName": "لابك لتجاره الالكترونيات",
+  "receiverId": "200152556",
+  "receiverName": "الشركه الهندسيه لخدمات المشاريع    بروسيرفيس",
+  "dateTimeIssued": "2024-11-27T11:43:54Z",
+  "dateTimeReceived": "2024-11-27T11:47:31.3476133Z",
+  "totalSales": 73900,
+  "totalDiscount": 0,
+  "netAmount": 73900,
+  "total": 83507,
+  "status": "Valid"
+}

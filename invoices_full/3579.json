@@ -1,0 +1,79 @@
+{
+  "document": "{\n      \"issuer\": {\n        \"address\": {\n          \"branchID\": \"0\",\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم مصر الجديدة\",\n          \"street\": \"ش الميرغني مصرالجديده\",\n          \"buildingNumber\": \"100\",\n          \"postalCode\": \"\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"758989938\",\n        \"name\": \"سيد بيومي سيد عبدالفتاح سيلفر اوفيس للتوريدات العمومية\"\n      },\n      \"receiver\": {\n        \"address\": {\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم المرج\",\n          \"street\": \"ش الحرم المكي كفر الشرفاء المرج القاهره\",\n          \"buildingNumber\": \"8\",\n          \"postalCode\": \"00000\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767043545\",\n        \"name\": \"لابك لتجاره الالكترونيات\"\n      },\n      \"documentType\": \"i\",\n      \"documentTypeVersion\": \"1.0\",\n      \"dateTimeIssued\": \"2024-12-12T05:47:00Z\",\n      \"taxpayerActivityCode\": \"4100\",\n      \"internalID\": \"3579\",\n      \"payment\": {},\n      \"delivery\": {},\n      \"invoiceLines\": [\n        {\n          \"description\": \" HP  probook  \",\n          \"itemType\": \"GS1\",\n          \"itemCode\": \"10006276\",\n          \"unitType\": \"EA\",\n          \"quantity\": 2,\n          \"internalCode\": \"\",\n          \"salesTotal\": 18600,\n          \"total\": 21204,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 18600,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 9300,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 2604,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \" Dell Latitude. \",\n          \"itemType\": \"GS1\",\n          \"itemCode\": \"10006276\",\n          \"unitType\": \"EA\",\n          \"quantity\": 1,\n          \"internalCode\": \"\",\n          \"salesTotal\": 14000,\n          \"total\": 15960,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 14000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 14000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 1960,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        }\n      ],\n      \"totalDiscountAmount\": 0,\n      \"totalSalesAmount\": 32600,\n      \"netAmount\": 32600,\n      \"taxTotals\": [\n        {\n          \"taxType\": \"T1\",\n          \"amount\": 4564\n        }\n      ],\n      \"totalAmount\": 37164,\n      \"extraDiscountAmount\": 0,\n      \"totalItemsDiscountAmount\": 0,\n      \"signatures\": [\n        {\n          \"signatureType\": \"I\",\n          \"value\": \"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\"\n        }\n      ],\n      \"references\": []\n    }",
+  "transformationStatus": "original",
+  "validationResults": {
+    "status": "Valid",
+    "validationSteps": [
+      {
+        "name": "Step-03.ITIDA Signature Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-04.NationalID Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-05.TaxpayerProfile Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-06.Simple Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-07.Code Field Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-08. Duplicate Submission Validator",
+        "status": "Valid",
+        "error": null
+      }
+    ]
+  },
+  "maxPercision": 2,
+  "invoiceLineItemCodes": [
+    {
+      "codeTypeId": 2,
+      "codeTypeNamePrimaryLang": "GS1",
+      "codeTypeNameSecondaryLang": "GS1",
+      "itemCode": "10006276",
+      "codeNamePrimaryLang": "Personal Computers - Tablets/E-Book Readers",
+      "codeNameSecondaryLang": "أجهزة الحاسوب الشخصية - الألواح الإلكترونية/قارئات الكتب الإلكترونية"
+    },
+    {
+      "codeTypeId": 2,
+      "codeTypeNamePrimaryLang": "GS1",
+      "codeTypeNameSecondaryLang": "GS1",
+      "itemCode": "10006276",
+      "codeNamePrimaryLang": "Personal Computers - Tablets/E-Book Readers",
+      "codeNameSecondaryLang": "أجهزة الحاسوب الشخصية - الألواح الإلكترونية/قارئات الكتب الإلكترونية"
+    }
+  ],
+  "documentLinesTotalCount": 2,
+  "additionalMetadata": [],
+  "lateSubmissionRequestNumber": null,
+  "serviceDeliveryDate": null,
+  "uuid": "3WM0QVVMB7FT8SBX49VRZXEJ10",
+  "submissionUUID": "Y7ENRJK69G5ZJPM239VRZXEJ10",
+  "longId": "SAF7HY5TQ7FP6W2049VRZXEJ10z7VZZK1734025702",
+  "internalId": "3579",
+  "typeName": "i",
+  "typeVersionName": "1.0",
+  "issuerId": "758989938",
+  "issuerName": "سيد بيومي سيد عبدالفتاح سيلفر اوفيس للتوريدات العمومية",
+  "receiverId": "767043545",
+  "receiverName": "لابك لتجاره الالكترونيات",
+  "dateTimeIssued": "2024-12-12T05:47:00Z",
+  "dateTimeReceived": "2024-12-12T17:48:22.6906553Z",
+  "totalSales": 32600,
+  "totalDiscount": 0,
+  "netAmount": 32600,
+  "total": 37164,
+  "status": "Valid"
+}

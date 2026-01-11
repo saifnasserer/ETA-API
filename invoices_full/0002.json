@@ -1,0 +1,71 @@
+{
+  "document": "{\n      \"issuer\": {\n        \"address\": {\n          \"branchID\": \"0\",\n          \"country\": \"EG\",\n          \"governate\": \"Cairo\",\n          \"regionCity\": \"El Marg\",\n          \"street\": \"ش الحرم المكي كفر الشرفاء المرج القاهره\",\n          \"buildingNumber\": \"8\",\n          \"postalCode\": \"00000\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767043545\",\n        \"name\": \"لابك لتجاره الالكترونيات\"\n      },\n      \"receiver\": {\n        \"address\": {\n          \"country\": \"EG\",\n          \"governate\": \"Cairo\",\n          \"regionCity\": \"Azbakeya\",\n          \"street\": \"ش 26 يوليو الازبكية\",\n          \"buildingNumber\": \"31\",\n          \"postalCode\": \"0     \",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"602198038\",\n        \"name\": \"جى تى سي اي لانشاءات مشاريع الطاقة والبنية التحتيه\"\n      },\n      \"documentType\": \"i\",\n      \"documentTypeVersion\": \"1.0\",\n      \"dateTimeIssued\": \"2024-11-15T19:37:32Z\",\n      \"taxpayerActivityCode\": \"4741\",\n      \"internalID\": \"0002\",\n      \"payment\": {},\n      \"delivery\": {},\n      \"invoiceLines\": [\n        {\n          \"description\": \"HP ProBook 600 G4 + HP FHD Monitor + keyboard +mouse\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767043545-1005\",\n          \"unitType\": \"EA\",\n          \"quantity\": 4,\n          \"internalCode\": \"\",\n          \"salesTotal\": 49120,\n          \"total\": 55505.6,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 49120,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 12280,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 6876.8,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            },\n            {\n              \"taxType\": \"T4\",\n              \"amount\": 491.2,\n              \"subType\": \"W002\",\n              \"rate\": 1\n            }\n          ]\n        }\n      ],\n      \"totalDiscountAmount\": 0,\n      \"totalSalesAmount\": 49120,\n      \"netAmount\": 49120,\n      \"taxTotals\": [\n        {\n          \"taxType\": \"T1\",\n          \"amount\": 6876.8\n        },\n        {\n          \"taxType\": \"T4\",\n          \"amount\": 491.2\n        }\n      ],\n      \"totalAmount\": 55505.6,\n      \"extraDiscountAmount\": 0,\n      \"totalItemsDiscountAmount\": 0,\n      \"signatures\": [\n        {\n          \"signatureType\": \"I\",\n          \"value\": \"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\"\n        }\n      ],\n      \"references\": []\n    }",
+  "transformationStatus": "original",
+  "validationResults": {
+    "status": "Valid",
+    "validationSteps": [
+      {
+        "name": "Step-03.ITIDA Signature Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-04.NationalID Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-05.TaxpayerProfile Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-06.Simple Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-07.Code Field Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-08. Duplicate Submission Validator",
+        "status": "Valid",
+        "error": null
+      }
+    ]
+  },
+  "maxPercision": 2,
+  "invoiceLineItemCodes": [
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767043545-1005",
+      "codeNamePrimaryLang": "HP PC",
+      "codeNameSecondaryLang": "بي سي اتش بي"
+    }
+  ],
+  "documentLinesTotalCount": 1,
+  "additionalMetadata": [],
+  "lateSubmissionRequestNumber": null,
+  "serviceDeliveryDate": null,
+  "uuid": "DHBMF7KTY8E3CQKWF34ANRCJ10",
+  "submissionUUID": "W4V4JQFPPTCVT01WF34ANRCJ10",
+  "longId": "186Q9MKZZ6C4CSFBF34ANRCJ10DN87gP1731699478",
+  "internalId": "0002",
+  "typeName": "i",
+  "typeVersionName": "1.0",
+  "issuerId": "767043545",
+  "issuerName": "لابك لتجاره الالكترونيات",
+  "receiverId": "602198038",
+  "receiverName": "جى تى سي اي لانشاءات مشاريع الطاقة والبنية التحتيه",
+  "dateTimeIssued": "2024-11-15T19:37:32Z",
+  "dateTimeReceived": "2024-11-15T19:37:58.6389823Z",
+  "totalSales": 49120,
+  "totalDiscount": 0,
+  "netAmount": 49120,
+  "total": 55505.6,
+  "status": "Valid"
+}

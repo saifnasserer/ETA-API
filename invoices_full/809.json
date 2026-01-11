@@ -1,0 +1,79 @@
+{
+  "document": "{\n      \"issuer\": {\n        \"address\": {\n          \"branchID\": \"0\",\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم اول مدينة نصر\",\n          \"street\": \"ش مكرم عبيد مدينه نصر القاهره\",\n          \"buildingNumber\": \"30\",\n          \"postalCode\": \"\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767886712\",\n        \"name\": \"ايوال لتوريد اجهزه الكمبيوتر والمحمول\"\n      },\n      \"receiver\": {\n        \"address\": {\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم المرج\",\n          \"street\": \"ش الحرم المكي كفر الشرفاء المرج القاهره\",\n          \"buildingNumber\": \"8\",\n          \"postalCode\": \"00000\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767043545\",\n        \"name\": \"لابك لتجاره الالكترونيات\"\n      },\n      \"documentType\": \"i\",\n      \"documentTypeVersion\": \"1.0\",\n      \"dateTimeIssued\": \"2025-07-31T06:40:00Z\",\n      \"taxpayerActivityCode\": \"4741\",\n      \"internalID\": \"809\",\n      \"payment\": {},\n      \"delivery\": {},\n      \"invoiceLines\": [\n        {\n          \"description\": \"Dell latitude 7390 x360\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767886712-COM1\",\n          \"unitType\": \"EA\",\n          \"quantity\": 6,\n          \"internalCode\": \"\",\n          \"salesTotal\": 64800,\n          \"total\": 73872,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 64800,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 10800,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 9072,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"Dell latitude 5590\\n\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767886712-COM1\",\n          \"unitType\": \"EA\",\n          \"quantity\": 1,\n          \"internalCode\": \"\",\n          \"salesTotal\": 10000,\n          \"total\": 11400,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 10000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 10000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 1400,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        }\n      ],\n      \"totalDiscountAmount\": 0,\n      \"totalSalesAmount\": 74800,\n      \"netAmount\": 74800,\n      \"taxTotals\": [\n        {\n          \"taxType\": \"T1\",\n          \"amount\": 10472\n        }\n      ],\n      \"totalAmount\": 85272,\n      \"extraDiscountAmount\": 0,\n      \"totalItemsDiscountAmount\": 0,\n      \"signatures\": [\n        {\n          \"signatureType\": \"I\",\n          \"value\": \"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\"\n        }\n      ],\n      \"references\": []\n    }",
+  "transformationStatus": "original",
+  "validationResults": {
+    "status": "Valid",
+    "validationSteps": [
+      {
+        "name": "Step-03.ITIDA Signature Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-04.NationalID Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-05.TaxpayerProfile Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-06.Simple Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-07.Code Field Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-08. Duplicate Submission Validator",
+        "status": "Valid",
+        "error": null
+      }
+    ]
+  },
+  "maxPercision": 2,
+  "invoiceLineItemCodes": [
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767886712-COM1",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "كمبيوتر / قطع غيار كمبيوتر "
+    },
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767886712-COM1",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "كمبيوتر / قطع غيار كمبيوتر "
+    }
+  ],
+  "documentLinesTotalCount": 2,
+  "additionalMetadata": [],
+  "lateSubmissionRequestNumber": null,
+  "serviceDeliveryDate": null,
+  "uuid": "BHMNSC8RE1KAS1Z3S7NFWG1K10",
+  "submissionUUID": "RH2D0Q04MAJZARQMS7NFWG1K10",
+  "longId": "3P8Y5MBG6MPA8B3YS7NFWG1K10FYyuw01753987142",
+  "internalId": "809",
+  "typeName": "i",
+  "typeVersionName": "1.0",
+  "issuerId": "767886712",
+  "issuerName": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+  "receiverId": "767043545",
+  "receiverName": "لابك لتجاره الالكترونيات",
+  "dateTimeIssued": "2025-07-31T06:40:00Z",
+  "dateTimeReceived": "2025-07-31T18:39:02.9049725Z",
+  "totalSales": 74800,
+  "totalDiscount": 0,
+  "netAmount": 74800,
+  "total": 85272,
+  "status": "Valid"
+}

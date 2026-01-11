@@ -1,0 +1,71 @@
+{
+  "document": "{\n      \"issuer\": {\n        \"address\": {\n          \"branchID\": \"0\",\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم اول مدينة نصر\",\n          \"street\": \"ش مكرم عبيد مدينه نصر القاهره\",\n          \"buildingNumber\": \"30\",\n          \"postalCode\": \"\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767886712\",\n        \"name\": \"ايوال لتوريد اجهزه الكمبيوتر والمحمول\"\n      },\n      \"receiver\": {\n        \"address\": {\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم المرج\",\n          \"street\": \"ش الحرم المكي كفر الشرفاء المرج القاهره\",\n          \"buildingNumber\": \"8\",\n          \"postalCode\": \"00000\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767043545\",\n        \"name\": \"لابك لتجاره الالكترونيات\"\n      },\n      \"documentType\": \"i\",\n      \"documentTypeVersion\": \"1.0\",\n      \"dateTimeIssued\": \"2025-07-01T00:43:00Z\",\n      \"taxpayerActivityCode\": \"4741\",\n      \"internalID\": \"635\",\n      \"payment\": {},\n      \"delivery\": {},\n      \"invoiceLines\": [\n        {\n          \"description\": \"Autodesk All Apps 3-Year\\n Subscription for 1 User – Educational\\n License covering all essential\\n Autodesk software.\\n\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767886712-COM1\",\n          \"unitType\": \"EA\",\n          \"quantity\": 2,\n          \"internalCode\": \"\",\n          \"salesTotal\": 5600,\n          \"total\": 6384,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 5600,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 2800,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 784,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        }\n      ],\n      \"totalDiscountAmount\": 0,\n      \"totalSalesAmount\": 5600,\n      \"netAmount\": 5600,\n      \"taxTotals\": [\n        {\n          \"taxType\": \"T1\",\n          \"amount\": 784\n        }\n      ],\n      \"totalAmount\": 6384,\n      \"extraDiscountAmount\": 0,\n      \"totalItemsDiscountAmount\": 0,\n      \"signatures\": [\n        {\n          \"signatureType\": \"I\",\n          \"value\": \"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\"\n        }\n      ],\n      \"references\": []\n    }",
+  "transformationStatus": "original",
+  "validationResults": {
+    "status": "Valid",
+    "validationSteps": [
+      {
+        "name": "Step-03.ITIDA Signature Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-04.NationalID Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-05.TaxpayerProfile Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-06.Simple Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-07.Code Field Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-08. Duplicate Submission Validator",
+        "status": "Valid",
+        "error": null
+      }
+    ]
+  },
+  "maxPercision": 2,
+  "invoiceLineItemCodes": [
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767886712-COM1",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "كمبيوتر / قطع غيار كمبيوتر "
+    }
+  ],
+  "documentLinesTotalCount": 1,
+  "additionalMetadata": [],
+  "lateSubmissionRequestNumber": null,
+  "serviceDeliveryDate": null,
+  "uuid": "6T560364Q1EY95JMAM2603ZJ10",
+  "submissionUUID": "8S47PYS6T3MSVMNS9M2603ZJ10",
+  "longId": "AQAXM02F3HN5CBSGAM2603ZJ10a7t8SX1751373777",
+  "internalId": "635",
+  "typeName": "i",
+  "typeVersionName": "1.0",
+  "issuerId": "767886712",
+  "issuerName": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+  "receiverId": "767043545",
+  "receiverName": "لابك لتجاره الالكترونيات",
+  "dateTimeIssued": "2025-07-01T00:43:00Z",
+  "dateTimeReceived": "2025-07-01T12:42:57.5456225Z",
+  "totalSales": 5600,
+  "totalDiscount": 0,
+  "netAmount": 5600,
+  "total": 6384,
+  "status": "Valid"
+}

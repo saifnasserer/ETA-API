@@ -1,0 +1,79 @@
+{
+  "document": "{\n      \"issuer\": {\n        \"address\": {\n          \"branchID\": \"0\",\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم اول مدينة نصر\",\n          \"street\": \"ش مكرم عبيد مدينه نصر القاهره\",\n          \"buildingNumber\": \"30\",\n          \"postalCode\": \"\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767886712\",\n        \"name\": \"ايوال لتوريد اجهزه الكمبيوتر والمحمول\"\n      },\n      \"receiver\": {\n        \"address\": {\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم المرج\",\n          \"street\": \"ش الحرم المكي كفر الشرفاء المرج القاهره\",\n          \"buildingNumber\": \"8\",\n          \"postalCode\": \"00000\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767043545\",\n        \"name\": \"لابك لتجاره الالكترونيات\"\n      },\n      \"documentType\": \"i\",\n      \"documentTypeVersion\": \"1.0\",\n      \"dateTimeIssued\": \"2025-09-02T22:39:00Z\",\n      \"serviceDeliveryDate\": \"2025-09-01\",\n      \"taxpayerActivityCode\": \"4741\",\n      \"internalID\": \"985\",\n      \"references\": [],\n      \"payment\": {},\n      \"delivery\": {},\n      \"invoiceLines\": [\n        {\n          \"description\": \" Dell latitude 5420\",\n          \"itemType\": \"GS1\",\n          \"itemCode\": \"10005438\",\n          \"unitType\": \"EA\",\n          \"quantity\": 3,\n          \"internalCode\": \"\",\n          \"salesTotal\": 37500,\n          \"total\": 42750,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 37500,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 12500,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 5250,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"Dell precision 3561\",\n          \"itemType\": \"GS1\",\n          \"itemCode\": \"10005438\",\n          \"unitType\": \"EA\",\n          \"quantity\": 1,\n          \"internalCode\": \"\",\n          \"salesTotal\": 21500,\n          \"total\": 24510,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 21500,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 21500,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 3010,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        }\n      ],\n      \"totalSalesAmount\": 59000,\n      \"totalDiscountAmount\": 0,\n      \"netAmount\": 59000,\n      \"taxTotals\": [\n        {\n          \"taxType\": \"T1\",\n          \"amount\": 8260\n        }\n      ],\n      \"totalAmount\": 67260,\n      \"totalItemsDiscountAmount\": 0,\n      \"extraDiscountAmount\": 0,\n      \"signatures\": [\n        {\n          \"signatureType\": \"I\",\n          \"value\": \"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\"\n        }\n      ]\n    }",
+  "transformationStatus": "original",
+  "validationResults": {
+    "status": "Valid",
+    "validationSteps": [
+      {
+        "name": "Step-03.ITIDA Signature Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-04.NationalID Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-05.TaxpayerProfile Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-06.Simple Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-07.Code Field Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-08. Duplicate Submission Validator",
+        "status": "Valid",
+        "error": null
+      }
+    ]
+  },
+  "maxPercision": 2,
+  "invoiceLineItemCodes": [
+    {
+      "codeTypeId": 2,
+      "codeTypeNamePrimaryLang": "GS1",
+      "codeTypeNameSecondaryLang": "GS1",
+      "itemCode": "10005438",
+      "codeNamePrimaryLang": "Computer Stands/Supports",
+      "codeNameSecondaryLang": "منصات / داعمات أجهزة الكمبيوتر"
+    },
+    {
+      "codeTypeId": 2,
+      "codeTypeNamePrimaryLang": "GS1",
+      "codeTypeNameSecondaryLang": "GS1",
+      "itemCode": "10005438",
+      "codeNamePrimaryLang": "Computer Stands/Supports",
+      "codeNameSecondaryLang": "منصات / داعمات أجهزة الكمبيوتر"
+    }
+  ],
+  "documentLinesTotalCount": 2,
+  "additionalMetadata": [],
+  "lateSubmissionRequestNumber": null,
+  "serviceDeliveryDate": "2025-09-01T00:00:00Z",
+  "uuid": "ZRT3K55VZFZHE4KB1MKFJ74K10",
+  "submissionUUID": "YY8NCSJ46CRTY5M51MKFJ74K10",
+  "longId": "B89BR6789Q59E2K42MKFJ74K10eGUq0d1756895891",
+  "internalId": "985",
+  "typeName": "i",
+  "typeVersionName": "1.0",
+  "issuerId": "767886712",
+  "issuerName": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+  "receiverId": "767043545",
+  "receiverName": "لابك لتجاره الالكترونيات",
+  "dateTimeIssued": "2025-09-02T22:39:00Z",
+  "dateTimeReceived": "2025-09-03T10:38:11.0733622Z",
+  "totalSales": 59000,
+  "totalDiscount": 0,
+  "netAmount": 59000,
+  "total": 67260,
+  "status": "Valid"
+}

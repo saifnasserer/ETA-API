@@ -1,0 +1,71 @@
+{
+  "document": "{\n      \"issuer\": {\n        \"address\": {\n          \"branchID\": \"0\",\n          \"country\": \"EG\",\n          \"governate\": \"Cairo\",\n          \"regionCity\": \"El Marg\",\n          \"street\": \"ش الحرم المكي كفر الشرفاء المرج القاهره\",\n          \"buildingNumber\": \"8\",\n          \"postalCode\": \"00000\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767043545\",\n        \"name\": \"لابك لتجاره الالكترونيات\"\n      },\n      \"receiver\": {\n        \"address\": {\n          \"country\": \"EG\",\n          \"governate\": \"Cairo\",\n          \"regionCity\": \"Maadi\",\n          \"street\": \" عماره2004 المجاورة الثانية  المعراج العلوي المعادي\",\n          \"buildingNumber\": \"0\",\n          \"postalCode\": \"\",\n          \"floor\": \"\",\n          \"room\": \"\",\n          \"landmark\": \"\",\n          \"additionalInformation\": \"\"\n        },\n        \"type\": \"B\",\n        \"id\": \"331332302\",\n        \"name\": \"إنشاء للتطوير والبناء\"\n      },\n      \"documentType\": \"i\",\n      \"documentTypeVersion\": \"1.0\",\n      \"dateTimeIssued\": \"2025-10-19T17:37:26Z\",\n      \"taxpayerActivityCode\": \"4741\",\n      \"internalID\": \"069\",\n      \"references\": [],\n      \"payment\": {},\n      \"delivery\": {},\n      \"invoiceLines\": [\n        {\n          \"description\": \"Z440 workstation + monitor and bundle\\n\",\n          \"itemType\": \"GS1\",\n          \"itemCode\": \"10001118\",\n          \"unitType\": \"EA\",\n          \"quantity\": 5,\n          \"internalCode\": \"\",\n          \"salesTotal\": 86000,\n          \"total\": 97180,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 86000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 17200,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 12040,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            },\n            {\n              \"taxType\": \"T4\",\n              \"amount\": 860,\n              \"subType\": \"W002\",\n              \"rate\": 1\n            }\n          ]\n        }\n      ],\n      \"totalSalesAmount\": 86000,\n      \"totalDiscountAmount\": 0,\n      \"netAmount\": 86000,\n      \"taxTotals\": [\n        {\n          \"taxType\": \"T1\",\n          \"amount\": 12040\n        },\n        {\n          \"taxType\": \"T4\",\n          \"amount\": 860\n        }\n      ],\n      \"totalAmount\": 97180,\n      \"totalItemsDiscountAmount\": 0,\n      \"extraDiscountAmount\": 0,\n      \"signatures\": [\n        {\n          \"signatureType\": \"I\",\n          \"value\": \"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\"\n        }\n      ]\n    }",
+  "transformationStatus": "original",
+  "validationResults": {
+    "status": "Valid",
+    "validationSteps": [
+      {
+        "name": "Step-03.ITIDA Signature Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-04.NationalID Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-05.TaxpayerProfile Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-06.Simple Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-07.Code Field Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-08. Duplicate Submission Validator",
+        "status": "Valid",
+        "error": null
+      }
+    ]
+  },
+  "maxPercision": 2,
+  "invoiceLineItemCodes": [
+    {
+      "codeTypeId": 2,
+      "codeTypeNamePrimaryLang": "GS1",
+      "codeTypeNameSecondaryLang": "GS1",
+      "itemCode": "10001118",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "مكونات أجهزة الكمبيوتر - قطع إستبدال / ملحقات"
+    }
+  ],
+  "documentLinesTotalCount": 1,
+  "additionalMetadata": [],
+  "lateSubmissionRequestNumber": null,
+  "serviceDeliveryDate": null,
+  "uuid": "239S6MN2H4P1HYCX98ASRY7K10",
+  "submissionUUID": "GRTVJERTRJGPN8HE98ASRY7K10",
+  "longId": "1SQ3GDKTY94Y6P0C98ASRY7K1015gqe01760895478",
+  "internalId": "069",
+  "typeName": "i",
+  "typeVersionName": "1.0",
+  "issuerId": "767043545",
+  "issuerName": "لابك لتجاره الالكترونيات",
+  "receiverId": "331332302",
+  "receiverName": "إنشاء للتطوير والبناء",
+  "dateTimeIssued": "2025-10-19T17:37:26Z",
+  "dateTimeReceived": "2025-10-19T17:37:58.0252662Z",
+  "totalSales": 86000,
+  "totalDiscount": 0,
+  "netAmount": 86000,
+  "total": 97180,
+  "status": "Valid"
+}

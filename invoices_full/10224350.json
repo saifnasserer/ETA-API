@@ -1,0 +1,71 @@
+{
+  "document": "{\n            \"issuer\": {\n                \"address\": {\n                    \"country\": \"EG\",\n                    \"governate\": \"Cairo\",\n                    \"regionCity\": \"القاهره\",\n                    \"street\": \"76  شارع الميرغني\",\n                    \"buildingNumber\": \"76\",\n                    \"postalCode\": \"11311\",\n                    \"branchID\": \"0\"\n                },\n                \"name\": \"Egypt trust - Branch\",\n                \"type\": \"B\",\n                \"id\": \"274264323\"\n            },\n            \"receiver\": {\n                \"address\": {\n                    \"country\": \"EG\",\n                    \"governate\": \"Cairo\",\n                    \"regionCity\": \"1\",\n                    \"street\": \"2\",\n                    \"buildingNumber\": \"56\",\n                    \"postalCode\": \"123\"\n                },\n                \"name\": \"لابك لتجاره الالكترونيات\",\n                \"type\": \"B\",\n                \"id\": \"767043545\"\n            },\n            \"documentType\": \"i\",\n            \"documentTypeVersion\": \"1.0\",\n            \"dateTimeIssued\": \"2024-11-10T00:00:00Z\",\n            \"taxpayerActivityCode\": \"6209\",\n            \"internalID\": \"10224350\",\n            \"invoiceLines\": [\n                {\n                    \"description\": \"New Digital seal for Three years\",\n                    \"itemType\": \"EGS\",\n                    \"itemCode\": \"EG-274264323-10006236\",\n                    \"unitType\": \"C62\",\n                    \"quantity\": 1.0,\n                    \"internalCode\": \"\",\n                    \"valueDifference\": 0.0,\n                    \"totalTaxableFees\": 0.0,\n                    \"itemsDiscount\": 0.0,\n                    \"unitValue\": {\n                        \"currencySold\": \"EGP\",\n                        \"amountEGP\": 2192.98\n                    },\n                    \"discount\": {\n                        \"rate\": 0.0,\n                        \"amount\": 0.0\n                    },\n                    \"taxableItems\": [\n                        {\n                            \"taxType\": \"T1\",\n                            \"amount\": 307.02,\n                            \"subType\": \"V009\",\n                            \"rate\": 14.0\n                        }\n                    ],\n                    \"salesTotal\": 2192.98,\n                    \"netTotal\": 2192.98,\n                    \"total\": 2500.0\n                }\n            ],\n            \"taxTotals\": [\n                {\n                    \"taxType\": \"T1\",\n                    \"amount\": 307.02\n                }\n            ],\n            \"totalDiscountAmount\": 0.0,\n            \"totalSalesAmount\": 2192.98,\n            \"netAmount\": 2192.98,\n            \"totalAmount\": 2500.0,\n            \"extraDiscountAmount\": 0.0,\n            \"totalItemsDiscountAmount\": 0.0,\n            \"salesOrderReference\": \"S1678279\",\n            \"signatures\": [\n                {\n                    \"signatureType\": \"I\",\n                    \"value\": \"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\"\n                }\n            ]\n        }",
+  "transformationStatus": "original",
+  "validationResults": {
+    "status": "Valid",
+    "validationSteps": [
+      {
+        "name": "Step-03.ITIDA Signature Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-04.NationalID Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-05.TaxpayerProfile Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-06.Simple Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-07.Code Field Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-08. Duplicate Submission Validator",
+        "status": "Valid",
+        "error": null
+      }
+    ]
+  },
+  "maxPercision": 2,
+  "invoiceLineItemCodes": [
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-274264323-10006236",
+      "codeNamePrimaryLang": "Digital Certificates",
+      "codeNameSecondaryLang": "شهادة التوقيع الالكترونى"
+    }
+  ],
+  "documentLinesTotalCount": 1,
+  "additionalMetadata": [],
+  "lateSubmissionRequestNumber": null,
+  "serviceDeliveryDate": null,
+  "uuid": "PZJ3JWHWAJHC7VQ5AJ9S2BCJ10",
+  "submissionUUID": "JXAEAX24NHTVWWR3AJ9S2BCJ10",
+  "longId": "GN3NYDZPVBBZCRDPBJ9S2BCJ10uIq7rs1731243845",
+  "internalId": "10224350",
+  "typeName": "i",
+  "typeVersionName": "1.0",
+  "issuerId": "274264323",
+  "issuerName": "Egypt trust - Branch",
+  "receiverId": "767043545",
+  "receiverName": "لابك لتجاره الالكترونيات",
+  "dateTimeIssued": "2024-11-10T00:00:00Z",
+  "dateTimeReceived": "2024-11-10T13:04:05.1945893Z",
+  "totalSales": 2192.98,
+  "totalDiscount": 0,
+  "netAmount": 2192.98,
+  "total": 2500,
+  "status": "Valid"
+}

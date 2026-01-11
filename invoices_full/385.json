@@ -1,0 +1,79 @@
+{
+  "document": "{\n      \"issuer\": {\n        \"address\": {\n          \"branchID\": \"0\",\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم الزيتون\",\n          \"street\": \"ش عبدربه واصل الزيتون القاهره\",\n          \"buildingNumber\": \"3\",\n          \"postalCode\": \"\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"766929442\",\n        \"name\": \"ايكو لاند للمقاولات العامه والتوريدات\"\n      },\n      \"receiver\": {\n        \"address\": {\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم المرج\",\n          \"street\": \"ش الحرم المكي كفر الشرفاء المرج القاهره\",\n          \"buildingNumber\": \"8\",\n          \"postalCode\": \"00000\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767043545\",\n        \"name\": \"لابك لتجاره الالكترونيات\"\n      },\n      \"documentType\": \"i\",\n      \"documentTypeVersion\": \"1.0\",\n      \"dateTimeIssued\": \"2025-01-05T00:12:00Z\",\n      \"taxpayerActivityCode\": \"4690\",\n      \"internalID\": \"385\",\n      \"payment\": {},\n      \"delivery\": {},\n      \"invoiceLines\": [\n        {\n          \"description\": \"HP 650 G5 laptop \\n\",\n          \"itemType\": \"GS1\",\n          \"itemCode\": \"10001118\",\n          \"unitType\": \"EA\",\n          \"quantity\": 1,\n          \"internalCode\": \"\",\n          \"salesTotal\": 9000,\n          \"total\": 10260,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 9000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 9000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 1260,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"hp battery\",\n          \"itemType\": \"GS1\",\n          \"itemCode\": \"10001118\",\n          \"unitType\": \"EA\",\n          \"quantity\": 16,\n          \"internalCode\": \"\",\n          \"salesTotal\": 18400,\n          \"total\": 20976,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 18400,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 1150,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 2576,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        }\n      ],\n      \"totalDiscountAmount\": 0,\n      \"totalSalesAmount\": 27400,\n      \"netAmount\": 27400,\n      \"taxTotals\": [\n        {\n          \"taxType\": \"T1\",\n          \"amount\": 3836\n        }\n      ],\n      \"totalAmount\": 31236,\n      \"extraDiscountAmount\": 0,\n      \"totalItemsDiscountAmount\": 0,\n      \"signatures\": [\n        {\n          \"signatureType\": \"I\",\n          \"value\": \"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\"\n        }\n      ],\n      \"references\": []\n    }",
+  "transformationStatus": "original",
+  "validationResults": {
+    "status": "Valid",
+    "validationSteps": [
+      {
+        "name": "Step-03.ITIDA Signature Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-04.NationalID Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-05.TaxpayerProfile Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-06.Simple Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-07.Code Field Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-08. Duplicate Submission Validator",
+        "status": "Valid",
+        "error": null
+      }
+    ]
+  },
+  "maxPercision": 2,
+  "invoiceLineItemCodes": [
+    {
+      "codeTypeId": 2,
+      "codeTypeNamePrimaryLang": "GS1",
+      "codeTypeNameSecondaryLang": "GS1",
+      "itemCode": "10001118",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "مكونات أجهزة الكمبيوتر - قطع إستبدال / ملحقات"
+    },
+    {
+      "codeTypeId": 2,
+      "codeTypeNamePrimaryLang": "GS1",
+      "codeTypeNameSecondaryLang": "GS1",
+      "itemCode": "10001118",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "مكونات أجهزة الكمبيوتر - قطع إستبدال / ملحقات"
+    }
+  ],
+  "documentLinesTotalCount": 2,
+  "additionalMetadata": [],
+  "lateSubmissionRequestNumber": null,
+  "serviceDeliveryDate": null,
+  "uuid": "M9G7KDP29YSHN4FRYQ436VGJ10",
+  "submissionUUID": "TJJFWHPTP9PZJ8HPXQ436VGJ10",
+  "longId": "EA34GV7FDDVZP34RYQ436VGJ10x4icCl1736079151",
+  "internalId": "385",
+  "typeName": "i",
+  "typeVersionName": "1.0",
+  "issuerId": "766929442",
+  "issuerName": "ايكو لاند للمقاولات العامه والتوريدات",
+  "receiverId": "767043545",
+  "receiverName": "لابك لتجاره الالكترونيات",
+  "dateTimeIssued": "2025-01-05T00:12:00Z",
+  "dateTimeReceived": "2025-01-05T12:12:31.8694517Z",
+  "totalSales": 27400,
+  "totalDiscount": 0,
+  "netAmount": 27400,
+  "total": 31236,
+  "status": "Valid"
+}

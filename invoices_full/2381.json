@@ -1,0 +1,111 @@
+{
+  "document": "{\n      \"issuer\": {\n        \"address\": {\n          \"branchID\": \"0\",\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم اول مدينة نصر\",\n          \"street\": \"ش مكرم عبيد مدينه نصر القاهره\",\n          \"buildingNumber\": \"30\",\n          \"postalCode\": \"\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767886712\",\n        \"name\": \"ايوال لتوريد اجهزه الكمبيوتر والمحمول\"\n      },\n      \"receiver\": {\n        \"address\": {\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم المرج\",\n          \"street\": \"ش الحرم المكي كفر الشرفاء المرج القاهره\",\n          \"buildingNumber\": \"8\",\n          \"postalCode\": \"00000\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767043545\",\n        \"name\": \"لابك لتجاره الالكترونيات\"\n      },\n      \"documentType\": \"i\",\n      \"documentTypeVersion\": \"1.0\",\n      \"dateTimeIssued\": \"2025-12-30T02:04:00Z\",\n      \"taxpayerActivityCode\": \"4741\",\n      \"internalID\": \"2381\",\n      \"payment\": {},\n      \"delivery\": {},\n      \"invoiceLines\": [\n        {\n          \"description\": \"Dell precision 3561\\n\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767886712-4\",\n          \"unitType\": \"EA\",\n          \"quantity\": 5,\n          \"internalCode\": \"\",\n          \"salesTotal\": 120000,\n          \"total\": 136800,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 120000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 24000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 16800,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"Dell latitude 5420\\n\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767886712-4\",\n          \"unitType\": \"EA\",\n          \"quantity\": 8,\n          \"internalCode\": \"\",\n          \"salesTotal\": 112000,\n          \"total\": 127680,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 112000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 14000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 15680,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"Dell latitude 5420 i5\\n\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767886712-4\",\n          \"unitType\": \"EA\",\n          \"quantity\": 6,\n          \"internalCode\": \"\",\n          \"salesTotal\": 72000,\n          \"total\": 82080,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 72000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 12000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 10080,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"Dell latitude 5520\\n\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767886712-4\",\n          \"unitType\": \"EA\",\n          \"quantity\": 3,\n          \"internalCode\": \"\",\n          \"salesTotal\": 40500,\n          \"total\": 46170,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 40500,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 13500,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 5670,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"Dell latitude 5590\\n\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767886712-4\",\n          \"unitType\": \"EA\",\n          \"quantity\": 8,\n          \"internalCode\": \"\",\n          \"salesTotal\": 88000,\n          \"total\": 100320,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 88000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 11000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 12320,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"Dell precision 5540\\n\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767886712-4\",\n          \"unitType\": \"EA\",\n          \"quantity\": 5,\n          \"internalCode\": \"\",\n          \"salesTotal\": 125000,\n          \"total\": 142500,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 125000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 25000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 17500,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        }\n      ],\n      \"totalDiscountAmount\": 0,\n      \"totalSalesAmount\": 557500,\n      \"netAmount\": 557500,\n      \"taxTotals\": [\n        {\n          \"taxType\": \"T1\",\n          \"amount\": 78050\n        }\n      ],\n      \"totalAmount\": 635550,\n      \"extraDiscountAmount\": 0,\n      \"totalItemsDiscountAmount\": 0,\n      \"signatures\": [\n        {\n          \"signatureType\": \"I\",\n          \"value\": \"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\"\n        }\n      ],\n      \"references\": []\n    }",
+  "transformationStatus": "original",
+  "validationResults": {
+    "status": "Valid",
+    "validationSteps": [
+      {
+        "name": "Step-06.Simple Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-05.TaxpayerProfile Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-04.NationalID Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-03.ITIDA Signature Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-07.Code Field Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-08. Duplicate Submission Validator",
+        "status": "Valid",
+        "error": null
+      }
+    ]
+  },
+  "maxPercision": 2,
+  "invoiceLineItemCodes": [
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767886712-4",
+      "codeNamePrimaryLang": "Computer/Video Game Security Products",
+      "codeNameSecondaryLang": " لاب توب"
+    },
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767886712-4",
+      "codeNamePrimaryLang": "Computer/Video Game Security Products",
+      "codeNameSecondaryLang": " لاب توب"
+    },
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767886712-4",
+      "codeNamePrimaryLang": "Computer/Video Game Security Products",
+      "codeNameSecondaryLang": " لاب توب"
+    },
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767886712-4",
+      "codeNamePrimaryLang": "Computer/Video Game Security Products",
+      "codeNameSecondaryLang": " لاب توب"
+    },
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767886712-4",
+      "codeNamePrimaryLang": "Computer/Video Game Security Products",
+      "codeNameSecondaryLang": " لاب توب"
+    },
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767886712-4",
+      "codeNamePrimaryLang": "Computer/Video Game Security Products",
+      "codeNameSecondaryLang": " لاب توب"
+    }
+  ],
+  "documentLinesTotalCount": 6,
+  "additionalMetadata": [],
+  "lateSubmissionRequestNumber": null,
+  "serviceDeliveryDate": null,
+  "uuid": "WCCG10N7Y2XXGXJ14W73SQDK10",
+  "submissionUUID": "ZPB62EXJNMVMXRE42W73SQDK10",
+  "longId": "EJEY91JPK11PZM8H5W73SQDK10qF3PkU1767103373",
+  "internalId": "2381",
+  "typeName": "i",
+  "typeVersionName": "1.0",
+  "issuerId": "767886712",
+  "issuerName": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+  "receiverId": "767043545",
+  "receiverName": "لابك لتجاره الالكترونيات",
+  "dateTimeIssued": "2025-12-30T02:04:00Z",
+  "dateTimeReceived": "2025-12-30T14:02:53.1859556Z",
+  "totalSales": 557500,
+  "totalDiscount": 0,
+  "netAmount": 557500,
+  "total": 635550,
+  "status": "Valid"
+}
