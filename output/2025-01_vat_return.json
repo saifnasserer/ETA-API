@@ -1,0 +1,94 @@
+{
+  "period": "2025-01",
+  "periodName": "January 2025",
+  "submissionType": "Late Voluntary - Law 5/2025",
+  "legalBasis": "Law 5/2025 Article 3",
+  "companyId": "767043545",
+  "companyName": "لابك لتجاره الالكترونيات",
+  "invoiceCount": 6,
+  "generatedDate": "2026-01-11T23:39:28.797Z",
+  "sales": {
+    "local": {
+      "value": 119200,
+      "tax": 15688,
+      "items": [
+        {
+          "id": "0010",
+          "date": "1/18/2025",
+          "customer": "العتال جروب كومبانيز",
+          "total": 100000,
+          "vat": 13000,
+          "type": "Invoice"
+        },
+        {
+          "id": "009",
+          "date": "1/5/2025",
+          "customer": "محمد فؤاد حسين عوض",
+          "total": 19200,
+          "vat": 2688,
+          "type": "Invoice"
+        }
+      ]
+    },
+    "exports": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    },
+    "exempt": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    }
+  },
+  "inputs": {
+    "value": 197200,
+    "tax": 23912,
+    "items": [
+      {
+        "id": "19",
+        "date": "1/5/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 27400,
+        "vat": 3836,
+        "type": "Invoice"
+      },
+      {
+        "id": "28",
+        "date": "1/17/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 98400,
+        "vat": 13776,
+        "type": "Invoice"
+      },
+      {
+        "id": "385",
+        "date": "1/5/2025",
+        "customer": "ايكو لاند للمقاولات العامه والتوريدات",
+        "total": 27400,
+        "vat": 3836,
+        "type": "Invoice"
+      },
+      {
+        "id": "49",
+        "date": "1/22/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 44000,
+        "vat": 2464,
+        "type": "Invoice"
+      }
+    ]
+  },
+  "totals": {
+    "salesTax": 15688,
+    "inputTax": 23912,
+    "netDue": -8224
+  },
+  "summary": {
+    "totalSales": 119200,
+    "totalOutputVAT": 15688,
+    "totalInputVAT": 23912,
+    "netVATDue": -8224,
+    "status": "Refundable"
+  }
+}

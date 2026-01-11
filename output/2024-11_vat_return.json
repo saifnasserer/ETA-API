@@ -1,0 +1,118 @@
+{
+  "period": "2024-11",
+  "periodName": "November 2024",
+  "submissionType": "Late Voluntary - Law 5/2025",
+  "legalBasis": "Law 5/2025 Article 3",
+  "companyId": "767043545",
+  "companyName": "لابك لتجاره الالكترونيات",
+  "invoiceCount": 9,
+  "generatedDate": "2026-01-11T23:39:28.775Z",
+  "sales": {
+    "local": {
+      "value": 482181,
+      "tax": 62683.53,
+      "items": [
+        {
+          "id": "0001",
+          "date": "11/15/2024",
+          "customer": "جى تى سي اي لانشاءات مشاريع الطاقة والبنية التحتيه",
+          "total": 55412,
+          "vat": 7203.56,
+          "type": "Invoice"
+        },
+        {
+          "id": "0002",
+          "date": "11/15/2024",
+          "customer": "جى تى سي اي لانشاءات مشاريع الطاقة والبنية التحتيه",
+          "total": 49120,
+          "vat": 6385.6,
+          "type": "Invoice"
+        },
+        {
+          "id": "0003",
+          "date": "11/15/2024",
+          "customer": "جى تى سي اي لانشاءات مشاريع الطاقة والبنية التحتيه",
+          "total": 303749,
+          "vat": 39487.37,
+          "type": "Invoice"
+        },
+        {
+          "id": "0004",
+          "date": "11/27/2024",
+          "customer": "الشركه الهندسيه لخدمات المشاريع    بروسيرفيس",
+          "total": 73900,
+          "vat": 9607,
+          "type": "Invoice"
+        }
+      ]
+    },
+    "exports": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    },
+    "exempt": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    }
+  },
+  "inputs": {
+    "value": 528892.98,
+    "tax": 74045.02,
+    "items": [
+      {
+        "id": "10224350",
+        "date": "11/10/2024",
+        "customer": "Egypt trust - Branch",
+        "total": 2192.98,
+        "vat": 307.02,
+        "type": "Invoice"
+      },
+      {
+        "id": "2233",
+        "date": "11/13/2024",
+        "customer": "تشيمو للتوريدات و التجارة العامة",
+        "total": 102400,
+        "vat": 14336,
+        "type": "Invoice"
+      },
+      {
+        "id": "2266",
+        "date": "11/13/2024",
+        "customer": "تشيمو للتوريدات و التجارة العامة",
+        "total": 299700,
+        "vat": 41958,
+        "type": "Invoice"
+      },
+      {
+        "id": "2319",
+        "date": "11/26/2024",
+        "customer": "سيد بيومي سيد عبدالفتاح سيلفر اوفيس للتوريدات العمومية",
+        "total": 72000,
+        "vat": 10080,
+        "type": "Invoice"
+      },
+      {
+        "id": "2495",
+        "date": "11/27/2024",
+        "customer": "سيد بيومي سيد عبدالفتاح سيلفر اوفيس للتوريدات العمومية",
+        "total": 52600,
+        "vat": 7364,
+        "type": "Invoice"
+      }
+    ]
+  },
+  "totals": {
+    "salesTax": 62683.53,
+    "inputTax": 74045.02,
+    "netDue": -11361.490000000005
+  },
+  "summary": {
+    "totalSales": 482181,
+    "totalOutputVAT": 62683.53,
+    "totalInputVAT": 74045.02,
+    "netVATDue": -11361.490000000005,
+    "status": "Refundable"
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, FileText, FileSpreadsheet, Download, Languages } from 'lucide-react';
+import { LayoutDashboard, FileText, FileSpreadsheet, Download, Languages, Shield } from 'lucide-react';
 import { translations } from '../translations';
 
 const Layout = ({ children, activeTab, setActiveTab, lang, setLang }) => {
@@ -9,6 +9,7 @@ const Layout = ({ children, activeTab, setActiveTab, lang, setLang }) => {
         { id: 'dashboard', label: t.dashboard, icon: LayoutDashboard },
         { id: 'invoices', label: t.invoices, icon: FileText },
         { id: 'tax-return', label: t.taxReturn, icon: FileSpreadsheet },
+        { id: 'tax-compliance', label: lang === 'ar' ? 'الامتثال الضريبي' : 'Tax Compliance', icon: Shield },
         { id: 'fetch', label: t.fetchData, icon: Download },
     ];
 

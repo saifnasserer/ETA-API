@@ -1,0 +1,78 @@
+{
+  "period": "2025-11",
+  "periodName": "November 2025",
+  "submissionType": "Late Voluntary - Law 5/2025",
+  "legalBasis": "Law 5/2025 Article 3",
+  "companyId": "767043545",
+  "companyName": "لابك لتجاره الالكترونيات",
+  "invoiceCount": 4,
+  "generatedDate": "2026-01-11T23:39:28.824Z",
+  "sales": {
+    "local": {
+      "value": 50900,
+      "tax": 6617,
+      "items": [
+        {
+          "id": "071",
+          "date": "11/11/2025",
+          "customer": "العتال جروب كومبانيز",
+          "total": 2400,
+          "vat": 312,
+          "type": "Invoice"
+        },
+        {
+          "id": "073",
+          "date": "11/11/2025",
+          "customer": "جاما للانظمة الامنيه والمقاولات",
+          "total": 45000,
+          "vat": 5850,
+          "type": "Invoice"
+        },
+        {
+          "id": "074",
+          "date": "11/11/2025",
+          "customer": "شركه سيستم وان",
+          "total": 3500,
+          "vat": 455,
+          "type": "Invoice"
+        }
+      ]
+    },
+    "exports": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    },
+    "exempt": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    }
+  },
+  "inputs": {
+    "value": 44000,
+    "tax": 6160,
+    "items": [
+      {
+        "id": "1812",
+        "date": "11/10/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 44000,
+        "vat": 6160,
+        "type": "Invoice"
+      }
+    ]
+  },
+  "totals": {
+    "salesTax": 6617,
+    "inputTax": 6160,
+    "netDue": 457
+  },
+  "summary": {
+    "totalSales": 50900,
+    "totalOutputVAT": 6617,
+    "totalInputVAT": 6160,
+    "netVATDue": 457,
+    "status": "Payable to ETA"
+  }
+}

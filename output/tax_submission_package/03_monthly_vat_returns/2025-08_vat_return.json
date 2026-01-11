@@ -1,0 +1,142 @@
+{
+  "period": "2025-08",
+  "periodName": "August 2025",
+  "submissionType": "Late Voluntary - Law 5/2025",
+  "legalBasis": "Law 5/2025 Article 3",
+  "companyId": "767043545",
+  "companyName": "لابك لتجاره الالكترونيات",
+  "invoiceCount": 12,
+  "generatedDate": "2026-01-11T23:39:28.817Z",
+  "sales": {
+    "local": {
+      "value": 273680,
+      "tax": 36021.4,
+      "items": [
+        {
+          "id": "040",
+          "date": "8/3/2025",
+          "customer": "العتال جروب كومبانيز",
+          "total": 77700,
+          "vat": 10101,
+          "type": "Invoice"
+        },
+        {
+          "id": "041",
+          "date": "8/3/2025",
+          "customer": "كلاود ان للبرمجيات",
+          "total": 7800,
+          "vat": 1014,
+          "type": "Invoice"
+        },
+        {
+          "id": "042",
+          "date": "8/7/2025",
+          "customer": "متيوري للصناعه والتجاره والمقاولات",
+          "total": 44300,
+          "vat": 6202,
+          "type": "Invoice"
+        },
+        {
+          "id": "043",
+          "date": "8/19/2025",
+          "customer": "سويديش جروب للاعمال المتكامله",
+          "total": 17000,
+          "vat": 2210,
+          "type": "Invoice"
+        },
+        {
+          "id": "044",
+          "date": "8/20/2025",
+          "customer": "العتال جروب كومبانيز",
+          "total": 88000,
+          "vat": 11440,
+          "type": "Invoice"
+        },
+        {
+          "id": "045",
+          "date": "8/30/2025",
+          "customer": "جي تي سي اي لانشاءات مشاريع الطاقه والبنيه التحتيه",
+          "total": 18880,
+          "vat": 2454.4,
+          "type": "Invoice"
+        },
+        {
+          "id": "046",
+          "date": "8/30/2025",
+          "customer": "سويديش جروب للاعمال المتكامله",
+          "total": 20000,
+          "vat": 2600,
+          "type": "Invoice"
+        }
+      ]
+    },
+    "exports": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    },
+    "exempt": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    }
+  },
+  "inputs": {
+    "value": 233170,
+    "tax": 32643.8,
+    "items": [
+      {
+        "id": "821",
+        "date": "8/20/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 52500,
+        "vat": 7350,
+        "type": "Invoice"
+      },
+      {
+        "id": "839",
+        "date": "8/7/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 42500,
+        "vat": 5950,
+        "type": "Invoice"
+      },
+      {
+        "id": "887",
+        "date": "8/17/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 84000,
+        "vat": 11760,
+        "type": "Invoice"
+      },
+      {
+        "id": "903",
+        "date": "8/17/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 16500,
+        "vat": 2310,
+        "type": "Invoice"
+      },
+      {
+        "id": "949",
+        "date": "8/27/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 37670,
+        "vat": 5273.8,
+        "type": "Invoice"
+      }
+    ]
+  },
+  "totals": {
+    "salesTax": 36021.4,
+    "inputTax": 32643.8,
+    "netDue": 3377.600000000002
+  },
+  "summary": {
+    "totalSales": 273680,
+    "totalOutputVAT": 36021.4,
+    "totalInputVAT": 32643.8,
+    "netVATDue": 3377.600000000002,
+    "status": "Payable to ETA"
+  }
+}

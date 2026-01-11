@@ -1,0 +1,62 @@
+{
+  "period": "2025-06",
+  "periodName": "June 2025",
+  "submissionType": "Late Voluntary - Law 5/2025",
+  "legalBasis": "Law 5/2025 Article 3",
+  "companyId": "767043545",
+  "companyName": "لابك لتجاره الالكترونيات",
+  "invoiceCount": 2,
+  "generatedDate": "2026-01-11T23:39:28.812Z",
+  "sales": {
+    "local": {
+      "value": 28400,
+      "tax": 3692,
+      "items": [
+        {
+          "id": "034",
+          "date": "6/26/2025",
+          "customer": "إنشاء للتطوير والبناء",
+          "total": 28400,
+          "vat": 3692,
+          "type": "Invoice"
+        }
+      ]
+    },
+    "exports": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    },
+    "exempt": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    }
+  },
+  "inputs": {
+    "value": 28400,
+    "tax": 3976,
+    "items": [
+      {
+        "id": "592",
+        "date": "6/23/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 28400,
+        "vat": 3976,
+        "type": "Invoice"
+      }
+    ]
+  },
+  "totals": {
+    "salesTax": 3692,
+    "inputTax": 3976,
+    "netDue": -284
+  },
+  "summary": {
+    "totalSales": 28400,
+    "totalOutputVAT": 3692,
+    "totalInputVAT": 3976,
+    "netVATDue": -284,
+    "status": "Refundable"
+  }
+}

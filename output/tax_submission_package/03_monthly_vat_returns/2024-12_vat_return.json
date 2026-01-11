@@ -1,0 +1,78 @@
+{
+  "period": "2024-12",
+  "periodName": "December 2024",
+  "submissionType": "Late Voluntary - Law 5/2025",
+  "legalBasis": "Law 5/2025 Article 3",
+  "companyId": "767043545",
+  "companyName": "لابك لتجاره الالكترونيات",
+  "invoiceCount": 4,
+  "generatedDate": "2026-01-11T23:39:28.793Z",
+  "sales": {
+    "local": {
+      "value": 38150,
+      "tax": 5294.5,
+      "items": [
+        {
+          "id": "0006",
+          "date": "12/4/2024",
+          "customer": "جى تى سي اي لانشاءات مشاريع الطاقة والبنية التحتيه",
+          "total": 4650,
+          "vat": 604.5,
+          "type": "Invoice"
+        },
+        {
+          "id": "0008",
+          "date": "12/13/2024",
+          "customer": "شريف فؤاد محمود وشركاه هواريزون للمشروعات الهندسيه",
+          "total": 33500,
+          "vat": 4690,
+          "type": "Invoice"
+        }
+      ]
+    },
+    "exports": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    },
+    "exempt": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    }
+  },
+  "inputs": {
+    "value": 35900,
+    "tax": 5026,
+    "items": [
+      {
+        "id": "2904",
+        "date": "12/3/2024",
+        "customer": "سيد بيومي سيد عبدالفتاح سيلفر اوفيس للتوريدات العمومية",
+        "total": 3300,
+        "vat": 462,
+        "type": "Invoice"
+      },
+      {
+        "id": "3579",
+        "date": "12/12/2024",
+        "customer": "سيد بيومي سيد عبدالفتاح سيلفر اوفيس للتوريدات العمومية",
+        "total": 32600,
+        "vat": 4564,
+        "type": "Invoice"
+      }
+    ]
+  },
+  "totals": {
+    "salesTax": 5294.5,
+    "inputTax": 5026,
+    "netDue": 268.5
+  },
+  "summary": {
+    "totalSales": 38150,
+    "totalOutputVAT": 5294.5,
+    "totalInputVAT": 5026,
+    "netVATDue": 268.5,
+    "status": "Payable to ETA"
+  }
+}

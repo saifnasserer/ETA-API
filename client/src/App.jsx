@@ -5,6 +5,7 @@ import InvoiceList from './components/InvoiceList';
 import InvoiceDetails from './components/InvoiceDetails';
 import TaxReturn from './components/TaxReturn';
 import FetchInvoices from './components/FetchInvoices';
+import TaxComplianceDashboard from './components/TaxComplianceDashboard';
 
 function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -73,6 +74,7 @@ function App() {
             />
           )}
           {activeTab === 'tax-return' && <TaxReturn lang={lang} />}
+          {activeTab === 'tax-compliance' && <TaxComplianceDashboard lang={lang} />}
           {activeTab === 'fetch' && <FetchInvoices lang={lang} />}
         </div>
       )}

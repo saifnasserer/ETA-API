@@ -1,0 +1,87 @@
+{
+  "documentType": "Delay Explanation Note",
+  "submissionType": "Voluntary Late Submission",
+  "legalBasis": "Law 5/2025 Article 3",
+  "generatedDate": "2026-01-11T23:27:50.585Z",
+  "header": {
+    "to": "Egyptian Tax Authority",
+    "toArabic": "مصلحة الضرائب المصرية",
+    "from": "Laapak Electronics Trading",
+    "fromArabic": "لابك لتجاره الالكترونيات",
+    "taxId": "767043545",
+    "date": "12 January 2026",
+    "subject": "Voluntary Late Submission of Tax Declarations under Law 5/2025",
+    "subjectArabic": "تقديم طوعي متأخر للإقرارات الضريبية بموجب القانون رقم 5 لسنة 2025"
+  },
+  "content": {
+    "introduction": "We, Laapak Electronics Trading (Tax ID: 767043545), hereby submit the following tax declarations voluntarily under the provisions of Law 5/2025 Article 3.",
+    "vatDeclarations": {
+      "title": "Monthly VAT Declarations (Form 10)",
+      "periods": [
+        "December 2024",
+        "January 2025",
+        "February 2025",
+        "March 2025",
+        "April 2025",
+        "May 2025",
+        "June 2025",
+        "July 2025",
+        "August 2025",
+        "September 2025",
+        "October 2025",
+        "November 2025",
+        "December 2025"
+      ],
+      "count": 13
+    },
+    "incomeTaxDeclarations": {
+      "title": "Annual Corporate Income Tax Declarations",
+      "periods": [
+        "Fiscal Year 2024",
+        "Fiscal Year 2025"
+      ],
+      "count": 2
+    },
+    "delayReason": {
+      "title": "Reason for Delay",
+      "explanation": [
+        "Technical difficulties accessing the Egyptian Tax Authority e-portal prevented timely submission of the above declarations.",
+        "All business transactions during these periods were properly documented through the ETA e-invoicing system.",
+        "The company has maintained complete and accurate records of all sales and purchases.",
+        "There was no intent of tax evasion or deliberate non-compliance."
+      ]
+    },
+    "legalBasis": {
+      "title": "Legal Basis for Submission",
+      "points": [
+        "This submission is made voluntarily under Law 5/2025 Article 3.",
+        "No tax audit or assessment has been initiated against the company.",
+        "The company qualifies for penalty waiver under Law 5/2025.",
+        "All declarations are submitted within the 6-month amnesty window (deadline: August 12, 2026)."
+      ]
+    },
+    "declaration": {
+      "title": "Company Declaration",
+      "statement": "We declare that all information provided in the attached tax returns is true, complete, and accurate to the best of our knowledge. We understand our obligations under Egyptian tax law and commit to timely compliance going forward."
+    },
+    "attachments": {
+      "title": "Attached Documents",
+      "list": [
+        "13 Monthly VAT Returns (December 2024 - December 2025)",
+        "2 Annual Corporate Income Tax Returns (2024, 2025)",
+        "Invoice listings by month",
+        "VAT reconciliation worksheets",
+        "Supporting financial documentation"
+      ]
+    }
+  },
+  "footer": {
+    "respectfully": "Respectfully submitted,",
+    "companyName": "Laapak Electronics Trading",
+    "companyNameArabic": "لابك لتجاره الالكترونيات",
+    "taxId": "767043545",
+    "date": "12 January 2026",
+    "signature": "[Authorized Signatory]",
+    "stamp": "[Company Stamp]"
+  }
+}

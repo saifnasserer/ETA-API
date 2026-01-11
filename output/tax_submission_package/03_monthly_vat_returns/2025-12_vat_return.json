@@ -1,0 +1,174 @@
+{
+  "period": "2025-12",
+  "periodName": "December 2025",
+  "submissionType": "Late Voluntary - Law 5/2025",
+  "legalBasis": "Law 5/2025 Article 3",
+  "companyId": "767043545",
+  "companyName": "لابك لتجاره الالكترونيات",
+  "invoiceCount": 16,
+  "generatedDate": "2026-01-11T23:39:28.826Z",
+  "sales": {
+    "local": {
+      "value": 458500,
+      "tax": 59830,
+      "items": [
+        {
+          "id": "075",
+          "date": "12/4/2025",
+          "customer": "شركه الايد للاستثمار السياحي",
+          "total": 6500,
+          "vat": 845,
+          "type": "Invoice"
+        },
+        {
+          "id": "080",
+          "date": "12/10/2025",
+          "customer": "سويديش جروب للاعمال المتكامله",
+          "total": 20500,
+          "vat": 2665,
+          "type": "Invoice"
+        },
+        {
+          "id": "082",
+          "date": "12/17/2025",
+          "customer": "جاما للانظمة الامنيه والمقاولات",
+          "total": 22500,
+          "vat": 3150,
+          "type": "Invoice"
+        },
+        {
+          "id": "083",
+          "date": "12/28/2025",
+          "customer": "شركه الموزعون المتحدون",
+          "total": 4500,
+          "vat": 585,
+          "type": "Invoice"
+        },
+        {
+          "id": "084",
+          "date": "12/30/2025",
+          "customer": "شركه سيستم وان",
+          "total": 238500,
+          "vat": 31005,
+          "type": "Invoice"
+        },
+        {
+          "id": "085",
+          "date": "12/31/2025",
+          "customer": "العتال جروب كومبانيز",
+          "total": 57500,
+          "vat": 7475,
+          "type": "Invoice"
+        },
+        {
+          "id": "76",
+          "date": "12/4/2025",
+          "customer": "العتال جروب كومبانيز",
+          "total": 43000,
+          "vat": 5590,
+          "type": "Invoice"
+        },
+        {
+          "id": "77",
+          "date": "12/4/2025",
+          "customer": "العتال جروب كومبانيز",
+          "total": 16000,
+          "vat": 2080,
+          "type": "Invoice"
+        },
+        {
+          "id": "78",
+          "date": "12/4/2025",
+          "customer": "العتال جروب كومبانيز",
+          "total": 16000,
+          "vat": 2080,
+          "type": "Invoice"
+        },
+        {
+          "id": "79",
+          "date": "12/4/2025",
+          "customer": "سويديش جروب للاعمال المتكامله",
+          "total": 20500,
+          "vat": 2665,
+          "type": "Invoice"
+        },
+        {
+          "id": "81",
+          "date": "12/17/2025",
+          "customer": "سويديش جروب للاعمال المتكامله",
+          "total": 13000,
+          "vat": 1690,
+          "type": "Invoice"
+        }
+      ]
+    },
+    "exports": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    },
+    "exempt": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    }
+  },
+  "inputs": {
+    "value": 982000,
+    "tax": 137480,
+    "items": [
+      {
+        "id": "2035",
+        "date": "12/4/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 123000,
+        "vat": 17220,
+        "type": "Invoice"
+      },
+      {
+        "id": "2039",
+        "date": "12/4/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 60000,
+        "vat": 8400,
+        "type": "Invoice"
+      },
+      {
+        "id": "2117",
+        "date": "12/14/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 62500,
+        "vat": 8750,
+        "type": "Invoice"
+      },
+      {
+        "id": "2166",
+        "date": "12/17/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 179000,
+        "vat": 25060,
+        "type": "Invoice"
+      },
+      {
+        "id": "2381",
+        "date": "12/30/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 557500,
+        "vat": 78050,
+        "type": "Invoice"
+      }
+    ]
+  },
+  "totals": {
+    "salesTax": 59830,
+    "inputTax": 137480,
+    "netDue": -77650
+  },
+  "summary": {
+    "totalSales": 458500,
+    "totalOutputVAT": 59830,
+    "totalInputVAT": 137480,
+    "netVATDue": -77650,
+    "status": "Refundable"
+  }
+}

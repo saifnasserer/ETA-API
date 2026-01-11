@@ -1,0 +1,102 @@
+{
+  "period": "2025-03",
+  "periodName": "March 2025",
+  "submissionType": "Late Voluntary - Law 5/2025",
+  "legalBasis": "Law 5/2025 Article 3",
+  "companyId": "767043545",
+  "companyName": "لابك لتجاره الالكترونيات",
+  "invoiceCount": 7,
+  "generatedDate": "2026-01-11T23:39:28.804Z",
+  "sales": {
+    "local": {
+      "value": 173480,
+      "tax": 23125.2,
+      "items": [
+        {
+          "id": "013",
+          "date": "3/6/2025",
+          "customer": "مارجينز للتنميه العمرانيه واداره المشروعات",
+          "total": 45000,
+          "vat": 6300,
+          "type": "Invoice"
+        },
+        {
+          "id": "015",
+          "date": "3/19/2025",
+          "customer": "جي تي سي اي لانشاءات مشاريع الطاقه والبنيه التحتيه",
+          "total": 116200,
+          "vat": 15106,
+          "type": "Invoice"
+        },
+        {
+          "id": "016",
+          "date": "3/27/2025",
+          "customer": "متيوري للصناعه والتجاره والمقاولات",
+          "total": 12280,
+          "vat": 1719.2,
+          "type": "Invoice"
+        }
+      ]
+    },
+    "exports": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    },
+    "exempt": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    }
+  },
+  "inputs": {
+    "value": 169850,
+    "tax": 23779,
+    "items": [
+      {
+        "id": "165",
+        "date": "3/5/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 44000,
+        "vat": 6160,
+        "type": "Invoice"
+      },
+      {
+        "id": "184",
+        "date": "3/18/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 109450,
+        "vat": 15323,
+        "type": "Invoice"
+      },
+      {
+        "id": "186",
+        "date": "3/18/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 4400,
+        "vat": 616,
+        "type": "Invoice"
+      },
+      {
+        "id": "190",
+        "date": "3/20/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 12000,
+        "vat": 1680,
+        "type": "Invoice"
+      }
+    ]
+  },
+  "totals": {
+    "salesTax": 23125.2,
+    "inputTax": 23779,
+    "netDue": -653.7999999999993
+  },
+  "summary": {
+    "totalSales": 173480,
+    "totalOutputVAT": 23125.2,
+    "totalInputVAT": 23779,
+    "netVATDue": -653.7999999999993,
+    "status": "Refundable"
+  }
+}

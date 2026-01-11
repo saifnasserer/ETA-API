@@ -1,0 +1,78 @@
+{
+  "period": "2025-07",
+  "periodName": "July 2025",
+  "submissionType": "Late Voluntary - Law 5/2025",
+  "legalBasis": "Law 5/2025 Article 3",
+  "companyId": "767043545",
+  "companyName": "لابك لتجاره الالكترونيات",
+  "invoiceCount": 4,
+  "generatedDate": "2026-01-11T23:39:28.814Z",
+  "sales": {
+    "local": {
+      "value": 6000,
+      "tax": 780,
+      "items": [
+        {
+          "id": "035",
+          "date": "7/1/2025",
+          "customer": "شركه الايد للاستثمار السياحي",
+          "total": 6000,
+          "vat": 780,
+          "type": "Invoice"
+        }
+      ]
+    },
+    "exports": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    },
+    "exempt": {
+      "value": 0,
+      "tax": 0,
+      "items": []
+    }
+  },
+  "inputs": {
+    "value": 88650,
+    "tax": 12411,
+    "items": [
+      {
+        "id": "635",
+        "date": "7/1/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 5600,
+        "vat": 784,
+        "type": "Invoice"
+      },
+      {
+        "id": "780",
+        "date": "7/29/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 8250,
+        "vat": 1155,
+        "type": "Invoice"
+      },
+      {
+        "id": "809",
+        "date": "7/31/2025",
+        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
+        "total": 74800,
+        "vat": 10472,
+        "type": "Invoice"
+      }
+    ]
+  },
+  "totals": {
+    "salesTax": 780,
+    "inputTax": 12411,
+    "netDue": -11631
+  },
+  "summary": {
+    "totalSales": 6000,
+    "totalOutputVAT": 780,
+    "totalInputVAT": 12411,
+    "netVATDue": -11631,
+    "status": "Refundable"
+  }
+}

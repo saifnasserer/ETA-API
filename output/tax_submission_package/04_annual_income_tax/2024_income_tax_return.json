@@ -1,0 +1,121 @@
+{
+  "year": 2024,
+  "fiscalPeriod": "2024-01-01 to 2024-12-31",
+  "companyId": "767043545",
+  "companyName": "لابك لتجاره الالكترونيات",
+  "submissionType": "Late Voluntary - Law 5/2025",
+  "legalBasis": "Law 5/2025 Article 3",
+  "generatedDate": "2026-01-11T23:26:02.991Z",
+  "revenue": {
+    "totalRevenue": 520331,
+    "salesInvoiceCount": 6,
+    "breakdown": [
+      {
+        "id": "0001",
+        "date": "2024-11-15T19:29:17Z",
+        "customer": "جى تى سي اي لانشاءات مشاريع الطاقة والبنية التحتيه",
+        "amount": 55412
+      },
+      {
+        "id": "0002",
+        "date": "2024-11-15T19:37:32Z",
+        "customer": "جى تى سي اي لانشاءات مشاريع الطاقة والبنية التحتيه",
+        "amount": 49120
+      },
+      {
+        "id": "0003",
+        "date": "2024-11-15T20:03:51Z",
+        "customer": "جى تى سي اي لانشاءات مشاريع الطاقة والبنية التحتيه",
+        "amount": 303749
+      },
+      {
+        "id": "0004",
+        "date": "2024-11-27T11:43:54Z",
+        "customer": "الشركه الهندسيه لخدمات المشاريع    بروسيرفيس",
+        "amount": 73900
+      },
+      {
+        "id": "0006",
+        "date": "2024-12-04T21:19:37Z",
+        "customer": "جى تى سي اي لانشاءات مشاريع الطاقة والبنية التحتيه",
+        "amount": 4650
+      },
+      {
+        "id": "0008",
+        "date": "2024-12-13T15:33:53Z",
+        "customer": "شريف فؤاد محمود وشركاه هواريزون للمشروعات الهندسيه",
+        "amount": 33500
+      }
+    ]
+  },
+  "cogs": {
+    "totalCOGS": 564792.98,
+    "purchaseInvoiceCount": 7,
+    "breakdown": [
+      {
+        "id": "10224350",
+        "date": "2024-11-10T00:00:00Z",
+        "supplier": "Egypt trust - Branch",
+        "amount": 2192.98
+      },
+      {
+        "id": "2233",
+        "date": "2024-11-13T10:48:08Z",
+        "supplier": "تشيمو للتوريدات و التجارة العامة",
+        "amount": 102400
+      },
+      {
+        "id": "2266",
+        "date": "2024-11-13T18:36:26Z",
+        "supplier": "تشيمو للتوريدات و التجارة العامة",
+        "amount": 299700
+      },
+      {
+        "id": "2319",
+        "date": "2024-11-25T22:01:00Z",
+        "supplier": "سيد بيومي سيد عبدالفتاح سيلفر اوفيس للتوريدات العمومية",
+        "amount": 72000
+      },
+      {
+        "id": "2495",
+        "date": "2024-11-27T06:14:00Z",
+        "supplier": "سيد بيومي سيد عبدالفتاح سيلفر اوفيس للتوريدات العمومية",
+        "amount": 52600
+      },
+      {
+        "id": "2904",
+        "date": "2024-12-03T05:47:00Z",
+        "supplier": "سيد بيومي سيد عبدالفتاح سيلفر اوفيس للتوريدات العمومية",
+        "amount": 3300
+      },
+      {
+        "id": "3579",
+        "date": "2024-12-12T05:47:00Z",
+        "supplier": "سيد بيومي سيد عبدالفتاح سيلفر اوفيس للتوريدات العمومية",
+        "amount": 32600
+      }
+    ]
+  },
+  "grossProfit": -44461.98,
+  "operatingExpenses": {
+    "salaries": 0,
+    "rent": 0,
+    "utilities": 0,
+    "marketing": 0,
+    "depreciation": 0,
+    "other": 0,
+    "total": 0
+  },
+  "netProfit": -44461.98,
+  "taxableIncome": 0,
+  "corporateTax": 0,
+  "taxRate": 0.225,
+  "notes": [
+    "Partial year: Company started operations Nov 10, 2024",
+    "Only 2 months of operations (Nov-Dec 2024)",
+    "Loss of 44,461.98 EGP - No tax due",
+    "Loss can be carried forward to offset future profits",
+    "WARNING: No operating expenses entered - tax calculation incomplete",
+    "Please add salaries, rent, utilities, and other expenses"
+  ]
+}

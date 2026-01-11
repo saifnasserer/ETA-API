@@ -306,6 +306,111 @@ app.get('/api/invoices/:internalId', (req, res) => {
     }
 });
 
+// ==================== TAX COMPLIANCE API ENDPOINTS ====================
+
+const multiPeriodVAT = require('../tax_engine/multi_period_vat');
+const annualIncomeTax = require('../tax_engine/annual_income_tax');
+const delayNoteGenerator = require('../tax_engine/delay_note_generator');
+const accountantPackage = require('../tax_engine/accountant_package');
+
+// API: Get Tax Compliance Dashboard Data
+app.get('/api/tax/dashboard', (req, res) => {
+    try {
+        // Load VAT summary
+        const vatSummaryPath = path.join(__dirname, '../output/all_vat_returns_summary.json');
+        let vatData = null;
+
+        if (fs.existsSync(vatSummaryPath)) {
+            vatData = JSON.parse(fs.readFileSync(vatSummaryPath, 'utf8'));
+        }
+
+        // Load income tax returns
+        const incomeTax = {};
+        const tax2024Path = path.join(__dirname, '../output/2024_income_tax_return.json');
+        const tax2025Path = path.join(__dirname, '../output/2025_income_tax_return.json');
+
+        if (fs.existsSync(tax2024Path)) {
+            incomeTax['2024'] = JSON.parse(fs.readFileSync(tax2024Path, 'utf8'));
+        }
+        if (fs.existsSync(tax2025Path)) {
+            incomeTax['2025'] = JSON.parse(fs.readFileSync(tax2025Path, 'utf8'));
+        }
+
+        // Calculate days remaining until deadline
+        const deadline = new Date('2026-08-12');
+        const now = new Date();
+        const daysRemaining = Math.ceil((deadline - now) / (1000 * 60 * 60 * 24));
+
+        res.json({
+            vat: vatData,
+            incomeTax: incomeTax,
+            deadline: '2026-08-12',
+            daysRemaining: daysRemaining,
+            generated: new Date().toISOString()
+        });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// API: Generate all VAT returns
+app.post('/api/tax/vat/generate-all', (req, res) => {
+    try {
+        const returns = multiPeriodVAT.generateAllMonthlyReturns();
+        res.json({ success: true, count: returns.length, returns });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// API: Get specific month VAT return
+app.get('/api/tax/vat/month/:month', (req, res) => {
+    try {
+        const { month } = req.params;
+        const filePath = path.join(__dirname, '../output', `${month}_vat_return.json`);
+
+        if (!fs.existsSync(filePath)) {
+            return res.status(404).json({ error: 'VAT return not found for this month' });
+        }
+
+        const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        res.json(data);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// API: Generate income tax returns
+app.post('/api/tax/income/generate', (req, res) => {
+    try {
+        const { expenses2024, expenses2025 } = req.body;
+        const result = annualIncomeTax.generateBothYears(expenses2024 || {}, expenses2025 || {});
+        res.json({ success: true, result });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// API: Get delay explanation note
+app.get('/api/tax/delay-note', (req, res) => {
+    try {
+        const note = delayNoteGenerator.generateNote();
+        res.json(note);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// API: Download accountant package (ZIP)
+app.get('/api/tax/download-package', async (req, res) => {
+    try {
+        const zipPath = await accountantPackage.generatePackage();
+        res.download(zipPath, path.basename(zipPath));
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 // Start Server
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
