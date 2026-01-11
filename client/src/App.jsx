@@ -12,9 +12,11 @@ function App() {
   const [invoices, setInvoices] = useState([]);
   const [summary, setSummary] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [lang, setLang] = useState('ar');
 
   useEffect(() => {
     // Check for query params (e.g. ?invoiceId=123) for direct linking
+    // ... same log ...
     const params = new URLSearchParams(window.location.search);
     const linkedInvoiceId = params.get('invoiceId');
     if (linkedInvoiceId) {
@@ -48,29 +50,31 @@ function App() {
   }, []);
 
   return (
-    <Layout activeTab={activeTab} setActiveTab={setActiveTab}>
+    <Layout activeTab={activeTab} setActiveTab={setActiveTab} lang={lang} setLang={setLang}>
       {loading ? (
         <div className="flex items-center justify-center h-64">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
         </div>
       ) : (
-        <>
-          {activeTab === 'dashboard' && <Dashboard summary={summary} />}
+        <div dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+          {activeTab === 'dashboard' && <Dashboard summary={summary} lang={lang} />}
           {activeTab === 'invoices' && !selectedInvoiceId && (
             <InvoiceList
               invoices={invoices}
               onViewDetails={(id) => setSelectedInvoiceId(id)}
+              lang={lang}
             />
           )}
           {activeTab === 'invoices' && selectedInvoiceId && (
             <InvoiceDetails
               internalId={selectedInvoiceId}
               onBack={() => setSelectedInvoiceId(null)}
+              lang={lang}
             />
           )}
-          {activeTab === 'tax-return' && <TaxReturn />}
-          {activeTab === 'fetch' && <FetchInvoices />}
-        </>
+          {activeTab === 'tax-return' && <TaxReturn lang={lang} />}
+          {activeTab === 'fetch' && <FetchInvoices lang={lang} />}
+        </div>
       )}
     </Layout>
   );

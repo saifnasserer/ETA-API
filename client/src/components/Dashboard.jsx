@@ -2,6 +2,8 @@ import React from 'react';
 import { ArrowUpRight, ArrowDownRight, AlertTriangle, CheckCircle } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
+import { translations } from '../translations';
+
 const StatCard = ({ title, value, subtext, type, icon: Icon }) => (
     <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 w-full hover:shadow-md transition-shadow">
         <div className="flex justify-between items-start mb-4">
@@ -24,11 +26,12 @@ const StatCard = ({ title, value, subtext, type, icon: Icon }) => (
     </div>
 );
 
-const Dashboard = ({ summary }) => {
-    if (!summary) return <div className="p-12 text-center text-gray-400">Loading Dashboard...</div>;
+const Dashboard = ({ summary, lang }) => {
+    const t = translations[lang] || translations['en'];
+
+    if (!summary) return <div className="p-12 text-center text-gray-400">{t.processing}</div>;
 
     // Find latest period or aggregate
-    // For demo, just taking the first one or summing
     const currentPeriod = summary[0] || {};
 
     return (
@@ -36,30 +39,30 @@ const Dashboard = ({ summary }) => {
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <StatCard
-                    title="Total VAT Payable"
+                    title={t.vatPayable}
                     value={`EGP ${currentPeriod.totalVAT?.toLocaleString() || '0'}`}
-                    subtext="+12.5% vs last month"
+                    subtext={`+12.5% ${t.vsLastMonth}`}
                     type="primary"
                     icon={ArrowUpRight}
                 />
                 <StatCard
-                    title="Total Sales (Taxable)"
+                    title={t.totalRevenue}
                     value={`EGP ${currentPeriod.totalSales?.toLocaleString() || '0'}`}
-                    subtext={`${currentPeriod.invoiceCount || 0} Invoices Processed`}
+                    subtext={`${currentPeriod.invoiceCount || 0} ${t.invoicesCount}`}
                     type="success"
                     icon={CheckCircle}
                 />
                 <StatCard
-                    title="WHT Deducted"
+                    title={t.whtDeducted}
                     value={`EGP ${currentPeriod.totalWHT?.toLocaleString() || '0'}`}
-                    subtext="Under 1% Total"
+                    subtext={t.underOnePercent}
                     type="warning"
                     icon={ArrowDownRight}
                 />
                 <StatCard
-                    title="Compliance Flags"
+                    title={t.complianceFlags}
                     value={currentPeriod.flags?.length || 0}
-                    subtext="Requires Review"
+                    subtext={t.warning}
                     type="danger"
                     icon={AlertTriangle}
                 />
@@ -68,14 +71,31 @@ const Dashboard = ({ summary }) => {
             {/* Charts Section */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 lg:col-span-2">
-                    <h3 className="text-lg font-bold text-gray-800 mb-6">Tax Liability Trend</h3>
+                    <h3 className="text-lg font-bold text-gray-800 mb-6">{t.taxOverview}</h3>
                     <div className="h-80 w-full" style={{ minHeight: '320px' }}>
                         <ResponsiveContainer width="100%" height="100%">
-                            <BarChart data={summary}>
+                            <BarChart
+                                data={summary}
+                                margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
+                            >
                                 <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                                <XAxis dataKey="period" />
-                                <YAxis />
-                                <Tooltip />
+                                <XAxis
+                                    dataKey="period"
+                                    tick={{ fontSize: 12 }}
+                                />
+                                <YAxis
+                                    width={80}
+                                    tick={{ fontSize: 12 }}
+                                    tickFormatter={(value) => {
+                                        if (value >= 1000000) return `${(value / 1000000).toFixed(1)}M`;
+                                        if (value >= 1000) return `${(value / 1000).toFixed(0)}K`;
+                                        return value;
+                                    }}
+                                />
+                                <Tooltip
+                                    formatter={(value) => `EGP ${value.toLocaleString()}`}
+                                    contentStyle={{ fontSize: '12px' }}
+                                />
                                 <Bar dataKey="totalVAT" fill="#2563eb" radius={[4, 4, 0, 0]} />
                             </BarChart>
                         </ResponsiveContainer>
@@ -83,21 +103,25 @@ const Dashboard = ({ summary }) => {
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h3 className="text-lg font-bold text-gray-800 mb-4">Action Items</h3>
+                    <h3 className="text-lg font-bold text-gray-800 mb-4">{t.recentActivity}</h3>
                     <div className="space-y-4">
-                        {currentPeriod.flags?.slice(0, 5).map((flag, idx) => (
-                            <div key={idx} className="flex items-start bg-red-50 p-3 rounded-lg border border-red-100">
-                                <AlertTriangle className="text-red-500 mt-0.5 mr-3 shrink-0" size={16} />
-                                <div>
-                                    <p className="text-sm font-semibold text-red-700">{flag.type}</p>
-                                    <p className="text-xs text-red-600 mt-1">{flag.message}</p>
+                        {currentPeriod.flags?.slice(0, 5).map((flag, idx) => {
+                            // Translate flag type using error_ prefix
+                            const translatedType = t[`error_${flag.type}`] || flag.type;
+                            return (
+                                <div key={idx} className="flex items-start bg-red-50 p-3 rounded-lg border border-red-100">
+                                    <AlertTriangle className={`text-red-500 mt-0.5 shrink-0 ${lang === 'ar' ? 'ml-3' : 'mr-3'}`} size={16} />
+                                    <div className={lang === 'ar' ? 'text-right' : ''}>
+                                        <p className="text-sm font-semibold text-red-700">{translatedType}</p>
+                                        <p className="text-xs text-red-600 mt-1">{flag.message}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                         {!currentPeriod.flags?.length && (
                             <div className="text-center py-8 text-gray-400">
                                 <CheckCircle className="mx-auto mb-2 text-green-400 h-8 w-8" />
-                                <p>No Compliance Issues Found</p>
+                                <p>{t.noIssues}</p>
                             </div>
                         )}
                     </div>

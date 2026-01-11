@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { Download, Calendar, Hash, Loader2, CheckCircle, XCircle, AlertCircle } from 'lucide-react';
+import { translations } from '../translations';
 
-const FetchInvoices = () => {
+const FetchInvoices = ({ lang }) => {
     const [fetchMode, setFetchMode] = useState('month'); // 'month' or 'id'
     const [month, setMonth] = useState('2024-11');
     const [internalId, setInternalId] = useState('');
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState(null);
+
+    const t = translations[lang] || translations['en'];
 
     const handleFetch = async () => {
         setLoading(true);
@@ -43,9 +46,9 @@ const FetchInvoices = () => {
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <h1 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
                     <Download className="text-blue-600" />
-                    Fetch Invoices from ETA
+                    {t.fetchTitle}
                 </h1>
-                <p className="text-gray-500 mt-1">Download full invoice documents from Egyptian Tax Authority</p>
+                <p className="text-gray-500 mt-1">{t.fetchSubtitle}</p>
             </div>
 
             {/* Fetch Mode Selector */}
@@ -54,22 +57,22 @@ const FetchInvoices = () => {
                     <button
                         onClick={() => setFetchMode('month')}
                         className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${fetchMode === 'month'
-                                ? 'bg-blue-600 text-white shadow-md'
-                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                            ? 'bg-blue-600 text-white shadow-md'
+                            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                             }`}
                     >
-                        <Calendar className="inline mr-2" size={18} />
-                        Fetch by Month
+                        <Calendar className={`inline ${lang === 'ar' ? 'ml-2' : 'mr-2'}`} size={18} />
+                        {lang === 'ar' ? 'جلب بالشهر' : 'Fetch by Month'}
                     </button>
                     <button
                         onClick={() => setFetchMode('id')}
                         className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${fetchMode === 'id'
-                                ? 'bg-blue-600 text-white shadow-md'
-                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                            ? 'bg-blue-600 text-white shadow-md'
+                            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                             }`}
                     >
-                        <Hash className="inline mr-2" size={18} />
-                        Fetch by Internal ID
+                        <Hash className={`inline ${lang === 'ar' ? 'ml-2' : 'mr-2'}`} size={18} />
+                        {lang === 'ar' ? 'جلب بالرقم الداخلي' : 'Fetch by Internal ID'}
                     </button>
                 </div>
 
@@ -77,7 +80,7 @@ const FetchInvoices = () => {
                 {fetchMode === 'month' ? (
                     <div className="space-y-3">
                         <label className="block text-sm font-medium text-gray-700">
-                            Select Month
+                            {t.date}
                         </label>
                         <input
                             type="month"
@@ -86,13 +89,13 @@ const FetchInvoices = () => {
                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                         <p className="text-sm text-gray-500">
-                            Fetches all valid invoices for the selected month
+                            {lang === 'ar' ? 'جلب جميع الفواتير الصحيحة للشهر المحدد' : 'Fetches all valid invoices for the selected month'}
                         </p>
                     </div>
                 ) : (
                     <div className="space-y-3">
                         <label className="block text-sm font-medium text-gray-700">
-                            Internal ID
+                            {t.internalId}
                         </label>
                         <input
                             type="text"
@@ -102,7 +105,7 @@ const FetchInvoices = () => {
                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                         <p className="text-sm text-gray-500">
-                            Fetches a specific invoice by its internal ID
+                            {lang === 'ar' ? 'جلب فاتورة محددة برقمها الداخلي' : 'Fetches a specific invoice by its internal ID'}
                         </p>
                     </div>
                 )}
@@ -116,12 +119,12 @@ const FetchInvoices = () => {
                     {loading ? (
                         <>
                             <Loader2 className="animate-spin" size={20} />
-                            Fetching from ETA...
+                            {t.fetching}
                         </>
                     ) : (
                         <>
                             <Download size={20} />
-                            Fetch Invoices
+                            {t.syncNow}
                         </>
                     )}
                 </button>
@@ -130,8 +133,8 @@ const FetchInvoices = () => {
             {/* Result Display */}
             {result && (
                 <div className={`p-6 rounded-xl shadow-sm border ${result.success
-                        ? 'bg-green-50 border-green-200'
-                        : 'bg-red-50 border-red-200'
+                    ? 'bg-green-50 border-green-200'
+                    : 'bg-red-50 border-red-200'
                     }`}>
                     <div className="flex items-start gap-3">
                         {result.success ? (
@@ -142,7 +145,7 @@ const FetchInvoices = () => {
                         <div className="flex-1">
                             <h3 className={`font-bold text-lg ${result.success ? 'text-green-800' : 'text-red-800'
                                 }`}>
-                                {result.success ? 'Success!' : 'Error'}
+                                {result.success ? (lang === 'ar' ? 'نجاح!' : 'Success!') : (lang === 'ar' ? 'خطأ' : 'Error')}
                             </h3>
                             {result.success ? (
                                 <div className="mt-2 space-y-2">
@@ -185,12 +188,11 @@ const FetchInvoices = () => {
                 <div className="flex gap-3">
                     <AlertCircle className="text-blue-600 flex-shrink-0 mt-1" size={20} />
                     <div className="text-sm text-blue-800">
-                        <p className="font-medium mb-2">Important Notes:</p>
-                        <ul className="list-disc list-inside space-y-1 text-blue-700">
-                            <li>Invoices are saved to <code className="bg-blue-100 px-1 rounded">invoices_full/</code> directory</li>
-                            <li>Only valid invoices are fetched</li>
-                            <li>Rate limiting may occur - failed invoices can be retried later</li>
-                            <li>Fetching by month may take several minutes for large datasets</li>
+                        <p className="font-medium mb-2">{lang === 'ar' ? 'ملاحظات هامة:' : 'Important Notes:'}</p>
+                        <ul className={`list-disc list-inside space-y-1 text-blue-700 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
+                            <li>{lang === 'ar' ? 'يتم حفظ الفواتير في مجلد' : 'Invoices are saved to'} <code className="bg-blue-100 px-1 rounded">invoices_full/</code></li>
+                            <li>{lang === 'ar' ? 'يتم جلب الفواتير الصحيحة فقط' : 'Only valid invoices are fetched'}</li>
+                            <li>{lang === 'ar' ? 'قد يحدث تقييد للمعدل - يمكن إعادة المحاولة لاحقاً' : 'Rate limiting may occur - failed invoices can be retried later'}</li>
                         </ul>
                     </div>
                 </div>
