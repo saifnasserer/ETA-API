@@ -2,48 +2,51 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Printer, Download, MapPin, Calendar, Hash, Building2, Phone, Mail } from 'lucide-react';
 import { translations } from '../translations';
 
-const InvoiceDetails = ({ internalId, onBack, lang }) => {
-    const [invoice, setInvoice] = useState(null);
-    const [loading, setLoading] = useState(true);
+const InvoiceDetails = ({ invoice: initialInvoice, onBack, lang }) => {
+    const [invoice, setInvoice] = useState(initialInvoice);
     const [parsedDoc, setParsedDoc] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     const t = translations[lang] || translations['en'];
 
     useEffect(() => {
-        const fetchInvoice = async () => {
-            try {
-                const res = await fetch(`/api/invoices/${internalId}`);
-                if (res.ok) {
-                    const data = await res.json();
-                    setInvoice(data);
-                    // Parse the inner document string
-                    if (data.document) {
-                        try {
+        const loadInvoice = async () => {
+            // If we don't have the document field, fetch full invoice details
+            if (initialInvoice && !initialInvoice.document) {
+                try {
+                    setLoading(true);
+                    const res = await fetch(`/api/invoices/${initialInvoice.internalID}`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        setInvoice(data);
+                        if (data.document) {
                             setParsedDoc(JSON.parse(data.document));
-                        } catch (e) {
-                            console.error("Failed to parse document string", e);
                         }
                     }
+                } catch (error) {
+                    console.error("Failed to fetch invoice details:", error);
+                } finally {
+                    setLoading(false);
                 }
-            } catch (error) {
-                console.error("Error fetching invoice details", error);
-            } finally {
-                setLoading(false);
+            } else if (initialInvoice && initialInvoice.document) {
+                // We already have the full invoice
+                try {
+                    setParsedDoc(JSON.parse(initialInvoice.document));
+                } catch (e) {
+                    console.error("Failed to parse document string", e);
+                }
             }
         };
+        loadInvoice();
+    }, [initialInvoice]);
 
-        if (internalId) {
-            fetchInvoice();
-        }
-    }, [internalId]);
-
-    if (loading) return (
+    if (!initialInvoice || loading) return (
         <div className="flex justify-center items-center h-96">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
         </div>
     );
 
-    if (!invoice || !parsedDoc) return (
+    if (!parsedDoc) return (
         <div className="text-center p-12 text-gray-500">
             <p>{lang === 'ar' ? 'الفاتورة غير موجودة أو تنسيق غير صالح.' : 'Invoice not found or invalid format.'}</p>
             <button onClick={onBack} className="mt-4 text-blue-600 hover:underline">{lang === 'ar' ? 'العودة' : 'Go Back'}</button>

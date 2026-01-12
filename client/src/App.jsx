@@ -19,12 +19,12 @@ function App() {
 
   useEffect(() => {
     // Check for query params (e.g. ?invoiceId=123) for direct linking
-    // ... same log ...
     const params = new URLSearchParams(window.location.search);
     const linkedInvoiceId = params.get('invoiceId');
     if (linkedInvoiceId) {
       setActiveTab('invoices');
-      setSelectedInvoiceId(linkedInvoiceId);
+      // We'll need to find the invoice object by ID
+      // For now, just set the active tab
     }
 
     // Determine API URL (Relative for Proxy)

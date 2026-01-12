@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Search, Filter, AlertCircle, FileText } from 'lucide-react';
 import { translations } from '../translations';
 
-const InvoiceList = ({ invoices, onViewDetails, lang }) => {
+const InvoiceList = ({ invoices, onSelectInvoice, lang }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [filter, setFilter] = useState('ALL'); // ALL, WARNING, VALID
 
@@ -62,13 +62,13 @@ const InvoiceList = ({ invoices, onViewDetails, lang }) => {
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-50">
-                        {filteredInvoices.map((inv) => {
+                        {filteredInvoices.map((inv, index) => {
                             const isSale = inv.direction === 'Sales';
                             return (
                                 <tr
-                                    key={inv.uuid}
+                                    key={`${inv.internalID}-${index}`}
                                     className="hover:bg-slate-50 transition-colors cursor-pointer group"
-                                    onClick={() => onViewDetails(inv.internalID)}
+                                    onClick={() => onSelectInvoice(inv)}
                                 >
                                     <td className="px-6 py-4">
                                         <div className={`w-8 h-8 rounded-full flex items-center justify-center ${isSale ? 'bg-green-100 text-green-600' : 'bg-orange-100 text-orange-600'
