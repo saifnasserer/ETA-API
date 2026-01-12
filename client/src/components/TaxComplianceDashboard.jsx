@@ -2,12 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { FileText, Download, Calendar, AlertCircle, CheckCircle2, Clock, TrendingDown, TrendingUp, Package } from 'lucide-react';
 import { translations } from '../translations';
 
-const TaxComplianceDashboard = ({ lang }) => {
+const TaxComplianceDashboard = ({ lang, onSelectMonth }) => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [generating, setGenerating] = useState(false);
-    const [selectedMonth, setSelectedMonth] = useState(null);
-    const [monthDetails, setMonthDetails] = useState(null);
 
     const t = translations[lang] || translations['en'];
 
@@ -46,17 +44,6 @@ const TaxComplianceDashboard = ({ lang }) => {
             alert('Failed to download package');
         } finally {
             setGenerating(false);
-        }
-    };
-
-    const handleViewMonth = async (month) => {
-        try {
-            const res = await fetch(`/api/tax/vat/month/${month}`);
-            const json = await res.json();
-            setMonthDetails(json);
-            setSelectedMonth(month);
-        } catch (error) {
-            console.error('Failed to fetch month details:', error);
         }
     };
 
@@ -115,22 +102,22 @@ const TaxComplianceDashboard = ({ lang }) => {
                 <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                     <div className="flex items-center justify-between mb-2">
                         <FileText className="text-blue-600" size={24} />
-                        <span className="text-xs text-gray-500">Total</span>
+                        <span className="text-xs text-gray-500">{t.total}</span>
                     </div>
                     <div className="text-3xl font-bold text-gray-900">{vat.totalReturns + 2}</div>
-                    <div className="text-sm text-gray-600">Tax Declarations</div>
-                    <div className="text-xs text-gray-500 mt-1">{vat.totalReturns} VAT + 2 Income</div>
+                    <div className="text-sm text-gray-600">{t.totalDeclarations}</div>
+                    <div className="text-xs text-gray-500 mt-1">{vat.totalReturns} {t.monthlyVATReturns.split(' ')[0]} + 2 {t.corporateIncomeTax.split(' ')[0]}</div>
                 </div>
 
                 {/* Total Invoices */}
                 <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                     <div className="flex items-center justify-between mb-2">
                         <FileText className="text-green-600" size={24} />
-                        <span className="text-xs text-gray-500">Processed</span>
+                        <span className="text-xs text-gray-500">{lang === 'ar' ? 'معالج' : 'Processed'}</span>
                     </div>
                     <div className="text-3xl font-bold text-gray-900">{vat.totals.totalInvoices}</div>
-                    <div className="text-sm text-gray-600">Total Invoices</div>
-                    <div className="text-xs text-gray-500 mt-1">Nov 2024 - Dec 2025</div>
+                    <div className="text-sm text-gray-600">{t.totalInvoicesProcessed}</div>
+                    <div className="text-xs text-gray-500 mt-1">{lang === 'ar' ? 'نوفمبر 2024 - ديسمبر 2025' : 'Nov 2024 - Dec 2025'}</div>
                 </div>
 
                 {/* Net VAT Position */}
@@ -141,14 +128,14 @@ const TaxComplianceDashboard = ({ lang }) => {
                         ) : (
                             <TrendingUp className="text-blue-600" size={24} />
                         )}
-                        <span className="text-xs text-gray-500">Net VAT</span>
+                        <span className="text-xs text-gray-500">{t.netVATPosition}</span>
                     </div>
                     <div className={`text-3xl font-bold ${vat.totals.totalNetVATDue < 0 ? 'text-green-600' : 'text-blue-600'}`}>
-                        {Math.abs(vat.totals.totalNetVATDue).toLocaleString()}
+                        {Math.abs(vat.totals.totalNetVATDue).toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')}
                     </div>
-                    <div className="text-sm text-gray-600">EGP</div>
+                    <div className="text-sm text-gray-600">{lang === 'ar' ? 'ج.م' : 'EGP'}</div>
                     <div className={`text-xs mt-1 font-medium ${vat.totals.totalNetVATDue < 0 ? 'text-green-600' : 'text-blue-600'}`}>
-                        {vat.totals.totalNetVATDue < 0 ? 'REFUNDABLE' : 'PAYABLE'}
+                        {vat.totals.totalNetVATDue < 0 ? t.refundable : t.payable}
                     </div>
                 </div>
 
@@ -156,21 +143,21 @@ const TaxComplianceDashboard = ({ lang }) => {
                 <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                     <div className="flex items-center justify-between mb-2">
                         <FileText className="text-purple-600" size={24} />
-                        <span className="text-xs text-gray-500">Income Tax</span>
+                        <span className="text-xs text-gray-500">{t.corporateIncomeTax}</span>
                     </div>
                     <div className="text-3xl font-bold text-gray-900">
                         {incomeTax['2024'] && incomeTax['2025']
-                            ? (incomeTax['2024'].corporateTax + incomeTax['2025'].corporateTax).toLocaleString()
+                            ? (incomeTax['2024'].corporateTax + incomeTax['2025'].corporateTax).toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')
                             : '0'}
                     </div>
-                    <div className="text-sm text-gray-600">EGP</div>
+                    <div className="text-sm text-gray-600">{lang === 'ar' ? 'ج.م' : 'EGP'}</div>
                     <div className="text-xs text-gray-500 mt-1">2024 + 2025</div>
                 </div>
             </div>
 
             {/* Action Buttons */}
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold text-gray-900 mb-4">Quick Actions</h3>
+                <h3 className="font-bold text-gray-900 mb-4">{t.quickActions}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <button
                         onClick={handleDownloadPackage}
@@ -178,7 +165,7 @@ const TaxComplianceDashboard = ({ lang }) => {
                         className="flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                         <Package size={20} />
-                        {generating ? 'Generating...' : 'Download Accountant Package'}
+                        {generating ? t.generating : t.downloadAccountantPackage}
                     </button>
 
                     <button
@@ -195,7 +182,7 @@ const TaxComplianceDashboard = ({ lang }) => {
                         className="flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700"
                     >
                         <Download size={20} />
-                        Download Delay Note
+                        {t.downloadDelayNote}
                     </button>
 
                     <button
@@ -206,7 +193,7 @@ const TaxComplianceDashboard = ({ lang }) => {
                         className="flex items-center justify-center gap-2 bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700"
                     >
                         <FileText size={20} />
-                        Regenerate All Returns
+                        {t.regenerateAllReturns}
                     </button>
                 </div>
             </div>
@@ -214,42 +201,43 @@ const TaxComplianceDashboard = ({ lang }) => {
             {/* Monthly VAT Returns */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
                 <div className="bg-blue-50 px-6 py-4 border-b border-blue-100">
-                    <h2 className="font-bold text-blue-900">Monthly VAT Returns ({vat.totalReturns})</h2>
-                    <p className="text-blue-600 text-sm">Click on any month to view details</p>
+                    <h2 className="font-bold text-blue-900">{t.monthlyVATReturns} ({vat.totalReturns})</h2>
+                    <p className="text-blue-600 text-sm">{t.clickMonthDetails}</p>
                 </div>
 
                 <div className="overflow-x-auto">
-                    <table className="w-full">
+                    <table className="w-full" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
                         <thead className="bg-gray-50 text-xs text-gray-500 font-medium">
                             <tr>
-                                <th className="px-6 py-3 text-left">Period</th>
-                                <th className="px-6 py-3 text-right">Invoices</th>
-                                <th className="px-6 py-3 text-right">Sales</th>
-                                <th className="px-6 py-3 text-right">Output VAT</th>
-                                <th className="px-6 py-3 text-right">Input VAT</th>
-                                <th className="px-6 py-3 text-right">Net Due</th>
-                                <th className="px-6 py-3 text-center">Status</th>
-                                <th className="px-6 py-3 text-center">Action</th>
+                                <th className={`px-6 py-3 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>{t.period}</th>
+                                <th className="px-6 py-3 text-center">{t.invoicesCount}</th>
+                                <th className="px-6 py-3 text-center">{t.sales}</th>
+                                <th className="px-6 py-3 text-center">{t.outputVAT}</th>
+                                <th className="px-6 py-3 text-center">{t.inputVAT}</th>
+                                <th className="px-6 py-3 text-center">{t.netDue}</th>
+                                <th className="px-6 py-3 text-center">{t.statusLabel}</th>
+                                <th className="px-6 py-3 text-center">{t.action}</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-100">
                             {vat.periods.map((period) => (
-                                <tr key={period.period} className="hover:bg-gray-50">
-                                    <td className="px-6 py-4 font-medium text-gray-900">{period.periodName}</td>
-                                    <td className="px-6 py-4 text-right text-gray-600">{period.invoiceCount}</td>
-                                    <td className="px-6 py-4 text-right text-gray-900 font-mono text-sm">
-                                        {/* We'll need to add this to the summary */}
+                                <tr key={period.period} className="hover:bg-gray-50 cursor-pointer" onClick={() => onSelectMonth && onSelectMonth(period.period)}>
+                                    <td className={`px-6 py-4 font-medium text-gray-900 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
+                                        {period.periodName}
+                                    </td>
+                                    <td className="px-6 py-4 text-center text-gray-600">{period.invoiceCount}</td>
+                                    <td className="px-6 py-4 text-center text-gray-900 font-mono text-sm">
                                         -
                                     </td>
-                                    <td className="px-6 py-4 text-right text-gray-900 font-mono text-sm">
+                                    <td className="px-6 py-4 text-center text-gray-900 font-mono text-sm">
                                         -
                                     </td>
-                                    <td className="px-6 py-4 text-right text-gray-900 font-mono text-sm">
+                                    <td className="px-6 py-4 text-center text-gray-900 font-mono text-sm">
                                         -
                                     </td>
-                                    <td className="px-6 py-4 text-right font-bold">
+                                    <td className="px-6 py-4 text-center font-bold">
                                         <span className={period.netVATDue < 0 ? 'text-green-600' : 'text-blue-600'}>
-                                            {period.netVATDue.toLocaleString()} EGP
+                                            {period.netVATDue.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')} {lang === 'ar' ? 'ج.م' : 'EGP'}
                                         </span>
                                     </td>
                                     <td className="px-6 py-4 text-center">
@@ -257,15 +245,18 @@ const TaxComplianceDashboard = ({ lang }) => {
                                             ? 'bg-green-100 text-green-700'
                                             : 'bg-blue-100 text-blue-700'
                                             }`}>
-                                            {period.status}
+                                            {period.status === 'Refundable' ? t.refundable : t.payable}
                                         </span>
                                     </td>
                                     <td className="px-6 py-4 text-center">
                                         <button
-                                            onClick={() => handleViewMonth(period.period)}
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                onSelectMonth && onSelectMonth(period.period);
+                                            }}
                                             className="text-blue-600 hover:text-blue-800 text-sm font-medium"
                                         >
-                                            View Details
+                                            {t.viewDetails}
                                         </button>
                                     </td>
                                 </tr>
@@ -273,14 +264,14 @@ const TaxComplianceDashboard = ({ lang }) => {
                         </tbody>
                         <tfoot className="bg-gray-50 font-bold">
                             <tr>
-                                <td className="px-6 py-4">TOTAL</td>
-                                <td className="px-6 py-4 text-right">{vat.totals.totalInvoices}</td>
-                                <td className="px-6 py-4 text-right">{vat.totals.totalSales.toLocaleString()}</td>
-                                <td className="px-6 py-4 text-right">{vat.totals.totalOutputVAT.toLocaleString()}</td>
-                                <td className="px-6 py-4 text-right">{vat.totals.totalInputVAT.toLocaleString()}</td>
-                                <td className="px-6 py-4 text-right">
+                                <td className={`px-6 py-4 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>{t.total}</td>
+                                <td className="px-6 py-4 text-center">{vat.totals.totalInvoices}</td>
+                                <td className="px-6 py-4 text-center">{vat.totals.totalSales.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')}</td>
+                                <td className="px-6 py-4 text-center">{vat.totals.totalOutputVAT.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')}</td>
+                                <td className="px-6 py-4 text-center">{vat.totals.totalInputVAT.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')}</td>
+                                <td className="px-6 py-4 text-center">
                                     <span className={vat.totals.totalNetVATDue < 0 ? 'text-green-600' : 'text-blue-600'}>
-                                        {vat.totals.totalNetVATDue.toLocaleString()} EGP
+                                        {vat.totals.totalNetVATDue.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')} {lang === 'ar' ? 'ج.م' : 'EGP'}
                                     </span>
                                 </td>
                                 <td colSpan="2"></td>
@@ -295,29 +286,29 @@ const TaxComplianceDashboard = ({ lang }) => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {incomeTax['2024'] && (
                         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                            <h3 className="font-bold text-gray-900 mb-4">Income Tax 2024</h3>
+                            <h3 className="font-bold text-gray-900 mb-4">{t.incomeTax2024}</h3>
                             <div className="space-y-3">
                                 <div className="flex justify-between">
-                                    <span className="text-gray-600">Revenue</span>
-                                    <span className="font-mono">{incomeTax['2024'].revenue.totalRevenue.toLocaleString()} EGP</span>
+                                    <span className="text-gray-600">{t.revenue}</span>
+                                    <span className="font-mono">{incomeTax['2024'].revenue.totalRevenue.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')} {lang === 'ar' ? 'ج.م' : 'EGP'}</span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span className="text-gray-600">COGS</span>
-                                    <span className="font-mono">{incomeTax['2024'].cogs.totalCOGS.toLocaleString()} EGP</span>
+                                    <span className="text-gray-600">{t.cogs}</span>
+                                    <span className="font-mono">{incomeTax['2024'].cogs.totalCOGS.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')} {lang === 'ar' ? 'ج.م' : 'EGP'}</span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span className="text-gray-600">Gross Profit</span>
+                                    <span className="text-gray-600">{t.grossProfit}</span>
                                     <span className={`font-mono ${incomeTax['2024'].grossProfit < 0 ? 'text-red-600' : 'text-green-600'}`}>
-                                        {incomeTax['2024'].grossProfit.toLocaleString()} EGP
+                                        {incomeTax['2024'].grossProfit.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')} {lang === 'ar' ? 'ج.م' : 'EGP'}
                                     </span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span className="text-gray-600">Operating Expenses</span>
-                                    <span className="font-mono">{incomeTax['2024'].operatingExpenses.total.toLocaleString()} EGP</span>
+                                    <span className="text-gray-600">{t.operatingExpenses}</span>
+                                    <span className="font-mono">{incomeTax['2024'].operatingExpenses.total.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')} {lang === 'ar' ? 'ج.م' : 'EGP'}</span>
                                 </div>
                                 <div className="border-t pt-3 flex justify-between font-bold">
-                                    <span>Corporate Tax (22.5%)</span>
-                                    <span className="text-blue-600">{incomeTax['2024'].corporateTax.toLocaleString()} EGP</span>
+                                    <span>{t.corporateTaxRate}</span>
+                                    <span className="text-blue-600">{incomeTax['2024'].corporateTax.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')} {lang === 'ar' ? 'ج.م' : 'EGP'}</span>
                                 </div>
                                 {incomeTax['2024'].notes && incomeTax['2024'].notes.length > 0 && (
                                     <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded text-sm">
@@ -332,29 +323,29 @@ const TaxComplianceDashboard = ({ lang }) => {
 
                     {incomeTax['2025'] && (
                         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                            <h3 className="font-bold text-gray-900 mb-4">Income Tax 2025</h3>
+                            <h3 className="font-bold text-gray-900 mb-4">{t.incomeTax2025}</h3>
                             <div className="space-y-3">
                                 <div className="flex justify-between">
-                                    <span className="text-gray-600">Revenue</span>
-                                    <span className="font-mono">{incomeTax['2025'].revenue.totalRevenue.toLocaleString()} EGP</span>
+                                    <span className="text-gray-600">{t.revenue}</span>
+                                    <span className="font-mono">{incomeTax['2025'].revenue.totalRevenue.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')} {lang === 'ar' ? 'ج.م' : 'EGP'}</span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span className="text-gray-600">COGS</span>
-                                    <span className="font-mono">{incomeTax['2025'].cogs.totalCOGS.toLocaleString()} EGP</span>
+                                    <span className="text-gray-600">{t.cogs}</span>
+                                    <span className="font-mono">{incomeTax['2025'].cogs.totalCOGS.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')} {lang === 'ar' ? 'ج.م' : 'EGP'}</span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span className="text-gray-600">Gross Profit</span>
+                                    <span className="text-gray-600">{t.grossProfit}</span>
                                     <span className={`font-mono ${incomeTax['2025'].grossProfit < 0 ? 'text-red-600' : 'text-green-600'}`}>
-                                        {incomeTax['2025'].grossProfit.toLocaleString()} EGP
+                                        {incomeTax['2025'].grossProfit.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')} {lang === 'ar' ? 'ج.م' : 'EGP'}
                                     </span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span className="text-gray-600">Operating Expenses</span>
-                                    <span className="font-mono">{incomeTax['2025'].operatingExpenses.total.toLocaleString()} EGP</span>
+                                    <span className="text-gray-600">{t.operatingExpenses}</span>
+                                    <span className="font-mono">{incomeTax['2025'].operatingExpenses.total.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')} {lang === 'ar' ? 'ج.م' : 'EGP'}</span>
                                 </div>
                                 <div className="border-t pt-3 flex justify-between font-bold">
-                                    <span>Corporate Tax (22.5%)</span>
-                                    <span className="text-blue-600">{incomeTax['2025'].corporateTax.toLocaleString()} EGP</span>
+                                    <span>{t.corporateTaxRate}</span>
+                                    <span className="text-blue-600">{incomeTax['2025'].corporateTax.toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')} {lang === 'ar' ? 'ج.م' : 'EGP'}</span>
                                 </div>
                                 {incomeTax['2025'].notes && incomeTax['2025'].notes.length > 0 && (
                                     <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded text-sm">
@@ -369,101 +360,6 @@ const TaxComplianceDashboard = ({ lang }) => {
                 </div>
             )}
 
-            {/* Month Details Modal */}
-            {selectedMonth && monthDetails && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" onClick={() => setSelectedMonth(null)}>
-                    <div className="bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-auto" onClick={(e) => e.stopPropagation()}>
-                        <div className="sticky top-0 bg-blue-600 text-white p-6 rounded-t-xl">
-                            <div className="flex justify-between items-start">
-                                <div>
-                                    <h2 className="text-2xl font-bold">{monthDetails.periodName}</h2>
-                                    <p className="text-blue-100">VAT Return Details</p>
-                                </div>
-                                <button
-                                    onClick={() => setSelectedMonth(null)}
-                                    className="text-white hover:text-gray-200 text-2xl"
-                                >
-                                    ×
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="p-6 space-y-6">
-                            {/* Summary */}
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                <div className="bg-gray-50 p-4 rounded-lg">
-                                    <div className="text-sm text-gray-600 mb-1">Total Sales</div>
-                                    <div className="text-xl font-bold">{monthDetails.summary.totalSales.toLocaleString()}</div>
-                                </div>
-                                <div className="bg-gray-50 p-4 rounded-lg">
-                                    <div className="text-sm text-gray-600 mb-1">Output VAT</div>
-                                    <div className="text-xl font-bold text-blue-600">{monthDetails.summary.totalOutputVAT.toLocaleString()}</div>
-                                </div>
-                                <div className="bg-gray-50 p-4 rounded-lg">
-                                    <div className="text-sm text-gray-600 mb-1">Input VAT</div>
-                                    <div className="text-xl font-bold text-green-600">{monthDetails.summary.totalInputVAT.toLocaleString()}</div>
-                                </div>
-                                <div className="bg-gray-50 p-4 rounded-lg">
-                                    <div className="text-sm text-gray-600 mb-1">Net Due</div>
-                                    <div className={`text-xl font-bold ${monthDetails.summary.netVATDue < 0 ? 'text-green-600' : 'text-blue-600'}`}>
-                                        {monthDetails.summary.netVATDue.toLocaleString()}
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Sales Breakdown */}
-                            <div>
-                                <h3 className="font-bold text-gray-900 mb-3">Sales (Output VAT)</h3>
-                                <div className="space-y-2">
-                                    <div className="flex justify-between p-3 bg-blue-50 rounded">
-                                        <span>Local Sales (14% VAT)</span>
-                                        <span className="font-mono">{monthDetails.sales.local.value.toLocaleString()} EGP</span>
-                                    </div>
-                                    <div className="flex justify-between p-3 bg-gray-50 rounded">
-                                        <span>Exports (0% VAT)</span>
-                                        <span className="font-mono">{monthDetails.sales.exports.value.toLocaleString()} EGP</span>
-                                    </div>
-                                    <div className="flex justify-between p-3 bg-gray-50 rounded">
-                                        <span>Exempt Sales</span>
-                                        <span className="font-mono">{monthDetails.sales.exempt.value.toLocaleString()} EGP</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Inputs */}
-                            <div>
-                                <h3 className="font-bold text-gray-900 mb-3">Purchases (Input VAT)</h3>
-                                <div className="flex justify-between p-3 bg-green-50 rounded">
-                                    <span>Deductible Input VAT</span>
-                                    <span className="font-mono">{monthDetails.inputs.value.toLocaleString()} EGP</span>
-                                </div>
-                            </div>
-
-                            <div className="flex justify-end gap-3 pt-4 border-t">
-                                <button
-                                    onClick={() => setSelectedMonth(null)}
-                                    className="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
-                                >
-                                    Close
-                                </button>
-                                <button
-                                    onClick={async () => {
-                                        const blob = new Blob([JSON.stringify(monthDetails, null, 2)], { type: 'application/json' });
-                                        const url = window.URL.createObjectURL(blob);
-                                        const a = document.createElement('a');
-                                        a.href = url;
-                                        a.download = `${selectedMonth}_vat_return.json`;
-                                        a.click();
-                                    }}
-                                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-                                >
-                                    Download JSON
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
         </div>
     );
 };

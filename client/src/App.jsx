@@ -6,12 +6,14 @@ import InvoiceDetails from './components/InvoiceDetails';
 import TaxReturn from './components/TaxReturn';
 import FetchInvoices from './components/FetchInvoices';
 import TaxComplianceDashboard from './components/TaxComplianceDashboard';
+import FormalVATReport from './components/FormalVATReport';
 
 function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
-  const [selectedInvoiceId, setSelectedInvoiceId] = useState(null);
+  const [selectedInvoice, setSelectedInvoice] = useState(null);
+  const [selectedVATMonth, setSelectedVATMonth] = useState(null);
   const [invoices, setInvoices] = useState([]);
-  const [summary, setSummary] = useState([]);
+  const [summary, setSummary] = useState(null);
   const [loading, setLoading] = useState(true);
   const [lang, setLang] = useState('ar');
 
@@ -58,24 +60,33 @@ function App() {
         </div>
       ) : (
         <div dir={lang === 'ar' ? 'rtl' : 'ltr'}>
-          {activeTab === 'dashboard' && <Dashboard summary={summary} lang={lang} />}
-          {activeTab === 'invoices' && !selectedInvoiceId && (
-            <InvoiceList
-              invoices={invoices}
-              onViewDetails={(id) => setSelectedInvoiceId(id)}
-              lang={lang}
-            />
-          )}
-          {activeTab === 'invoices' && selectedInvoiceId && (
+          {selectedInvoice ? (
             <InvoiceDetails
-              internalId={selectedInvoiceId}
-              onBack={() => setSelectedInvoiceId(null)}
+              invoice={selectedInvoice}
+              onBack={() => setSelectedInvoice(null)}
               lang={lang}
             />
+          ) : selectedVATMonth ? (
+            <FormalVATReport
+              selectedMonth={selectedVATMonth}
+              onBack={() => setSelectedVATMonth(null)}
+              lang={lang}
+            />
+          ) : (
+            <>
+              {activeTab === 'dashboard' && <Dashboard invoices={invoices} summary={summary} lang={lang} />}
+              {activeTab === 'invoices' && (
+                <InvoiceList
+                  invoices={invoices}
+                  onSelectInvoice={setSelectedInvoice}
+                  lang={lang}
+                />
+              )}
+              {activeTab === 'tax-return' && <TaxReturn lang={lang} />}
+              {activeTab === 'tax-compliance' && <TaxComplianceDashboard lang={lang} onSelectMonth={setSelectedVATMonth} />}
+              {activeTab === 'fetch' && <FetchInvoices lang={lang} />}
+            </>
           )}
-          {activeTab === 'tax-return' && <TaxReturn lang={lang} />}
-          {activeTab === 'tax-compliance' && <TaxComplianceDashboard lang={lang} />}
-          {activeTab === 'fetch' && <FetchInvoices lang={lang} />}
         </div>
       )}
     </Layout>
