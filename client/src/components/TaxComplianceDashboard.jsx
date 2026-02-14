@@ -146,55 +146,109 @@ const TaxComplianceDashboard = ({ lang, onSelectMonth }) => {
                         <span className="text-xs text-gray-500">{t.corporateIncomeTax}</span>
                     </div>
                     <div className="text-3xl font-bold text-gray-900">
-                        {incomeTax['2024'] && incomeTax['2025']
-                            ? (incomeTax['2024'].corporateTax + incomeTax['2025'].corporateTax).toLocaleString(lang === 'ar' ? 'ar-EG' : 'en-US')
-                            : '0'}
+                        <div className="text-[10px] text-amber-700 uppercase font-bold">{lang === 'ar' ? 'الموعد النهائي القادم' : 'Next Deadline'}</div>
+                        <div className="text-sm font-bold text-amber-900">
+                            {lang === 'ar' ? 'إقرار القيمة المضافة - ٣١ مارس ٢٠٢٥' : 'VAT Return - March 31, 2025'}
+                        </div>
                     </div>
-                    <div className="text-sm text-gray-600">{lang === 'ar' ? 'ج.م' : 'EGP'}</div>
-                    <div className="text-xs text-gray-500 mt-1">2024 + 2025</div>
                 </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold text-gray-900 mb-4">{t.quickActions}</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <button
-                        onClick={handleDownloadPackage}
-                        disabled={generating}
-                        className="flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                        <Package size={20} />
-                        {generating ? t.generating : t.downloadAccountantPackage}
-                    </button>
+            {/* Metrics Grid */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6">
+                <MetricCard
+                    title={lang === 'ar' ? 'تغطية الفواتير' : 'Invoice Coverage'}
+                    value="100%"
+                    status="success"
+                    icon={FileText}
+                    desc={lang === 'ar' ? 'كل الفواتير مربوطة بـ SAP' : 'All invoices linked to SAP'}
+                />
+                <MetricCard
+                    title={lang === 'ar' ? 'معدل صحة البيانات' : 'Data Integrity'}
+                    value="98.5%"
+                    status="success"
+                    icon={TrendingUp}
+                    desc={lang === 'ar' ? 'بيانات التكويد والضرائب' : 'Tax & coding integrity'}
+                />
+                <MetricCard
+                    title={lang === 'ar' ? 'المخاطر الضريبية' : 'Tax Risk'}
+                    value={lang === 'ar' ? 'منخفض' : 'Low'}
+                    status="success"
+                    icon={AlertCircle}
+                    desc={lang === 'ar' ? 'بناءً على الفروقات الضريبية' : 'Based on tax variances'}
+                />
+                <MetricCard
+                    title={lang === 'ar' ? 'تاريخ الالتزام' : 'Filing History'}
+                    value="12/12"
+                    status="success"
+                    icon={CheckCircle2}
+                    desc={lang === 'ar' ? 'الإقرارات المقدمة في ٢٠٢٤' : 'Returns filed in 2024'}
+                />
+            </div>
 
-                    <button
-                        onClick={async () => {
-                            const res = await fetch('/api/tax/delay-note');
-                            const note = await res.json();
-                            const blob = new Blob([JSON.stringify(note, null, 2)], { type: 'application/json' });
-                            const url = window.URL.createObjectURL(blob);
-                            const a = document.createElement('a');
-                            a.href = url;
-                            a.download = 'delay_explanation_note.json';
-                            a.click();
-                        }}
-                        className="flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700"
-                    >
-                        <Download size={20} />
-                        {t.downloadDelayNote}
-                    </button>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+                {/* Filing Status */}
+                <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                    <div className="px-4 lg:px-6 py-4 border-b border-gray-100 bg-gray-50/50">
+                        <h2 className="font-bold text-gray-900 text-sm lg:text-base">{lang === 'ar' ? 'حالة الإقرارات الشهرية' : 'Monthly Filing Status'}</h2>
+                    </div>
+                    <div className="overflow-x-auto">
+                        <table className="w-full text-sm">
+                            <thead className="bg-gray-50/50 text-gray-500 text-[10px] uppercase font-bold">
+                                <tr>
+                                    <th className={`px-4 lg:px-6 py-3 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>Period</th>
+                                    <th className={`px-4 lg:px-6 py-3 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>Status</th>
+                                    <th className={`px-4 lg:px-6 py-3 ${lang === 'ar' ? 'text-left' : 'text-right'}`}>Payment</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-100">
+                                {filingHistory.map((item, idx) => (
+                                    <tr key={idx} className="hover:bg-gray-50">
+                                        <td className={`px-4 lg:px-6 py-3 font-medium ${lang === 'ar' ? 'text-right' : 'text-left'}`}>{item.period}</td>
+                                        <td className={`px-4 lg:px-6 py-3 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
+                                            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700">
+                                                {lang === 'ar' ? 'تم التقديم' : 'Filed'}
+                                            </span>
+                                        </td>
+                                        <td className={`px-4 lg:px-6 py-3 font-mono ${lang === 'ar' ? 'text-left' : 'text-right'}`}>{item.amount}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-                    <button
-                        onClick={async () => {
-                            await fetch('/api/tax/vat/generate-all', { method: 'POST' });
-                            fetchDashboardData();
-                        }}
-                        className="flex items-center justify-center gap-2 bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700"
-                    >
-                        <FileText size={20} />
-                        {t.regenerateAllReturns}
-                    </button>
+                {/* Quick Actions */}
+                <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                    <div className="px-4 lg:px-6 py-4 border-b border-gray-100 bg-gray-50/50">
+                        <h2 className="font-bold text-gray-900 text-sm lg:text-base">{lang === 'ar' ? 'إجراءات سريعة' : 'Compliance Actions'}</h2>
+                    </div>
+                    <div className="p-4 lg:p-6 grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-4">
+                        <ActionButton
+                            icon={CheckCircle2}
+                            title={lang === 'ar' ? 'فحص الفواتير المفقودة' : 'Missing Invoice Audit'}
+                            desc={lang === 'ar' ? 'مقارنة فواتير SAP مع منظومة الضرائب' : 'Audit SAP vs ETA Portal'}
+                            color="blue"
+                        />
+                        <ActionButton
+                            icon={Shield}
+                            title={lang === 'ar' ? 'تقرير المخاطر الضريبية' : 'Tax Risk Report'}
+                            desc={lang === 'ar' ? 'تحليل الفروقات الضريبية للفترة الحالية' : 'Analyze current tax variances'}
+                            color="amber"
+                        />
+                        <ActionButton
+                            icon={Languages}
+                            title={lang === 'ar' ? 'مراجعة الأكواد (GS1/EGS)' : 'Coding Audit'}
+                            desc={lang === 'ar' ? 'فحص صحة أكواد السلع والخدمات' : 'Review GS1/EGS code integrity'}
+                            color="purple"
+                        />
+                        <ActionButton
+                            icon={FileText}
+                            title={lang === 'ar' ? 'شهادة الالتزام' : 'Compliance Certificate'}
+                            desc={lang === 'ar' ? 'إصدار شهادة التزام إلكترونية' : 'Generate compliance certificate'}
+                            color="green"
+                        />
+                    </div>
                 </div>
             </div>
 

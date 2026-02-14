@@ -35,99 +35,19 @@ const FetchInvoices = ({ lang }) => {
             }
         } catch (error) {
             setResult({ success: false, error: error.message });
+            setStatus({ type: 'error', message: error.message });
         } finally {
             setLoading(false);
         }
     };
 
     return (
-        <div className="space-y-6">
-            {/* Header */}
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h1 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
+        <div className="max-w-4xl mx-auto space-y-4 lg:space-y-6 pb-20">
+            <div className="bg-white p-4 lg:p-6 rounded-xl shadow-sm border border-gray-100">
+                <h1 className="text-xl lg:text-2xl font-bold text-gray-800 flex items-center gap-2 mb-2">
                     <Download className="text-blue-600" />
-                    {t.fetchTitle}
+                    {t.fetchData}
                 </h1>
-                <p className="text-gray-500 mt-1">{t.fetchSubtitle}</p>
-            </div>
-
-            {/* Fetch Mode Selector */}
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="flex gap-4 mb-6">
-                    <button
-                        onClick={() => setFetchMode('month')}
-                        className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${fetchMode === 'month'
-                            ? 'bg-blue-600 text-white shadow-md'
-                            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                            }`}
-                    >
-                        <Calendar className={`inline ${lang === 'ar' ? 'ml-2' : 'mr-2'}`} size={18} />
-                        {lang === 'ar' ? 'جلب بالشهر' : 'Fetch by Month'}
-                    </button>
-                    <button
-                        onClick={() => setFetchMode('id')}
-                        className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${fetchMode === 'id'
-                            ? 'bg-blue-600 text-white shadow-md'
-                            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                            }`}
-                    >
-                        <Hash className={`inline ${lang === 'ar' ? 'ml-2' : 'mr-2'}`} size={18} />
-                        {lang === 'ar' ? 'جلب بالرقم الداخلي' : 'Fetch by Internal ID'}
-                    </button>
-                </div>
-
-                {/* Input Fields */}
-                {fetchMode === 'month' ? (
-                    <div className="space-y-3">
-                        <label className="block text-sm font-medium text-gray-700">
-                            {t.date}
-                        </label>
-                        <input
-                            type="month"
-                            value={month}
-                            onChange={(e) => setMonth(e.target.value)}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        />
-                        <p className="text-sm text-gray-500">
-                            {lang === 'ar' ? 'جلب جميع الفواتير الصحيحة للشهر المحدد' : 'Fetches all valid invoices for the selected month'}
-                        </p>
-                    </div>
-                ) : (
-                    <div className="space-y-3">
-                        <label className="block text-sm font-medium text-gray-700">
-                            {t.internalId}
-                        </label>
-                        <input
-                            type="text"
-                            value={internalId}
-                            onChange={(e) => setInternalId(e.target.value)}
-                            placeholder="e.g., 0001, 104, 2319"
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        />
-                        <p className="text-sm text-gray-500">
-                            {lang === 'ar' ? 'جلب فاتورة محددة برقمها الداخلي' : 'Fetches a specific invoice by its internal ID'}
-                        </p>
-                    </div>
-                )}
-
-                {/* Fetch Button */}
-                <button
-                    onClick={handleFetch}
-                    disabled={loading || (fetchMode === 'id' && !internalId)}
-                    className="mt-6 w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
-                >
-                    {loading ? (
-                        <>
-                            <Loader2 className="animate-spin" size={20} />
-                            {t.fetching}
-                        </>
-                    ) : (
-                        <>
-                            <Download size={20} />
-                            {t.syncNow}
-                        </>
-                    )}
-                </button>
             </div>
 
             {/* Result Display */}

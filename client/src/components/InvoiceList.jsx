@@ -18,10 +18,10 @@ const InvoiceList = ({ invoices, onSelectInvoice, lang }) => {
     });
 
     return (
-        <div className="space-y-6">
+        <div className="space-y-4 lg:space-y-6">
             {/* Toolbar */}
-            <div className="flex justify-between items-center bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                <div className="relative w-96">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center bg-white p-4 rounded-xl shadow-sm border border-gray-100 gap-4">
+                <div className="relative w-full md:w-96">
                     <Search className={`absolute ${lang === 'ar' ? 'right-3' : 'left-3'} top-1/2 -translate-y-1/2 text-gray-400`} size={18} />
                     <input
                         type="text"
@@ -31,16 +31,16 @@ const InvoiceList = ({ invoices, onSelectInvoice, lang }) => {
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
                 </div>
-                <div className="flex space-x-2">
+                <div className="flex gap-2 w-full md:w-auto">
                     <button
                         onClick={() => setFilter('ALL')}
-                        className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filter === 'ALL' ? 'bg-slate-800 text-white' : 'bg-white text-slate-600 border border-gray-200 hover:bg-gray-50'}`}
+                        className={`flex-1 md:flex-none px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filter === 'ALL' ? 'bg-slate-800 text-white' : 'bg-white text-slate-600 border border-gray-200 hover:bg-gray-50'}`}
                     >
                         {t.noInvoices.includes('found') ? 'All Invoices' : 'كل الفواتير'}
                     </button>
                     <button
                         onClick={() => setFilter('WARNING')}
-                        className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filter === 'WARNING' ? 'bg-amber-100 text-amber-700 border border-amber-200' : 'bg-white text-slate-600 border border-gray-200 hover:bg-gray-50'}`}
+                        className={`flex-1 md:flex-none px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filter === 'WARNING' ? 'bg-amber-100 text-amber-700 border border-amber-200' : 'bg-white text-slate-600 border border-gray-200 hover:bg-gray-50'}`}
                     >
                         <AlertCircle size={14} className={`inline ${lang === 'ar' ? 'ml-2' : 'mr-2'}`} />
                         {t.warning}
@@ -48,8 +48,8 @@ const InvoiceList = ({ invoices, onSelectInvoice, lang }) => {
                 </div>
             </div>
 
-            {/* Table */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+            {/* Table (Desktop) */}
+            <div className="hidden lg:block bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
                 <table className="w-full text-left text-sm">
                     <thead className="bg-gray-50 border-b border-gray-100 text-gray-500 font-medium uppercase tracking-wider">
                         <tr>
@@ -98,17 +98,61 @@ const InvoiceList = ({ invoices, onSelectInvoice, lang }) => {
                                 </tr>
                             );
                         })}
-                        {filteredInvoices.length === 0 && (
-                            <tr>
-                                <td colSpan="6" className="px-6 py-12 text-center text-gray-300">
-                                    <FileText className="mx-auto h-12 w-12 mb-3 opacity-20" />
-                                    {t.noInvoices}
-                                </td>
-                            </tr>
-                        )}
                     </tbody>
                 </table>
             </div>
+
+            {/* Cards (Mobile) */}
+            <div className="lg:hidden space-y-3">
+                {filteredInvoices.map((inv, index) => {
+                    const isSale = inv.direction === 'Sales';
+                    return (
+                        <div
+                            key={`mobile-inv-${inv.internalID}-${index}`}
+                            className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 space-y-3 active:bg-gray-50 transition-colors"
+                            onClick={() => onSelectInvoice(inv)}
+                        >
+                            <div className="flex justify-between items-start">
+                                <div className="flex items-center gap-3">
+                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-lg ${isSale ? 'bg-green-100 text-green-600' : 'bg-orange-100 text-orange-600'
+                                        }`}>
+                                        {isSale ? (lang === 'ar' ? '↖' : '↗') : (lang === 'ar' ? '↘' : '↙')}
+                                    </div>
+                                    <div>
+                                        <div className="font-bold text-slate-900">{isSale ? inv.receiverName : inv.issuerName}</div>
+                                        <div className="text-xs font-mono text-slate-500">ID: {inv.internalID}</div>
+                                    </div>
+                                </div>
+                                <div className="text-right">
+                                    <div className="font-bold text-slate-900 text-lg">{inv.totalAmount.toLocaleString()}</div>
+                                    <div className="text-[10px] text-gray-400 uppercase tracking-tighter">EGP Total</div>
+                                </div>
+                            </div>
+                            <div className="flex justify-between items-center pt-2 border-t border-gray-50">
+                                <div className="text-xs text-gray-400">
+                                    {new Date(inv.dateTimeIssued).toLocaleDateString()}
+                                </div>
+                                {inv.vatAmount === 0 && !inv.isExport ? (
+                                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800">
+                                        {t.warning}
+                                    </span>
+                                ) : (
+                                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600">
+                                        {t.valid}
+                                    </span>
+                                )}
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+
+            {filteredInvoices.length === 0 && (
+                <div className="bg-white px-6 py-12 rounded-xl border border-gray-100 text-center text-gray-300">
+                    <FileText className="mx-auto h-12 w-12 mb-3 opacity-20" />
+                    {t.noInvoices}
+                </div>
+            )}
         </div>
     );
 };

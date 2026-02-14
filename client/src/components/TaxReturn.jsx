@@ -187,18 +187,18 @@ const TaxReturn = ({ lang }) => {
     };
 
     return (
-        <div className="space-y-6 pb-20">
+        <div className="space-y-4 lg:space-y-6 pb-20">
             {/* Header */}
-            <div className="flex justify-between items-center bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center bg-white p-4 lg:p-6 rounded-xl shadow-sm border border-gray-100 gap-4">
                 <div>
-                    <h1 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
+                    <h1 className="text-xl lg:text-2xl font-bold text-gray-800 flex items-center gap-2">
                         <FileText className="text-blue-600" />
                         {t.taxReturnTitle}
                     </h1>
-                    <p className="text-gray-500">{t.taxReturnSubtitle}</p>
+                    <p className="text-sm text-gray-500">{t.taxReturnSubtitle}</p>
                 </div>
-                <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-2 bg-gray-50 px-2 py-2 rounded-lg border border-gray-200">
+                <div className="w-full md:w-auto">
+                    <div className="flex items-center justify-between md:justify-start gap-2 bg-gray-50 px-3 py-2 rounded-lg border border-gray-200">
                         <button
                             onClick={() => changeMonth(-1)}
                             disabled={minMonth && month <= minMonth}
@@ -206,7 +206,7 @@ const TaxReturn = ({ lang }) => {
                         >
                             {lang === 'ar' ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
                         </button>
-                        <span className="text-gray-900 font-bold min-w-[120px] text-center">
+                        <span className="text-gray-900 font-bold text-sm lg:text-base min-w-[100px] lg:min-w-[120px] text-center">
                             {new Date(month + '-01').toLocaleDateString(lang === 'ar' ? 'ar-EG' : 'en-US', { month: 'long', year: 'numeric' })}
                         </span>
                         <button
@@ -220,20 +220,20 @@ const TaxReturn = ({ lang }) => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
                 {/* Left Column: Form Details */}
-                <div className="lg:col-span-2 space-y-6">
+                <div className="lg:col-span-2 space-y-4 lg:space-y-6">
 
                     {/* Sales Section */}
                     <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                        <div className="bg-blue-50 px-6 py-4 border-b border-blue-100 flex justify-between items-center">
+                        <div className="bg-blue-50 px-4 lg:px-6 py-4 border-b border-blue-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-0">
                             <div>
-                                <h2 className="font-bold text-blue-900">{t.salesOutputTax}</h2>
-                                <p className="text-blue-600 text-xs">{t.salesDesc}</p>
+                                <h2 className="font-bold text-blue-900 text-sm lg:text-base">{t.salesOutputTax}</h2>
+                                <p className="text-blue-600 text-[10px] lg:text-xs">{t.salesDesc}</p>
                             </div>
-                            <div className={`${lang === 'ar' ? 'text-left' : 'text-right'}`}>
-                                <div className="text-xs text-blue-600 uppercase font-bold">Total Sales Tax</div>
-                                <div className="text-xl font-bold text-blue-900">{totals.salesTax.toLocaleString()} EGP</div>
+                            <div className={`${lang === 'ar' ? 'text-right' : 'text-right md:text-right'}`}>
+                                <div className="text-[10px] text-blue-600 uppercase font-bold">Total Sales Tax</div>
+                                <div className="text-lg lg:text-xl font-bold text-blue-900">{totals.salesTax.toLocaleString()} EGP</div>
                             </div>
                         </div>
                         <div>
@@ -260,14 +260,14 @@ const TaxReturn = ({ lang }) => {
 
                     {/* Inputs Section */}
                     <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                        <div className="bg-green-50 px-6 py-4 border-b border-green-100 flex justify-between items-center">
+                        <div className="bg-green-50 px-4 lg:px-6 py-4 border-b border-green-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-0">
                             <div>
-                                <h2 className="font-bold text-green-900">{t.inputsDeductibleTax}</h2>
-                                <p className="text-green-600 text-xs">{t.inputsDesc}</p>
+                                <h2 className="font-bold text-green-900 text-sm lg:text-base">{t.inputsDeductibleTax}</h2>
+                                <p className="text-green-600 text-[10px] lg:text-xs">{t.inputsDesc}</p>
                             </div>
-                            <div className={`${lang === 'ar' ? 'text-left' : 'text-right'}`}>
-                                <div className="text-xs text-green-600 uppercase font-bold">Total Input Tax</div>
-                                <div className="text-xl font-bold text-green-900">{totals.inputTax.toLocaleString()} EGP</div>
+                            <div className={`${lang === 'ar' ? 'text-right' : 'text-right md:text-right'}`}>
+                                <div className="text-[10px] text-green-600 uppercase font-bold">Total Input Tax</div>
+                                <div className="text-lg lg:text-xl font-bold text-green-900">{totals.inputTax.toLocaleString()} EGP</div>
                             </div>
                         </div>
                         <div>
@@ -283,23 +283,23 @@ const TaxReturn = ({ lang }) => {
                 </div>
 
                 {/* Right Column: Summary Card */}
-                <div className="space-y-6">
+                <div className="space-y-4 lg:space-y-6">
                     <div className="bg-slate-900 text-white p-6 rounded-xl shadow-lg ring-1 ring-white/10 relative overflow-hidden">
                         <div className="relative z-10">
-                            <h3 className="text-slate-400 font-medium mb-1 uppercase text-xs tracking-wider">{t.netTaxPosition}</h3>
+                            <h3 className="text-slate-400 font-medium mb-1 uppercase text-[10px] lg:text-xs tracking-wider">{t.netTaxPosition}</h3>
                             <div className="flex items-baseline gap-1 mt-2">
-                                <span className="text-4xl font-bold">
+                                <span className="text-3xl lg:text-4xl font-bold">
                                     {totals.netDue.toLocaleString()}
                                 </span>
-                                <span className="text-xl text-slate-400">EGP</span>
+                                <span className="text-lg lg:text-xl text-slate-400">EGP</span>
                             </div>
 
-                            <div className={`inline-flex items-center gap-2 mt-4 px-3 py-1 rounded-full text-xs font-bold ${totals.netDue >= 0 ? 'bg-blue-500 text-white' : 'bg-green-500 text-white'
+                            <div className={`inline-flex items-center gap-2 mt-4 px-3 py-1 rounded-full text-[10px] font-bold ${totals.netDue >= 0 ? 'bg-blue-500 text-white' : 'bg-green-500 text-white'
                                 }`}>
                                 {totals.netDue >= 0 ? t.payableToEta : t.refundable}
                             </div>
 
-                            <p className="text-slate-400 text-sm mt-4 leading-relaxed">
+                            <p className="text-slate-400 text-xs lg:text-sm mt-4 leading-relaxed">
                                 {totals.netDue >= 0
                                     ? t.payableMsg
                                     : t.refundableMsg}
@@ -310,69 +310,42 @@ const TaxReturn = ({ lang }) => {
                         <div className="absolute -bottom-12 -left-12 w-48 h-48 bg-purple-500 rounded-full blur-3xl opacity-20"></div>
                     </div>
 
-                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <h3 className="text-gray-900 font-bold mb-4">{t.submissionChecklist}</h3>
+                    <div className="bg-white p-5 lg:p-6 rounded-xl shadow-sm border border-gray-100">
+                        <h3 className="text-gray-900 font-bold mb-4 text-sm lg:text-base">{t.submissionChecklist}</h3>
                         <div className="space-y-3">
                             <div className="flex items-start gap-3">
-                                <div className={`mt-1 w-4 h-4 rounded border flex items-center justify-center ${totals.netDue > 0 ? 'border-blue-500 bg-blue-50' : 'border-gray-300'}`}>
+                                <div className={`mt-1 w-4 h-4 rounded border flex items-center justify-center flex-shrink-0 ${totals.netDue > 0 ? 'border-blue-500 bg-blue-50' : 'border-gray-300'}`}>
                                     {totals.netDue > 0 && <div className="w-2 h-2 bg-blue-500 rounded-full"></div>}
                                 </div>
-                                <p className="text-sm text-gray-600">{t.checkBalance} <strong className="text-gray-900">{totals.netDue.toLocaleString()} EGP</strong> if payable.</p>
+                                <p className="text-xs lg:text-sm text-gray-600">{t.checkBalance} <strong className="text-gray-900 whitespace-nowrap">{totals.netDue.toLocaleString()} EGP</strong> if payable.</p>
                             </div>
                             <div className="flex items-start gap-3">
-                                <div className="mt-1 w-4 h-4 rounded border border-gray-300"></div>
-                                <p className="text-sm text-gray-600">{t.exportExcel}</p>
+                                <div className="mt-1 w-4 h-4 rounded border border-gray-300 flex-shrink-0"></div>
+                                <p className="text-xs lg:text-sm text-gray-600">{t.exportExcel}</p>
                             </div>
                             <div className="flex items-start gap-3">
-                                <div className="mt-1 w-4 h-4 rounded border border-gray-300"></div>
-                                <p className="text-sm text-gray-600">{t.openEta}</p>
+                                <div className="mt-1 w-4 h-4 rounded border border-gray-300 flex-shrink-0"></div>
+                                <p className="text-xs lg:text-sm text-gray-600">{t.openEta}</p>
                             </div>
                         </div>
-                    </div>
-
-
-                    {/* Annual Report Card */}
-                    <div className="bg-gradient-to-br from-indigo-900 to-purple-900 text-white p-6 rounded-xl shadow-lg relative overflow-hidden">
-                        <div className="relative z-10">
-                            <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
-                                <Calendar size={20} className="text-purple-300" />
-                                {t.taxReturnTitle} 2024
-                            </h3>
-                            <button
-                                onClick={async () => {
-                                    try {
-                                        const res = await fetch('/api/reports/annual-income?year=2024');
-                                        const json = await res.json();
-                                        alert(`Annual Report 2024\n\nTotal Revenue: ${json.totalRevenue.toLocaleString()} EGP\nTotal Invoices: ${json.invoiceCount}`);
-                                    } catch (e) {
-                                        console.error(e);
-                                    }
-                                }}
-                                className="w-full mt-3 bg-white/10 hover:bg-white/20 text-white text-sm font-medium py-2 px-4 rounded-lg transition-colors border border-white/20"
-                            >
-                                View 2024 Income Report
-                            </button>
-                        </div>
-                        {/* Decor */}
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500 rounded-full blur-3xl opacity-20 -mr-16 -mt-16"></div>
                     </div>
 
                     {/* SAP Export Section */}
-                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 relative overflow-hidden">
+                    <div className="bg-white p-5 lg:p-6 rounded-xl shadow-sm border border-gray-100 relative overflow-hidden">
                         {month === '2025-02' && (
-                            <div className="absolute top-0 left-0 w-full bg-amber-100 border-b border-amber-200 p-2 text-xs text-amber-800 font-medium text-center">
+                            <div className="absolute top-0 left-0 w-full bg-amber-100 border-b border-amber-200 p-2 text-[10px] text-amber-800 font-medium text-center">
                                 ⚠ Amnesty Catch-up: Includes ALL invoices up to Feb 28, 2025
                             </div>
                         )}
-                        <h3 className={`text-gray-900 font-bold mb-4 ${month === '2025-02' ? 'mt-6' : ''}`}>{t.sapExport}</h3>
-                        <div className="space-y-3">
+                        <h3 className={`text-gray-900 font-bold mb-4 text-sm lg:text-base ${month === '2025-02' ? 'mt-6' : ''}`}>{t.sapExport}</h3>
+                        <div className="space-y-2 lg:space-y-3">
                             <button
                                 onClick={() => handleDownloadSap('sales')}
                                 disabled={loading}
-                                className="w-full flex items-center justify-between p-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors"
+                                className="w-full flex items-center justify-between p-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors text-sm"
                             >
                                 <span className="flex items-center gap-2">
-                                    <Download size={18} />
+                                    <Download size={16} />
                                     {t.downloadSalesSap}
                                 </span>
                                 {loading && <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>}
@@ -380,10 +353,10 @@ const TaxReturn = ({ lang }) => {
                             <button
                                 onClick={() => handleDownloadSap('purchases')}
                                 disabled={loading}
-                                className="w-full flex items-center justify-between p-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors"
+                                className="w-full flex items-center justify-between p-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-sm"
                             >
                                 <span className="flex items-center gap-2">
-                                    <Download size={18} />
+                                    <Download size={16} />
                                     {t.downloadPurchasesSap}
                                 </span>
                                 {loading && <div className="w-4 h-4 border-2 border-green-600 border-t-transparent rounded-full animate-spin"></div>}

@@ -17,9 +17,24 @@ const Layout = ({ children, activeTab, setActiveTab, lang, setLang }) => {
     };
 
     return (
-        <div className="flex h-screen bg-gray-50" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
-            {/* Sidebar */}
-            <div className="w-64 bg-slate-900 text-white shadow-xl flex flex-col">
+        <div className="flex flex-col lg:flex-row h-screen bg-gray-50" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+            {/* Mobile Header */}
+            <header className="lg:hidden bg-slate-900 text-white p-4 flex justify-between items-center shadow-lg sticky top-0 z-50">
+                <div className="flex flex-col">
+                    <h1 className="text-lg font-bold tracking-tight">
+                        {lang === 'ar' ? 'المحاسب الضريبي' : 'Tax Accountant'}
+                    </h1>
+                </div>
+                <button
+                    onClick={toggleLang}
+                    className="p-2 bg-slate-800 rounded-lg text-slate-300 hover:bg-slate-700 transition-colors"
+                >
+                    <Languages size={20} />
+                </button>
+            </header>
+
+            {/* Sidebar (Desktop) */}
+            <div className="hidden lg:flex w-64 bg-slate-900 text-white shadow-xl flex-col">
                 <div className="p-6 border-b border-slate-800">
                     <h1 className="text-xl font-bold tracking-tight text-white">
                         {lang === 'ar' ? 'المحاسب الضريبي' : 'Tax Accountant'}
@@ -61,16 +76,36 @@ const Layout = ({ children, activeTab, setActiveTab, lang, setLang }) => {
                 </div>
             </div>
 
+            {/* Bottom Nav (Mobile) */}
+            <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around p-2 z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+                {navItems.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                        <button
+                            key={item.id}
+                            onClick={() => setActiveTab(item.id)}
+                            className={`flex flex-col items-center gap-1 p-2 rounded-lg transition-all ${activeTab === item.id
+                                ? 'text-blue-600'
+                                : 'text-gray-400'
+                                }`}
+                        >
+                            <Icon size={20} />
+                            <span className="text-[10px] font-medium">{item.label}</span>
+                        </button>
+                    );
+                })}
+            </nav>
+
             {/* Main Content */}
-            <div className="flex-1 overflow-auto">
-                <header className="bg-white border-b border-gray-200 px-8 py-5 shadow-sm sticky top-0 z-10 transition-all">
+            <div className="flex-1 overflow-auto pb-20 lg:pb-0">
+                <header className="hidden lg:block bg-white border-b border-gray-200 px-8 py-5 shadow-sm sticky top-0 z-10 transition-all">
                     <div className="flex justify-between items-center">
                         <h2 className="text-2xl font-bold text-gray-800 tracking-tight">
                             {navItems.find(i => i.id === activeTab)?.label}
                         </h2>
                     </div>
                 </header>
-                <main className="p-8 max-w-7xl mx-auto">
+                <main className="p-4 lg:p-8 max-w-7xl mx-auto">
                     {children}
                 </main>
             </div>
