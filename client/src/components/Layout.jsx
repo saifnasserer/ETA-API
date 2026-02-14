@@ -6,10 +6,8 @@ const Layout = ({ children, activeTab, setActiveTab, lang, setLang }) => {
     const t = translations[lang] || translations['en'];
 
     const navItems = [
-        { id: 'dashboard', label: t.dashboard, icon: LayoutDashboard },
         { id: 'invoices', label: t.invoices, icon: FileText },
         { id: 'tax-return', label: t.taxReturn, icon: FileSpreadsheet },
-        { id: 'annual-income', label: lang === 'ar' ? 'تقرير الدخل السنوي' : 'Annual Income', icon: TrendingUp },
         { id: 'tax-compliance', label: lang === 'ar' ? 'الامتثال الضريبي' : 'Tax Compliance', icon: Shield },
         { id: 'fetch', label: t.fetchData, icon: Download },
     ];

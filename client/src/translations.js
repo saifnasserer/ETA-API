@@ -152,7 +152,7 @@ export const translations = {
         // Sidebar
         dashboard: "لوحة التحكم",
         invoices: "فواتيري",
-        taxReturn: "الإقرار الضريبي (نموذج 10)",
+        taxReturn: "الإقرار الضريبي",
         fetchData: "تحديث البيانات",
 
         // Dashboard

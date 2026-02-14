@@ -536,9 +536,10 @@ if (fs.existsSync(clientDistPath)) {
     console.log('🌐 Serving static files from:', clientDistPath);
     app.use(express.static(clientDistPath));
 
-    // Catch-all route for SPA
-    app.get('*', (req, res, next) => {
-        if (req.path.startsWith('/api')) return next();
+    // Catch-all route for SPA (Using middleware for Express 5 compatibility)
+    app.use((req, res, next) => {
+        if (req.url.startsWith('/api')) return next();
+        if (req.method !== 'GET') return next();
         res.sendFile(path.join(clientDistPath, 'index.html'));
     });
 }

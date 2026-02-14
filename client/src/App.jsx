@@ -11,7 +11,7 @@ import FormalVATReport from './components/FormalVATReport';
 import AnnualIncome from './components/AnnualIncome';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('dashboard');
+  const [activeTab, setActiveTab] = useState('invoices');
   const [selectedInvoice, setSelectedInvoice] = useState(null);
   const [selectedVATMonth, setSelectedVATMonth] = useState(null);
   const [invoices, setInvoices] = useState([]);
