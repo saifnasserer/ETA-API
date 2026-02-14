@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  invoicing-api:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./invoices_full:/app/invoices_full
+      - ./output:/app/output
+      - .env:/app/.env
+    restart: always

@@ -411,7 +411,138 @@ app.get('/api/tax/download-package', async (req, res) => {
     }
 });
 
-// Start Server
+// API: Generate SAP Excel Files
+const sapExcelGenerator = require('./sap_excel_generator');
+
+app.get('/api/reports/sap-excel', (req, res) => {
+    try {
+        const { month, year } = req.query; // Format: month=YYYY-MM or year=YYYY
+
+        let rawInvoices = loadInvoices();
+
+        if (year) {
+            const yearInt = parseInt(year);
+            rawInvoices = rawInvoices.filter(inv => {
+                const date = new Date(inv.dateTimeIssued);
+                return date.getFullYear() === yearInt;
+            });
+            console.log(`Filtering SAP export for Year: ${year}, found ${rawInvoices.length} invoices`);
+        } else if (month) {
+            // ---------------------------------------------------------
+            // EXCEPTION FOR FEB 2025 (AMNESTY / CATCH-UP PERIOD)
+            // ---------------------------------------------------------
+            // If month is Feb 2025, user wants to include ALL previous invoices 
+            // (Jan 2025, 2024, etc) to file them in this first return.
+            // ---------------------------------------------------------
+            if (month === '2025-02') {
+                console.log('Generating Cumulative Catch-up Report for Feb 2025');
+                rawInvoices = rawInvoices.filter(inv => {
+                    const date = new Date(inv.dateTimeIssued);
+                    // Include everything UP TO Feb 28, 2025
+                    // Note: This relies on the fact that future invoices (March+) will be excluded
+                    // simply by this date check.
+                    return date <= new Date('2025-02-28T23:59:59');
+                });
+                console.log(`Cumulative Report (<= Feb 2025) found ${rawInvoices.length} invoices`);
+            } else {
+                // Standard Monthly Filtering
+                rawInvoices = rawInvoices.filter(inv => {
+                    const date = new Date(inv.dateTimeIssued);
+                    const invMonth = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+                    return invMonth === month;
+                });
+                console.log(`Filtering SAP export for month: ${month}, found ${rawInvoices.length} invoices`);
+            }
+        }
+
+        // Pass isAdjustment flag for Feb 2025 pre-registration invoices
+        const isAdjustment = (month === '2025-02');
+        const result = sapExcelGenerator.generateSapExcel(rawInvoices, isAdjustment);
+        res.json({
+            success: true,
+            message: 'SAP Excel files generated successfully',
+            data: result,
+            urls: {
+                sales: '/api/reports/download/Sales_SAP.xlsx',
+                purchases: '/api/reports/download/Purchases_SAP.xlsx'
+            }
+        });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+
+// API: Annual Income Report
+app.get('/api/reports/annual-income', (req, res) => {
+    try {
+        const { year } = req.query; // e.g. 2024
+        if (!year) return res.status(400).json({ error: 'Year is required' });
+
+        const rawInvoices = loadInvoices();
+        const yearInt = parseInt(year);
+
+        const yearInvoices = rawInvoices.filter(inv => {
+            const d = new Date(inv.dateTimeIssued);
+            return d.getFullYear() === yearInt;
+        });
+
+        const totalSales = yearInvoices.reduce((sum, inv) => {
+            // totalSalesAmount is usually the net amount excluding tax
+            return sum + (inv.totalSalesAmount || 0);
+        }, 0);
+
+        const details = yearInvoices.map(inv => ({
+            id: inv.internalID,
+            date: inv.dateTimeIssued,
+            customer: inv.receiver?.name || 'Unknown',
+            total: inv.totalSalesAmount || 0,
+            tax: inv.taxTotals?.[0]?.amount || 0 // Assuming T1 is first, simpler for summary
+        }));
+
+        res.json({
+            year: yearInt,
+            invoiceCount: yearInvoices.length,
+            totalRevenue: totalSales,
+            details: details,
+            currency: 'EGP'
+        });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// API: Download Reports
+app.get('/api/reports/download/:filename', (req, res) => {
+    const filename = req.params.filename;
+    // Allow downloads from output and output/excel_uploads_eta
+    const possiblePaths = [
+        path.join(__dirname, '../output', filename),
+        path.join(__dirname, '../output/excel_uploads_eta', filename)
+    ];
+
+    const validPath = possiblePaths.find(p => fs.existsSync(p));
+
+    if (validPath) {
+        res.download(validPath);
+    } else {
+        res.status(404).json({ error: 'File not found' });
+    }
+});
+
+// Serve Static Files (Production)
+const clientDistPath = path.join(__dirname, '../client/dist');
+if (fs.existsSync(clientDistPath)) {
+    console.log('🌐 Serving static files from:', clientDistPath);
+    app.use(express.static(clientDistPath));
+
+    // Catch-all route for SPA
+    app.get('*', (req, res, next) => {
+        if (req.path.startsWith('/api')) return next();
+        res.sendFile(path.join(clientDistPath, 'index.html'));
+    });
+}
+
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
     console.log(`Invoices Directory: ${path.join(__dirname, '../invoices_full')}`);

@@ -1,0 +1,18 @@
+node_modules
+client/node_modules
+client/dist
+.git
+.gitignore
+*.md
+docker-compose.yml
+Dockerfile
+.env
+invoices
+invoices_full
+output
+template
+VAT Low
+*.js
+!server/*.js
+!tax_engine/*.js
+!scripts/*.js

@@ -60,6 +60,28 @@ const TaxReturn = ({ lang }) => {
         }
     };
 
+    const handleDownloadSap = async (type) => {
+        setLoading(true);
+        try {
+            // Include distinct query param to force generation for the specific month
+            const res = await fetch(`/api/reports/sap-excel?month=${month}`);
+            if (res.ok) {
+                const json = await res.json();
+                if (json.success && json.urls) {
+                    // Trigger download
+                    const url = type === 'sales' ? json.urls.sales : json.urls.purchases;
+                    window.open(url, '_blank');
+                }
+            } else {
+                console.error('Failed to generate SAP files');
+            }
+        } catch (error) {
+            console.error('Error downloading SAP file', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
     const changeMonth = (direction) => {
         const [year, monthNum] = month.split('-').map(Number);
         const date = new Date(year, monthNum - 1, 1);
@@ -305,6 +327,67 @@ const TaxReturn = ({ lang }) => {
                                 <div className="mt-1 w-4 h-4 rounded border border-gray-300"></div>
                                 <p className="text-sm text-gray-600">{t.openEta}</p>
                             </div>
+                        </div>
+                    </div>
+
+
+                    {/* Annual Report Card */}
+                    <div className="bg-gradient-to-br from-indigo-900 to-purple-900 text-white p-6 rounded-xl shadow-lg relative overflow-hidden">
+                        <div className="relative z-10">
+                            <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                <Calendar size={20} className="text-purple-300" />
+                                {t.taxReturnTitle} 2024
+                            </h3>
+                            <button
+                                onClick={async () => {
+                                    try {
+                                        const res = await fetch('/api/reports/annual-income?year=2024');
+                                        const json = await res.json();
+                                        alert(`Annual Report 2024\n\nTotal Revenue: ${json.totalRevenue.toLocaleString()} EGP\nTotal Invoices: ${json.invoiceCount}`);
+                                    } catch (e) {
+                                        console.error(e);
+                                    }
+                                }}
+                                className="w-full mt-3 bg-white/10 hover:bg-white/20 text-white text-sm font-medium py-2 px-4 rounded-lg transition-colors border border-white/20"
+                            >
+                                View 2024 Income Report
+                            </button>
+                        </div>
+                        {/* Decor */}
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500 rounded-full blur-3xl opacity-20 -mr-16 -mt-16"></div>
+                    </div>
+
+                    {/* SAP Export Section */}
+                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 relative overflow-hidden">
+                        {month === '2025-02' && (
+                            <div className="absolute top-0 left-0 w-full bg-amber-100 border-b border-amber-200 p-2 text-xs text-amber-800 font-medium text-center">
+                                ⚠ Amnesty Catch-up: Includes ALL invoices up to Feb 28, 2025
+                            </div>
+                        )}
+                        <h3 className={`text-gray-900 font-bold mb-4 ${month === '2025-02' ? 'mt-6' : ''}`}>{t.sapExport}</h3>
+                        <div className="space-y-3">
+                            <button
+                                onClick={() => handleDownloadSap('sales')}
+                                disabled={loading}
+                                className="w-full flex items-center justify-between p-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors"
+                            >
+                                <span className="flex items-center gap-2">
+                                    <Download size={18} />
+                                    {t.downloadSalesSap}
+                                </span>
+                                {loading && <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>}
+                            </button>
+                            <button
+                                onClick={() => handleDownloadSap('purchases')}
+                                disabled={loading}
+                                className="w-full flex items-center justify-between p-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors"
+                            >
+                                <span className="flex items-center gap-2">
+                                    <Download size={18} />
+                                    {t.downloadPurchasesSap}
+                                </span>
+                                {loading && <div className="w-4 h-4 border-2 border-green-600 border-t-transparent rounded-full animate-spin"></div>}
+                            </button>
                         </div>
                     </div>
                 </div>

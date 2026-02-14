@@ -1,0 +1,48 @@
+{
+    "meta": {
+        "brand_name": "Laapak",
+        "description": "Core design tokens highlighting the 'Calm & Minimal' Laapak feel.",
+        "design_philosophy": "Flat, minimal, rounded, high-quality interaction without noise."
+    },
+    "colors": {
+        "primary": {
+            "DEFAULT": "#00C853",
+            "gradient_start": "#00C853",
+            "gradient_end": "#00E676",
+            "foreground": "#FFFFFF"
+        },
+        "secondary": {
+            "DEFAULT": "#6B6B6B",
+            "foreground": "#FFFFFF"
+        },
+        "background": "#FFFFFF",
+        "surface": "#FFFFFF",
+        "surface_variant": "#F5F5F5",
+        "text_primary": "#2C2C2C",
+        "text_secondary": "#6B6B6B",
+        "destructive": "#D32F2F",
+        "success": "#00C853",
+        "warning": "#FFB300",
+        "info": "#2196F3"
+    },
+    "typography": {
+        "font_family_arabic": "Noto Sans Arabic",
+        "font_family_english": "BDO Grotesk",
+        "font_weight_bold": "700",
+        "font_weight_semibold": "600",
+        "font_weight_medium": "500",
+        "font_weight_regular": "400",
+        "default_line_height": 1.6
+    },
+    "ui": {
+        "border_radius_button": "30.0",
+        "border_radius_card": "14.0",
+        "border_radius_input": "12.0",
+        "spacing_base_unit": "8.0",
+        "default_elevation": 0,
+        "interaction_ripple": false,
+        "app_bar_height": "56.0",
+        "bottom_nav_height": "64.0",
+        "default_transition_duration_ms": 300
+    }
+}

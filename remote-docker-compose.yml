@@ -1,0 +1,25 @@
+version: '3.8'
+
+networks:
+  laapak-network:
+    external: true
+    name: laapak-network
+
+services:
+  invoicing-api:
+    image: ${DOCKERHUB_USERNAME}/laapak-invoicing-api:latest
+    container_name: invoicing-api
+    ports:
+      - "3003:3000"
+    volumes:
+      - ./invoices_full:/app/invoices_full
+      - ./output:/app/output
+      - .env:/app/.env
+    networks:
+      - laapak-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M

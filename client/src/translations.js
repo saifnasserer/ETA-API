@@ -141,9 +141,12 @@ export const translations = {
         deductibleInputVAT: 'Deductible Input VAT',
         closeButton: 'Close',
         downloadJSON: 'Download JSON',
-        noTaxDataAvailable: 'No Tax Data Available',
         generateTaxReturnsMsg: 'Generate tax returns to view compliance dashboard',
         generateTaxReturnsBtn: 'Generate Tax Returns',
+        sapExport: "SAP Export",
+        downloadSalesSap: "Download Sales (SAP)",
+        downloadPurchasesSap: "Download Purchases (SAP)",
+        generatingSap: "Generating SAP Files...",
     },
     ar: {
         // Sidebar
@@ -289,5 +292,9 @@ export const translations = {
         noTaxDataAvailable: 'لا توجد بيانات ضريبية',
         generateTaxReturnsMsg: 'قم بإنشاء الإقرارات الضريبية لعرض لوحة الامتثال',
         generateTaxReturnsBtn: 'إنشاء الإقرارات الضريبية',
+        sapExport: "تصدير SAP",
+        downloadSalesSap: "تحميل المبيعات (SAP)",
+        downloadPurchasesSap: "تحميل المشتريات (SAP)",
+        generatingSap: "جاري إنشاء ملفات SAP...",
     }
 };

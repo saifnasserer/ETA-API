@@ -8,6 +8,8 @@ import FetchInvoices from './components/FetchInvoices';
 import TaxComplianceDashboard from './components/TaxComplianceDashboard';
 import FormalVATReport from './components/FormalVATReport';
 
+import AnnualIncome from './components/AnnualIncome';
+
 function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [selectedInvoice, setSelectedInvoice] = useState(null);
@@ -83,6 +85,7 @@ function App() {
                 />
               )}
               {activeTab === 'tax-return' && <TaxReturn lang={lang} />}
+              {activeTab === 'annual-income' && <AnnualIncome lang={lang} />}
               {activeTab === 'tax-compliance' && <TaxComplianceDashboard lang={lang} onSelectMonth={setSelectedVATMonth} />}
               {activeTab === 'fetch' && <FetchInvoices lang={lang} />}
             </>
