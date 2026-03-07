@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FileText, Download, Calendar, AlertCircle, CheckCircle2, Clock, TrendingDown, TrendingUp, Package } from 'lucide-react';
+import { FileText, Download, Calendar, AlertCircle, CheckCircle2, Clock, TrendingDown, TrendingUp, Package, Shield, Languages } from 'lucide-react';
 import { translations } from '../translations';
 
 const TaxComplianceDashboard = ({ lang, onSelectMonth }) => {
@@ -417,5 +417,49 @@ const TaxComplianceDashboard = ({ lang, onSelectMonth }) => {
         </div>
     );
 };
+
+const MetricCard = ({ title, value, status, icon: Icon, desc }) => (
+    <div className="bg-white p-4 lg:p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between h-full">
+        <div className="flex items-start justify-between mb-4">
+            <div className={`p-2 rounded-lg ${status === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                <Icon size={20} />
+            </div>
+        </div>
+        <div>
+            <div className="text-2xl font-bold text-gray-900 mb-1">{value}</div>
+            <div className="text-sm font-medium text-gray-700">{title}</div>
+            <div className="text-xs text-gray-500 mt-1">{desc}</div>
+        </div>
+    </div>
+);
+
+const ActionButton = ({ icon: Icon, title, desc, color, onClick }) => {
+    const colorClasses = {
+        blue: 'bg-blue-50 text-blue-600 group-hover:bg-blue-100',
+        amber: 'bg-amber-50 text-amber-600 group-hover:bg-amber-100',
+        purple: 'bg-purple-50 text-purple-600 group-hover:bg-purple-100',
+        green: 'bg-green-50 text-green-600 group-hover:bg-green-100'
+    };
+    return (
+        <button
+            onClick={onClick}
+            className="flex items-start text-left gap-3 p-4 rounded-xl border border-gray-100 hover:border-gray-300 hover:shadow-md transition-all bg-white w-full group"
+        >
+            <div className={`p-2 rounded-lg transition-colors shrink-0 ${colorClasses[color] || colorClasses.blue}`}>
+                <Icon size={20} />
+            </div>
+            <div>
+                <h3 className="font-bold text-gray-900 text-sm">{title}</h3>
+                <p className="text-xs text-gray-500 mt-1">{desc}</p>
+            </div>
+        </button>
+    );
+};
+
+const filingHistory = [
+    { period: '2024-12', amount: '12,450.00 EGP' },
+    { period: '2024-11', amount: '8,320.00 EGP' },
+    { period: '2024-10', amount: '15,100.00 EGP' },
+];
 
 export default TaxComplianceDashboard;

@@ -35,7 +35,6 @@ const FetchInvoices = ({ lang }) => {
             }
         } catch (error) {
             setResult({ success: false, error: error.message });
-            setStatus({ type: 'error', message: error.message });
         } finally {
             setLoading(false);
         }
@@ -48,6 +47,63 @@ const FetchInvoices = ({ lang }) => {
                     <Download className="text-blue-600" />
                     {t.fetchData}
                 </h1>
+            </div>
+
+            {/* Input Form */}
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div className="flex gap-4 mb-6">
+                    <button
+                        onClick={() => setFetchMode('month')}
+                        className={`px-4 py-2 rounded-lg font-medium transition-colors ${fetchMode === 'month' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+                    >
+                        {lang === 'ar' ? 'فترة (شهر)' : 'Period (Month)'}
+                    </button>
+                    <button
+                        onClick={() => setFetchMode('id')}
+                        className={`px-4 py-2 rounded-lg font-medium transition-colors ${fetchMode === 'id' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+                    >
+                        {lang === 'ar' ? 'رقم الفاتورة (Internal ID)' : 'Internal ID'}
+                    </button>
+                </div>
+
+                <div className="space-y-4">
+                    {fetchMode === 'month' ? (
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                {lang === 'ar' ? 'الشهر (YYYY-MM)' : 'Month (YYYY-MM)'}
+                            </label>
+                            <input
+                                type="text"
+                                value={month}
+                                onChange={(e) => setMonth(e.target.value)}
+                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="2024-11"
+                            />
+                        </div>
+                    ) : (
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                {lang === 'ar' ? 'رقم الفاتورة (Internal ID)' : 'Internal ID'}
+                            </label>
+                            <input
+                                type="text"
+                                value={internalId}
+                                onChange={(e) => setInternalId(e.target.value)}
+                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder={lang === 'ar' ? 'أدخل رقم الفاتورة' : 'Enter Internal ID'}
+                            />
+                        </div>
+                    )}
+
+                    <button
+                        onClick={handleFetch}
+                        disabled={loading || (fetchMode === 'month' ? !month : !internalId)}
+                        className="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    >
+                        {loading ? <Loader2 className="animate-spin" /> : <Download size={20} />}
+                        {lang === 'ar' ? 'جلب الفواتير' : 'Fetch Invoices'}
+                    </button>
+                </div>
             </div>
 
             {/* Result Display */}

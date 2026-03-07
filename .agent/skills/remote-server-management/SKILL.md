@@ -95,6 +95,7 @@ cd /home/deploy/laapak-projects/reports && docker compose -f remote-docker-compo
 - **n8n Automation:** `n8n-auto.fixzzone.com` -> `n8n` (5678)
 - **Laapak Reports Backend:** `82.112.253.29:3001` (`report-system`)
 - **Laapak Reports Frontend:** `82.112.253.29:3000` (`laapak-frontend-react`)
+- **ETA Invoicing API:** `eta.laapak.com` -> `invoicing-api` (Port 3003 on host, 3000 internal). Nginx config at `/home/deploy/fz-projects/system/docker-infra/nginx/conf.d/eta_laapak.conf`
 - **Database:** `mysql-db` (MySQL 8.0), `postgres-db` (PostgreSQL)
 
 ## Security & Best Practices
