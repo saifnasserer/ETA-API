@@ -2,3 +2,6 @@ node_modules/
 .env
 # invoices/
 .DS_Store
+.xlsx
+.csv
+output/
