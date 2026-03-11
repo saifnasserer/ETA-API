@@ -94,8 +94,8 @@ function generateSapExcel(invoices, periodSuffix = '', outputDirOverride = null)
                     date,
                     line.description,
                     line.itemCode,
-                    '1', // نوع البيان (Strictly 1 as per user request)
-                    '1', // نوع السلعة
+                    isSale ? '3' : '1', // نوع البيان (Statement Type: 3 for Sales, 1 for Purchases)
+                    isSale ? '1' : '3', // نوع السلعة (Item Type: 1 for Sales, 3 for Purchases)
                     line.unitType || 'EA',
                     line.unitValue?.amountEGP || 0,
                     '14', // فئة الضريبة
