@@ -1,0 +1,95 @@
+{
+  "document": "{\n      \"issuer\": {\n        \"address\": {\n          \"branchID\": \"0\",\n          \"country\": \"EG\",\n          \"governate\": \"Cairo\",\n          \"regionCity\": \"El Marg\",\n          \"street\": \"ش الحرم المكي كفر الشرفاء المرج القاهره\",\n          \"buildingNumber\": \"8\",\n          \"postalCode\": \"00000\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767043545\",\n        \"name\": \"لابك لتجاره الالكترونيات\"\n      },\n      \"receiver\": {\n        \"address\": {\n          \"country\": \"EG\",\n          \"governate\": \"Cairo\",\n          \"regionCity\": \"El Khalifa\",\n          \"street\": \" منطقة س  المقطم\",\n          \"buildingNumber\": \" 8662 \",\n          \"postalCode\": \"\",\n          \"floor\": \"0\",\n          \"room\": \"\",\n          \"landmark\": \"\",\n          \"additionalInformation\": \"\"\n        },\n        \"type\": \"B\",\n        \"id\": \"200235524\",\n        \"name\": \"شركه سيستم وان\"\n      },\n      \"documentType\": \"i\",\n      \"documentTypeVersion\": \"1.0\",\n      \"dateTimeIssued\": \"2026-04-06T18:48:29Z\",\n      \"taxpayerActivityCode\": \"4741\",\n      \"internalID\": \"1492581234992\",\n      \"references\": [],\n      \"payment\": {},\n      \"delivery\": {},\n      \"invoiceLines\": [\n        {\n          \"description\": \"Lenovo Thinkpad Yoga\\n\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767043545-1003\",\n          \"unitType\": \"EA\",\n          \"quantity\": 1,\n          \"internalCode\": \"\",\n          \"salesTotal\": 21000,\n          \"total\": 23730,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 21000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 21000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 2940,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            },\n            {\n              \"taxType\": \"T4\",\n              \"amount\": 210,\n              \"subType\": \"W002\",\n              \"rate\": 1\n            }\n          ]\n        },\n        {\n          \"description\": \"Precision 3561\\n\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-767043545-1001\",\n          \"unitType\": \"EA\",\n          \"quantity\": 2,\n          \"internalCode\": \"\",\n          \"salesTotal\": 45000,\n          \"total\": 50850,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 45000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 22500,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 6300,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            },\n            {\n              \"taxType\": \"T4\",\n              \"amount\": 450,\n              \"subType\": \"W002\",\n              \"rate\": 1\n            }\n          ]\n        },\n        {\n          \"description\": \"16GB Ram DDR4\",\n          \"itemType\": \"GS1\",\n          \"itemCode\": \"10001118\",\n          \"unitType\": \"EA\",\n          \"quantity\": 2,\n          \"internalCode\": \"\",\n          \"salesTotal\": 8000,\n          \"total\": 9040,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 8000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 4000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 1120,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            },\n            {\n              \"taxType\": \"T4\",\n              \"amount\": 80,\n              \"subType\": \"W002\",\n              \"rate\": 1\n            }\n          ]\n        },\n        {\n          \"description\": \"Crusial SSD NVME 1TB\",\n          \"itemType\": \"GS1\",\n          \"itemCode\": \"10001118\",\n          \"unitType\": \"EA\",\n          \"quantity\": 1,\n          \"internalCode\": \"\",\n          \"salesTotal\": 7000,\n          \"total\": 7910,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 7000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 7000,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 980,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            },\n            {\n              \"taxType\": \"T4\",\n              \"amount\": 70,\n              \"subType\": \"W002\",\n              \"rate\": 1\n            }\n          ]\n        }\n      ],\n      \"totalSalesAmount\": 81000,\n      \"totalDiscountAmount\": 0,\n      \"netAmount\": 81000,\n      \"taxTotals\": [\n        {\n          \"taxType\": \"T1\",\n          \"amount\": 11340\n        },\n        {\n          \"taxType\": \"T4\",\n          \"amount\": 810\n        }\n      ],\n      \"totalAmount\": 91530,\n      \"totalItemsDiscountAmount\": 0,\n      \"extraDiscountAmount\": 0,\n      \"signatures\": [\n        {\n          \"signatureType\": \"I\",\n          \"value\": \"MIIHwgYJKoZIhvcNAQcCoIIHszCCB68CAQMxDzANBglghkgBZQMEAgEFADALBgkqhkiG9w0BBwWgggUIMIIFBDCCAuygAwIBAgIQ4a6u+6kVMfNRliXDn0BNhDANBgkqhkiG9w0BAQsFADA/MRowGAYDVQQDDBFFZ3lwdCBUcnVzdCBDQSBHNjEUMBIGA1UECgwLRWd5cHQgVHJ1c3QxCzAJBgNVBAYTAkVHMB4XDTI0MTEwNzE3NTI0MVoXDTI3MTEwNzE3NTI0MVowgZkxCzAJBgNVBAYTAkVHMRgwFgYDVQRhDA9WQVRFRy03NjcwNDM1NDUxNzA1BgNVBAoMLtmE2KfYqNmDINmE2KrYrNin2LHZhyDYp9mE2KfZhNmD2KrYsdmI2YbZitin2KoxNzA1BgNVBAMMLtmE2KfYqNmDINmE2KrYrNin2LHZhyDYp9mE2KfZhNmD2KrYsdmI2YbZitin2KowggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDBvUQpPsONCSjzRlR/KXcLH3Q9Hya6Sc42XZ/8TF1ewqiOCJDgznP1vH/IzGiRJ01aSGIthGt5CawZkdYC9CX/k/pMC5ph/n4e8++I626TYqahhT/QjqRbdxvHWAwQOr9nJff8lprLYBEJWo7XyC5mpf9iXjOVQPLGBoIQ1qQ2HduXbXL6g9uw1/bJOYoZIHGJFAJW2mK6QPvfVlrM63p37b8UDID0TBURz+7C6ZIRWUvI1kliDflIEv5VVw38QqaopAYghj4bePFYvl0x0kQhJTrhYWOjfkvvfyqlS0NkDmvJ+fqXblKRVWZdg+Axeyjx/YW3StLqv0rlCbDajCe9AgMBAAGjgaAwgZ0wCwYDVR0PBAQDAgbAMB0GA1UdDgQWBBRCrzi3bpUbmlSKnSDkoRNaT3jF0TAfBgNVHSMEGDAWgBReYVPie6LvO4vEEdhzQyiLSysejzAJBgNVHRMEAjAAMEMGA1UdHwQ8MDowOKA2oDSGMmh0dHA6Ly9tcGtpY3JsLmVneXB0dHJ1c3QuY29tL2V0Y2FnNi9MYXRlc3RDUkwuY3JsMA0GCSqGSIb3DQEBCwUAA4ICAQCLehJNtoq7axwjT3eMoiADDjbVmAKluV0aCkmpXqH4MI7QFBHM9iBB/KWNmCbZFuxf/6wRe4XkZengQeUZaFNfh3iuGLQoGvbUoQyODaUZurFRyTO4hfPL7s+A6mwimdHah/3/zRI9+xuMOvVay8mrMHrtkgvnESDsQMgiMRHCZbYn6v+Pas8YTZujjv0F3/pjxiGTV/vksaI7YNcx7hokUZpJJxEGE/QGr/4R/QhVrn3Bu74Rmfel5YpIWkBGxpsNxusV7yfHJvn1OXCgsf74Sjz9+6WVBX+K+cMq/URw9PMo+ghGkOfKDl4SKr3BIC1lFB7Oz5y4kWtv0/kwRPkKgaXS5pVHxF6OxveUc5POycaj5mbTm8YYdmFZoVseS4pRtEb6KAg/be0oDgBfXArTxGekQseDZc5EvhozY781R+Qj1TVBtjVZzCACuz+hPLBpdVTmsZb0LAycBGRlFm8aC3cSntqXvmFkHuEYgGhxamK/Sw4iFF1YDJ1AIFRGf5V+/9GCQg0vKaEhDQa5zipKte4DSoKMI2qbjt8Fd81CH5Zjfm0HWPb58+B48saSZTz5G9zbd+BpprSNZaf0aWZtnzLnH6OqwGlkYaLyumU0lcnuJQwzQ6VyzlqLu9lRNybwO/EkbzjzOZtwFPcfdxlLEfNgbsGP+OgH38ZmJUJzATGCAn4wggJ6AgEBMFMwPzEaMBgGA1UEAwwRRWd5cHQgVHJ1c3QgQ0EgRzYxFDASBgNVBAoMC0VneXB0IFRydXN0MQswCQYDVQQGEwJFRwIQ4a6u+6kVMfNRliXDn0BNhDANBglghkgBZQMEAgEFAKCB/TAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcFMBwGCSqGSIb3DQEJBTEPFw0yNjA0MDYxODQ5MDhaMC8GCSqGSIb3DQEJBDEiBCAnsDoYld5aWKN/3ToQpUBeKpHlRtnIDyDfVfrS+CmrLDCBkQYLKoZIhvcNAQkQAi8xgYEwfzB9MHsEIDNVXklHM9kQjuOjapiKLLkWzs07L1SoEvTyA3qkb6wTMFcwQ6RBMD8xGjAYBgNVBAMMEUVneXB0IFRydXN0IENBIEc2MRQwEgYDVQQKDAtFZ3lwdCBUcnVzdDELMAkGA1UEBhMCRUcCEOGurvupFTHzUZYlw59ATYQwDQYJKoZIhvcNAQELBQAEggEAQaiOVVfvrZ04WrM/COotbJyLWac+yO3YbUiQYPXcwv9kNSMY+5GaNyYLD2m/9gLLn4RzsjNDjzVQOObRRfwRNf+EFIn6t+mNcQoAWBGa44vIG99VB+j57QQxs2RWcoSCkie7vUymmkcyjlGDZUP37MiFYNULNL/3yynr1ypOpcG/LSN9AZBKMffbGlCqxhVvV+aRiDGNBVKZJyrKQtA9zKbkcUFu9QpCO/9NWP8qL+mrVq97vVUscSiU+87wuybhvcP4R1hZrM+fR1jyr5n+L7KVXOK6eln8knZ0QdtGfuskrI0yiF9IcdhRfhZ2ZYcZQ6z5XQBV8ULkbEaPP9FyHw==\"\n        }\n      ]\n    }",
+  "transformationStatus": "original",
+  "validationResults": {
+    "status": "Valid",
+    "validationSteps": [
+      {
+        "name": "Step-03.ITIDA Signature Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-04.NationalID Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-05.TaxpayerProfile Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-06.Simple Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-07.Code Field Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-08. Duplicate Submission Validator",
+        "status": "Valid",
+        "error": null
+      }
+    ]
+  },
+  "maxPercision": 2,
+  "invoiceLineItemCodes": [
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767043545-1003",
+      "codeNamePrimaryLang": "Lenovo Laptop",
+      "codeNameSecondaryLang": "لابتوب لينوفو"
+    },
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-767043545-1001",
+      "codeNamePrimaryLang": "Dell Laptop",
+      "codeNameSecondaryLang": "لابتوب دل"
+    },
+    {
+      "codeTypeId": 2,
+      "codeTypeNamePrimaryLang": "GS1",
+      "codeTypeNameSecondaryLang": "GS1",
+      "itemCode": "10001118",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "مكونات أجهزة الكمبيوتر - قطع إستبدال / ملحقات"
+    },
+    {
+      "codeTypeId": 2,
+      "codeTypeNamePrimaryLang": "GS1",
+      "codeTypeNameSecondaryLang": "GS1",
+      "itemCode": "10001118",
+      "codeNamePrimaryLang": "Computer Components - Replacement Parts/Accessories",
+      "codeNameSecondaryLang": "مكونات أجهزة الكمبيوتر - قطع إستبدال / ملحقات"
+    }
+  ],
+  "documentLinesTotalCount": 4,
+  "additionalMetadata": [],
+  "lateSubmissionRequestNumber": null,
+  "serviceDeliveryDate": null,
+  "uuid": "25VFCPGY8A0Q40GYR2712JNK10",
+  "submissionUUID": "75HXPRT7FG2GDBMTR2712JNK10",
+  "longId": "NAJFE5T5V819MY27S2712JNK10o9HsiV1775501352",
+  "internalId": "1492581234992",
+  "typeName": "i",
+  "typeVersionName": "1.0",
+  "issuerId": "767043545",
+  "issuerName": "لابك لتجاره الالكترونيات",
+  "receiverId": "200235524",
+  "receiverName": "شركه سيستم وان",
+  "dateTimeIssued": "2026-04-06T18:48:29Z",
+  "dateTimeReceived": "2026-04-06T18:49:12.0241531Z",
+  "totalSales": 81000,
+  "totalDiscount": 0,
+  "netAmount": 81000,
+  "total": 91530,
+  "status": "Valid"
+}

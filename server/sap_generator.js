@@ -165,3 +165,4 @@ function generateSapExcel(invoices, periodSuffix = '', outputDirOverride = null)
 }
 
 module.exports = { generateSapExcel };
+    

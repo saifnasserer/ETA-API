@@ -412,7 +412,7 @@ app.get('/api/tax/download-package', async (req, res) => {
 });
 
 // API: Generate SAP Excel Files
-const sapExcelGenerator = require('./sap_excel_generator');
+const sapExcelGenerator = require('./sap_generator');
 
 app.get('/api/reports/sap-excel', (req, res) => {
     try {
@@ -463,8 +463,8 @@ app.get('/api/reports/sap-excel', (req, res) => {
             message: 'SAP Excel files generated successfully',
             data: result,
             urls: {
-                sales: '/api/reports/download/Sales_SAP.xlsx',
-                purchases: '/api/reports/download/Purchases_SAP.xlsx'
+                sales: `/api/reports/download/${encodeURIComponent(path.basename(result.sales))}`,
+                purchases: `/api/reports/download/${encodeURIComponent(path.basename(result.purchases))}`
             }
         });
     } catch (error) {
@@ -515,17 +515,23 @@ app.get('/api/reports/annual-income', (req, res) => {
 // API: Download Reports
 app.get('/api/reports/download/:filename', (req, res) => {
     const filename = req.params.filename;
+    console.log('Download requested for filename:', filename);
+    
     // Allow downloads from output and output/excel_uploads_eta
     const possiblePaths = [
         path.join(__dirname, '../output', filename),
         path.join(__dirname, '../output/excel_uploads_eta', filename)
     ];
 
+    possiblePaths.forEach(p => console.log('Checking path:', p, 'Exists:', fs.existsSync(p)));
+
     const validPath = possiblePaths.find(p => fs.existsSync(p));
 
     if (validPath) {
+        console.log('Sending file:', validPath);
         res.download(validPath);
     } else {
+        console.error('File not found among possible paths');
         res.status(404).json({ error: 'File not found' });
     }
 });

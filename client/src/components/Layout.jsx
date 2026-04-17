@@ -9,7 +9,6 @@ const Layout = ({ children, activeTab, setActiveTab, lang, setLang }) => {
         { id: 'invoices', label: t.invoices, icon: FileText },
         { id: 'tax-return', label: t.taxReturn, icon: FileSpreadsheet },
         { id: 'tax-compliance', label: lang === 'ar' ? 'الامتثال الضريبي' : 'Tax Compliance', icon: Shield },
-        { id: 'fetch', label: t.fetchData, icon: Download },
     ];
 
     const toggleLang = () => {

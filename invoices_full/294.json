@@ -1,0 +1,95 @@
+{
+  "document": "{\n      \"issuer\": {\n        \"address\": {\n          \"branchID\": \"0\",\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم مصر الجديدة\",\n          \"street\": \"   شارع رفاعه شقه 1 الدور الاول منشيه البكري مصر الجديدة\",\n          \"buildingNumber\": \"3\",\n          \"postalCode\": \"\",\n          \"floor\": \"\",\n          \"room\": \"\",\n          \"landmark\": \"\",\n          \"additionalInformation\": \"\"\n        },\n        \"type\": \"B\",\n        \"id\": \"699073308\",\n        \"name\": \"خالد علي محمد محمدين اليابانيه للتوريدات العموميه\"\n      },\n      \"receiver\": {\n        \"address\": {\n          \"country\": \"EG\",\n          \"governate\": \"القاهرة\",\n          \"regionCity\": \"قسم المرج\",\n          \"street\": \"ش الحرم المكي كفر الشرفاء المرج القاهره\",\n          \"buildingNumber\": \"8\",\n          \"postalCode\": \"00000\",\n          \"floor\": null,\n          \"room\": null,\n          \"landmark\": null,\n          \"additionalInformation\": \" \"\n        },\n        \"type\": \"B\",\n        \"id\": \"767043545\",\n        \"name\": \"لابك لتجاره الالكترونيات\"\n      },\n      \"documentType\": \"i\",\n      \"documentTypeVersion\": \"1.0\",\n      \"dateTimeIssued\": \"2026-02-15T11:34:16Z\",\n      \"taxpayerActivityCode\": \"4610\",\n      \"internalID\": \"294\",\n      \"references\": [],\n      \"payment\": {},\n      \"delivery\": {},\n      \"invoiceLines\": [\n        {\n          \"description\": \"درام + بليد 2525\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-699073308-20\",\n          \"unitType\": \"EA\",\n          \"quantity\": 1,\n          \"internalCode\": \"\",\n          \"salesTotal\": 1850,\n          \"total\": 2109,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 1850,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 1850,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 259,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"غرامه\",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-699073308-20\",\n          \"unitType\": \"EA\",\n          \"quantity\": 1,\n          \"internalCode\": \"\",\n          \"salesTotal\": 600,\n          \"total\": 684,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 600,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 600,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 84,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"توصيل \",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-699073308-20\",\n          \"unitType\": \"EA\",\n          \"quantity\": 1,\n          \"internalCode\": \"\",\n          \"salesTotal\": 270,\n          \"total\": 307.8,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 270,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 270,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 37.8,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        },\n        {\n          \"description\": \"صيانة \",\n          \"itemType\": \"EGS\",\n          \"itemCode\": \"EG-699073308-26\",\n          \"unitType\": \"EA\",\n          \"quantity\": 2,\n          \"internalCode\": \"\",\n          \"salesTotal\": 1000,\n          \"total\": 1140,\n          \"valueDifference\": 0,\n          \"totalTaxableFees\": 0,\n          \"netTotal\": 1000,\n          \"itemsDiscount\": 0,\n          \"unitValue\": {\n            \"currencySold\": \"EGP\",\n            \"amountEGP\": 500,\n            \"amountSold\": 0\n          },\n          \"discount\": {},\n          \"taxableItems\": [\n            {\n              \"taxType\": \"T1\",\n              \"amount\": 140,\n              \"subType\": \"V009\",\n              \"rate\": 14\n            }\n          ]\n        }\n      ],\n      \"totalSalesAmount\": 3720,\n      \"totalDiscountAmount\": 0,\n      \"netAmount\": 3720,\n      \"taxTotals\": [\n        {\n          \"taxType\": \"T1\",\n          \"amount\": 520.8\n        }\n      ],\n      \"totalAmount\": 4240.8,\n      \"totalItemsDiscountAmount\": 0,\n      \"extraDiscountAmount\": 0,\n      \"signatures\": [\n        {\n          \"signatureType\": \"I\",\n          \"value\": \"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\"\n        }\n      ]\n    }",
+  "transformationStatus": "original",
+  "validationResults": {
+    "status": "Valid",
+    "validationSteps": [
+      {
+        "name": "Step-03.ITIDA Signature Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-04.NationalID Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-05.TaxpayerProfile Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-06.Simple Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-07.Code Field Validator",
+        "status": "Valid",
+        "error": null
+      },
+      {
+        "name": "Step-08. Duplicate Submission Validator",
+        "status": "Valid",
+        "error": null
+      }
+    ]
+  },
+  "maxPercision": 2,
+  "invoiceLineItemCodes": [
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-699073308-20",
+      "codeNamePrimaryLang": "Printer consumables",
+      "codeNameSecondaryLang": "مستهلكات الطابعات"
+    },
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-699073308-20",
+      "codeNamePrimaryLang": "Printer consumables",
+      "codeNameSecondaryLang": "مستهلكات الطابعات"
+    },
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-699073308-20",
+      "codeNamePrimaryLang": "Printer consumables",
+      "codeNameSecondaryLang": "مستهلكات الطابعات"
+    },
+    {
+      "codeTypeId": 9,
+      "codeTypeNamePrimaryLang": "EGS",
+      "codeTypeNameSecondaryLang": "EGS",
+      "itemCode": "EG-699073308-26",
+      "codeNamePrimaryLang": "صيانة واصلاح",
+      "codeNameSecondaryLang": "صيانة واصلاح"
+    }
+  ],
+  "documentLinesTotalCount": 4,
+  "additionalMetadata": [],
+  "lateSubmissionRequestNumber": null,
+  "serviceDeliveryDate": null,
+  "uuid": "89S2GK6Q138Z57JB61A9HGHK10",
+  "submissionUUID": "W69R8ENXCSQVQ89261A9HGHK10",
+  "longId": "2WKTV0V41YPA7XH561A9HGHK108eF3sL1771155269",
+  "internalId": "294",
+  "typeName": "i",
+  "typeVersionName": "1.0",
+  "issuerId": "699073308",
+  "issuerName": "خالد علي محمد محمدين اليابانيه للتوريدات العموميه",
+  "receiverId": "767043545",
+  "receiverName": "لابك لتجاره الالكترونيات",
+  "dateTimeIssued": "2026-02-15T11:34:16Z",
+  "dateTimeReceived": "2026-02-15T11:34:29.6695573Z",
+  "totalSales": 3720,
+  "totalDiscount": 0,
+  "netAmount": 3720,
+  "total": 4240.8,
+  "status": "Valid"
+}

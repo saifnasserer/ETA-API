@@ -4,7 +4,6 @@ import Dashboard from './components/Dashboard';
 import InvoiceList from './components/InvoiceList';
 import InvoiceDetails from './components/InvoiceDetails';
 import TaxReturn from './components/TaxReturn';
-import FetchInvoices from './components/FetchInvoices';
 import TaxComplianceDashboard from './components/TaxComplianceDashboard';
 import FormalVATReport from './components/FormalVATReport';
 
@@ -87,7 +86,6 @@ function App() {
               {activeTab === 'tax-return' && <TaxReturn lang={lang} />}
               {activeTab === 'annual-income' && <AnnualIncome lang={lang} />}
               {activeTab === 'tax-compliance' && <TaxComplianceDashboard lang={lang} onSelectMonth={setSelectedVATMonth} />}
-              {activeTab === 'fetch' && <FetchInvoices lang={lang} />}
             </>
           )}
         </div>
