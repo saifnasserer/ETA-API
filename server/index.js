@@ -238,9 +238,26 @@ app.post('/api/fetch-invoices', async (req, res) => {
 
             let fetchedCount = 0;
             let failedCount = 0;
+            let skippedCount = 0;
+
+            // Read existing files to prevent re-downloading
+            const invoicesDir = path.join(__dirname, '../invoices_full');
+            const existingFiles = fs.existsSync(invoicesDir) ? fs.readdirSync(invoicesDir) : [];
 
             for (const doc of validDocs) {
                 try {
+                    // Check if already downloaded based on unique suffix
+                    let uniquePart = doc.uuid || '';
+                    if (doc.dateTimeIssued) {
+                        uniquePart = doc.dateTimeIssued.replace(/[:.Z]/g, '-');
+                    }
+                    
+                    const suffix = `_${uniquePart}.json`;
+                    if (existingFiles.some(file => file.endsWith(suffix))) {
+                        skippedCount++;
+                        continue;
+                    }
+
                     const fullDocResponse = await axios.get(`${process.env.ETA_API_URL}/documents/${doc.uuid}/raw`, {
                         headers: {
                             'Authorization': `Bearer ${token}`,
@@ -264,7 +281,7 @@ app.post('/api/fetch-invoices', async (req, res) => {
 
             return res.json({
                 success: true,
-                message: `Fetched ${fetchedCount} invoices for ${month}`,
+                message: `Fetched ${fetchedCount} new invoices, skipped ${skippedCount} existing.`,
                 total: validDocs.length,
                 fetched: fetchedCount,
                 failed: failedCount
