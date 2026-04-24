@@ -139,15 +139,22 @@ function getDocumentType(fullDoc) {
     }
 }
 
-function generateFilename(internalId, documentType) {
+function generateFilename(internalId, documentType, dateTimeIssued, uuid) {
     const type = documentType.toLowerCase();
+    
+    // Create a safe, unique suffix based on date time or uuid
+    let uniquePart = uuid || Date.now().toString();
+    if (dateTimeIssued) {
+        // Format: 2025-10-15T14-30-00Z
+        uniquePart = dateTimeIssued.replace(/[:.Z]/g, '-');
+    }
 
     if (type === 'c') {
-        return `credit_${internalId}.json`;
+        return `credit_${internalId}_${uniquePart}.json`;
     } else if (type === 'd') {
-        return `debit_${internalId}.json`;
+        return `debit_${internalId}_${uniquePart}.json`;
     } else {
-        return `${internalId}.json`;
+        return `${internalId}_${uniquePart}.json`;
     }
 }
 
@@ -199,7 +206,7 @@ app.post('/api/fetch-invoices', async (req, res) => {
 
             // Save to invoices_full with proper naming
             const docType = getDocumentType(fullDocResponse.data);
-            const filename = generateFilename(doc.internalId, docType);
+            const filename = generateFilename(doc.internalId, docType, doc.dateTimeIssued, doc.uuid);
             const filepath = path.join(__dirname, '../invoices_full', filename);
             fs.writeFileSync(filepath, JSON.stringify(fullDocResponse.data, null, 2));
 
@@ -242,7 +249,7 @@ app.post('/api/fetch-invoices', async (req, res) => {
                     });
 
                     const docType = getDocumentType(fullDocResponse.data);
-                    const filename = generateFilename(doc.internalId, docType);
+                    const filename = generateFilename(doc.internalId, docType, doc.dateTimeIssued, doc.uuid);
                     const filepath = path.join(__dirname, '../invoices_full', filename);
                     fs.writeFileSync(filepath, JSON.stringify(fullDocResponse.data, null, 2));
                     fetchedCount++;
