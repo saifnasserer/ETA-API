@@ -1,19 +1,24 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { LayoutDashboard, FileText, FileSpreadsheet, Download, Languages, Shield, TrendingUp } from 'lucide-react';
 import { translations } from '../translations';
 
-const Layout = ({ children, activeTab, setActiveTab, lang, setLang }) => {
+const Layout = ({ children, lang, setLang }) => {
     const t = translations[lang] || translations['en'];
+    const location = useLocation();
 
     const navItems = [
-        { id: 'invoices', label: t.invoices, icon: FileText },
-        { id: 'tax-return', label: t.taxReturn, icon: FileSpreadsheet },
-        { id: 'tax-compliance', label: lang === 'ar' ? 'الامتثال الضريبي' : 'Tax Compliance', icon: Shield },
+        { id: '/invoices', label: t.invoices, icon: FileText },
+        { id: '/tax-return', label: t.taxReturn, icon: FileSpreadsheet },
+        { id: '/tax-compliance', label: lang === 'ar' ? 'الامتثال الضريبي' : 'Tax Compliance', icon: Shield },
     ];
 
     const toggleLang = () => {
         setLang(prev => prev === 'en' ? 'ar' : 'en');
     };
+
+    // Determine the active item based on the current pathname
+    const activePath = location.pathname;
 
     return (
         <div className="flex flex-col lg:flex-row h-screen bg-gray-50" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
@@ -45,18 +50,19 @@ const Layout = ({ children, activeTab, setActiveTab, lang, setLang }) => {
                 <nav className="p-4 space-y-2 flex-1">
                     {navItems.map((item) => {
                         const Icon = item.icon;
+                        const isActive = activePath.startsWith(item.id);
                         return (
-                            <button
+                            <Link
                                 key={item.id}
-                                onClick={() => setActiveTab(item.id)}
-                                className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all border border-transparent ${activeTab === item.id
+                                to={item.id}
+                                className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all border border-transparent ${isActive
                                     ? 'bg-blue-600 text-white shadow-md border-blue-500'
                                     : 'text-slate-300 hover:bg-slate-800 hover:text-white'
                                     }`}
                             >
                                 <Icon size={20} />
                                 <span className={`font-medium ${lang === 'ar' ? 'font-sans' : ''}`}>{item.label}</span>
-                            </button>
+                            </Link>
                         );
                     })}
                 </nav>
@@ -79,18 +85,19 @@ const Layout = ({ children, activeTab, setActiveTab, lang, setLang }) => {
             <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around p-2 z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
                 {navItems.map((item) => {
                     const Icon = item.icon;
+                    const isActive = activePath.startsWith(item.id);
                     return (
-                        <button
+                        <Link
                             key={item.id}
-                            onClick={() => setActiveTab(item.id)}
-                            className={`flex flex-col items-center gap-1 p-2 rounded-lg transition-all ${activeTab === item.id
+                            to={item.id}
+                            className={`flex flex-col items-center gap-1 p-2 rounded-lg transition-all ${isActive
                                 ? 'text-blue-600'
                                 : 'text-gray-400'
                                 }`}
                         >
                             <Icon size={20} />
                             <span className="text-[10px] font-medium">{item.label}</span>
-                        </button>
+                        </Link>
                     );
                 })}
             </nav>
@@ -100,7 +107,7 @@ const Layout = ({ children, activeTab, setActiveTab, lang, setLang }) => {
                 <header className="hidden lg:block bg-white border-b border-gray-200 px-8 py-5 shadow-sm sticky top-0 z-10 transition-all">
                     <div className="flex justify-between items-center">
                         <h2 className="text-2xl font-bold text-gray-800 tracking-tight">
-                            {navItems.find(i => i.id === activeTab)?.label}
+                            {navItems.find(i => activePath.startsWith(i.id))?.label || ''}
                         </h2>
                     </div>
                 </header>

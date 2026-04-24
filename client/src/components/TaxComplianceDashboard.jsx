@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FileText, Download, Calendar, AlertCircle, CheckCircle2, Clock, TrendingDown, TrendingUp, Package, Shield, Languages } from 'lucide-react';
 import { translations } from '../translations';
 
-const TaxComplianceDashboard = ({ lang, onSelectMonth }) => {
+const TaxComplianceDashboard = ({ lang }) => {
+    const navigate = useNavigate();
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [generating, setGenerating] = useState(false);
@@ -275,7 +277,7 @@ const TaxComplianceDashboard = ({ lang, onSelectMonth }) => {
                         </thead>
                         <tbody className="divide-y divide-gray-100">
                             {vat.periods.map((period) => (
-                                <tr key={period.period} className="hover:bg-gray-50 cursor-pointer" onClick={() => onSelectMonth && onSelectMonth(period.period)}>
+                                <tr key={period.period} className="hover:bg-gray-50 cursor-pointer" onClick={() => navigate(`/tax-compliance/${period.period}`)}>
                                     <td className={`px-6 py-4 font-medium text-gray-900 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
                                         {period.periodName}
                                     </td>
@@ -306,7 +308,7 @@ const TaxComplianceDashboard = ({ lang, onSelectMonth }) => {
                                         <button
                                             onClick={(e) => {
                                                 e.stopPropagation();
-                                                onSelectMonth && onSelectMonth(period.period);
+                                                navigate(`/tax-compliance/${period.period}`);
                                             }}
                                             className="text-blue-600 hover:text-blue-800 text-sm font-medium"
                                         >

@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Download, Printer } from 'lucide-react';
 import { translations } from '../translations';
 
-const FormalVATReport = ({ selectedMonth, onBack, lang }) => {
+const FormalVATReport = ({ lang }) => {
+    const { month: selectedMonth } = useParams();
+    const navigate = useNavigate();
     const [monthDetails, setMonthDetails] = useState(null);
     const [loading, setLoading] = useState(true);
     const t = translations[lang] || translations['en'];
     const isArabic = lang === 'ar';
+
+    const onBack = () => navigate(-1);
 
     useEffect(() => {
         if (selectedMonth) {

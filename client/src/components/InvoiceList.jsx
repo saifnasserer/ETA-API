@@ -1,15 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Search, Filter, AlertCircle, FileText, CheckCircle, XCircle } from 'lucide-react';
 import { translations } from '../translations';
 import { FilterBar } from './FilterBar';
 
-const InvoiceList = ({ invoices, onSelectInvoice, lang }) => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [filter, setFilter] = useState('SALES'); 
+const InvoiceList = ({ invoices, lang }) => {
+    const navigate = useNavigate();
+    const [searchParams, setSearchParams] = useSearchParams();
     
-    // Initialize to current month in YYYY-MM format
+    // Read from URL, fallback to default values
     const currentMonth = new Date().toISOString().substring(0, 7);
-    const [month, setMonth] = useState(currentMonth);
+    const searchTerm = searchParams.get('search') || '';
+    const filter = searchParams.get('filter') || 'SALES';
+    const month = searchParams.get('month') ?? currentMonth; // Default to current month if null
+
+    const updateParams = (newParams) => {
+        setSearchParams(prev => {
+            const params = new URLSearchParams(prev);
+            Object.keys(newParams).forEach(key => {
+                if (newParams[key] === null || newParams[key] === '') {
+                    params.delete(key);
+                } else {
+                    params.set(key, newParams[key]);
+                }
+            });
+            return params;
+        }, { replace: true });
+    };
+
+    const setSearchTerm = (val) => updateParams({ search: val });
+    const setFilter = (val) => updateParams({ filter: val });
+    const setMonth = (val) => updateParams({ month: val });
     
     // Fetch state
     const [fetchLoading, setFetchLoading] = useState(false);
@@ -163,7 +184,7 @@ const InvoiceList = ({ invoices, onSelectInvoice, lang }) => {
                                 <tr
                                     key={`${inv.internalID}-${index}`}
                                     className="hover:bg-slate-50 transition-colors cursor-pointer group"
-                                    onClick={() => onSelectInvoice(inv)}
+                                    onClick={() => navigate(`/invoices/${inv.internalID}`)}
                                 >
                                     <td className="px-4 py-4">
                                         <div className={`w-8 h-8 rounded-full flex items-center justify-center ${inv.isCreditNote ? 'bg-rose-100 text-rose-600' : (isSale ? 'bg-green-100 text-green-600' : 'bg-orange-100 text-orange-600')}`}>
@@ -209,7 +230,7 @@ const InvoiceList = ({ invoices, onSelectInvoice, lang }) => {
                         <div
                             key={`mobile-inv-${inv.internalID}-${index}`}
                             className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col gap-3 active:bg-gray-50 transition-colors"
-                            onClick={() => onSelectInvoice(inv)}
+                            onClick={() => navigate(`/invoices/${inv.internalID}`)}
                         >
                             <div className="flex justify-between items-start border-b border-gray-50 pb-3">
                                 <div className="flex flex-col gap-1">

@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Printer, Download, MapPin, Calendar, Hash, Building2, Phone, Mail } from 'lucide-react';
 import { translations } from '../translations';
 
-const InvoiceDetails = ({ invoice: initialInvoice, onBack, lang }) => {
+const InvoiceDetails = ({ invoices, lang }) => {
+    const { id } = useParams();
+    const navigate = useNavigate();
+    
+    // Find initial invoice from props if it exists
+    const initialInvoice = invoices.find(inv => inv.internalID === id) || { internalID: id };
+    
     const [invoice, setInvoice] = useState(initialInvoice);
     const [parsedDoc, setParsedDoc] = useState(null);
     const [loading, setLoading] = useState(false);
 
     const t = translations[lang] || translations['en'];
+
+    const onBack = () => navigate(-1);
 
     useEffect(() => {
         const loadInvoice = async () => {
@@ -15,7 +24,7 @@ const InvoiceDetails = ({ invoice: initialInvoice, onBack, lang }) => {
             if (initialInvoice && !initialInvoice.document) {
                 try {
                     setLoading(true);
-                    const res = await fetch(`/api/invoices/${initialInvoice.internalID}`);
+                    const res = await fetch(`/api/invoices/${id}`);
                     if (res.ok) {
                         const data = await res.json();
                         setInvoice(data);
@@ -38,9 +47,9 @@ const InvoiceDetails = ({ invoice: initialInvoice, onBack, lang }) => {
             }
         };
         loadInvoice();
-    }, [initialInvoice]);
+    }, [id, initialInvoice.document]);
 
-    if (!initialInvoice || loading) return (
+    if (!invoice || loading) return (
         <div className="flex justify-center items-center h-96">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
         </div>
