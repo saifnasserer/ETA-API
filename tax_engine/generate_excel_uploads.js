@@ -33,8 +33,9 @@ files.forEach(file => {
 
     vatData.sales.local.items.forEach(inv => {
         const netValue = inv.total - inv.vat;
+        const idLabel = inv.type === 'Credit Note' ? `${inv.id} (إشعار دائن)` : inv.id;
         salesData.push([
-            inv.id,
+            idLabel,
             inv.date,
             inv.customer,
             netValue.toFixed(2),
@@ -60,8 +61,9 @@ files.forEach(file => {
 
     vatData.inputs.items.forEach(inv => {
         const netValue = inv.total - inv.vat;
+        const idLabel = inv.type === 'Credit Note' ? `${inv.id} (إشعار دائن)` : inv.id;
         purchaseData.push([
-            inv.id,
+            idLabel,
             inv.date,
             inv.customer,
             netValue.toFixed(2),

@@ -43,7 +43,8 @@ for vat_file in vat_files:
         # Calculate net amount (before tax)
         net_amount = invoice['total'] - invoice['vat']
         
-        ws_sales.cell(row_num, 1).value = 'I'  # Invoice type
+        doc_type = 'C' if invoice.get('type') == 'Credit Note' else 'I'
+        ws_sales.cell(row_num, 1).value = doc_type  # Invoice type
         ws_sales.cell(row_num, 2).value = 'T1'  # VAT type
         ws_sales.cell(row_num, 3).value = ''  # Schedule goods type (empty for general)
         ws_sales.cell(row_num, 4).value = invoice['id']  # Invoice number
@@ -83,7 +84,8 @@ for vat_file in vat_files:
         # Calculate net amount (before tax)
         net_amount = invoice['total'] - invoice['vat']
         
-        ws_purch.cell(row_num, 1).value = 'I'  # Invoice type
+        doc_type = 'C' if invoice.get('type') == 'Credit Note' else 'I'
+        ws_purch.cell(row_num, 1).value = doc_type  # Invoice type
         ws_purch.cell(row_num, 2).value = 'T1'  # VAT type
         ws_purch.cell(row_num, 3).value = ''  # Schedule goods type
         ws_purch.cell(row_num, 4).value = invoice['id']  # Invoice number

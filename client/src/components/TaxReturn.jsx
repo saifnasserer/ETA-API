@@ -164,6 +164,11 @@ const TaxReturn = ({ lang }) => {
                                                     className={`text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-1 ${lang === 'ar' ? 'flex-row-reverse justify-end' : ''}`}
                                                 >
                                                     {item.id}
+                                                    {item.type === 'Credit Note' && (
+                                                        <span className="ml-2 mr-2 px-2 py-0.5 bg-red-100 text-red-700 rounded text-[10px] font-bold">
+                                                            {lang === 'ar' ? 'إشعار دائن' : 'Credit Note'}
+                                                        </span>
+                                                    )}
                                                     <span className="opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
                                                 </a>
                                             </td>
