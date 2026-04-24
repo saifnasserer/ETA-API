@@ -166,8 +166,8 @@ const InvoiceList = ({ invoices, onSelectInvoice, lang }) => {
                                     onClick={() => onSelectInvoice(inv)}
                                 >
                                     <td className="px-4 py-4">
-                                        <div className={`w-8 h-8 rounded-full flex items-center justify-center ${isSale ? 'bg-green-100 text-green-600' : 'bg-orange-100 text-orange-600'}`}>
-                                            {isSale ? (lang === 'ar' ? '↖' : '↗') : (lang === 'ar' ? '↘' : '↙')}
+                                        <div className={`w-8 h-8 rounded-full flex items-center justify-center ${inv.isCreditNote ? 'bg-rose-100 text-rose-600' : (isSale ? 'bg-green-100 text-green-600' : 'bg-orange-100 text-orange-600')}`}>
+                                            {inv.isCreditNote ? '↺' : (isSale ? (lang === 'ar' ? '↖' : '↗') : (lang === 'ar' ? '↘' : '↙'))}
                                         </div>
                                     </td>
                                     <td className={`px-4 py-4 font-mono text-slate-600 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
@@ -214,7 +214,14 @@ const InvoiceList = ({ invoices, onSelectInvoice, lang }) => {
                             <div className="flex justify-between items-start border-b border-gray-50 pb-3">
                                 <div className="flex flex-col gap-1">
                                     <div className="text-xs font-mono text-slate-500 uppercase">{lang === 'ar' ? 'رقم الفاتورة' : 'Invoice No'}</div>
-                                    <div className="font-bold text-blue-600">{invoiceNo}</div>
+                                    <div className="flex items-center gap-2">
+                                        <div className="font-bold text-blue-600">{invoiceNo}</div>
+                                        {inv.isCreditNote && (
+                                            <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-600">
+                                                {lang === 'ar' ? 'إشعار دائن ↺' : 'Credit Note ↺'}
+                                            </span>
+                                        )}
+                                    </div>
                                 </div>
                                 <div className="text-right flex flex-col gap-1">
                                     <div className="text-xs font-mono text-slate-500 uppercase">{lang === 'ar' ? 'الرقم الضريبي' : 'Tax ID'}</div>
