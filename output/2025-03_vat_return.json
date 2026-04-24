@@ -6,11 +6,11 @@
   "companyId": "767043545",
   "companyName": "لابك لتجاره الالكترونيات",
   "invoiceCount": 7,
-  "generatedDate": "2026-01-12T00:06:43.667Z",
+  "generatedDate": "2026-04-24T17:29:55.063Z",
   "sales": {
     "local": {
       "value": 173480,
-      "tax": 23125.2,
+      "tax": 24287.2,
       "items": [
         {
           "id": "013",
@@ -25,7 +25,7 @@
           "date": "3/19/2025",
           "customer": "جي تي سي اي لانشاءات مشاريع الطاقه والبنيه التحتيه",
           "total": 116200,
-          "vat": 15106,
+          "vat": 16268,
           "type": "Invoice"
         },
         {
@@ -88,15 +88,15 @@
     ]
   },
   "totals": {
-    "salesTax": 23125.2,
+    "salesTax": 24287.2,
     "inputTax": 23779,
-    "netDue": -653.7999999999993
+    "netDue": 508.2000000000007
   },
   "summary": {
     "totalSales": 173480,
-    "totalOutputVAT": 23125.2,
+    "totalOutputVAT": 24287.2,
     "totalInputVAT": 23779,
-    "netVATDue": -653.7999999999993,
-    "status": "Refundable"
+    "netVATDue": 508.2000000000007,
+    "status": "Payable to ETA"
   }
 }

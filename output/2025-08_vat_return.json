@@ -6,18 +6,18 @@
   "companyId": "767043545",
   "companyName": "لابك لتجاره الالكترونيات",
   "invoiceCount": 12,
-  "generatedDate": "2026-01-12T00:06:43.670Z",
+  "generatedDate": "2026-04-24T17:29:55.065Z",
   "sales": {
     "local": {
       "value": 273680,
-      "tax": 36021.4,
+      "tax": 38315.2,
       "items": [
         {
           "id": "040",
           "date": "8/3/2025",
           "customer": "العتال جروب كومبانيز",
           "total": 77700,
-          "vat": 10101,
+          "vat": 10878,
           "type": "Invoice"
         },
         {
@@ -25,7 +25,7 @@
           "date": "8/3/2025",
           "customer": "كلاود ان للبرمجيات",
           "total": 7800,
-          "vat": 1014,
+          "vat": 1092,
           "type": "Invoice"
         },
         {
@@ -41,7 +41,7 @@
           "date": "8/19/2025",
           "customer": "سويديش جروب للاعمال المتكامله",
           "total": 17000,
-          "vat": 2210,
+          "vat": 2380,
           "type": "Invoice"
         },
         {
@@ -49,7 +49,7 @@
           "date": "8/20/2025",
           "customer": "العتال جروب كومبانيز",
           "total": 88000,
-          "vat": 11440,
+          "vat": 12320,
           "type": "Invoice"
         },
         {
@@ -57,7 +57,7 @@
           "date": "8/30/2025",
           "customer": "جي تي سي اي لانشاءات مشاريع الطاقه والبنيه التحتيه",
           "total": 18880,
-          "vat": 2454.4,
+          "vat": 2643.2,
           "type": "Invoice"
         },
         {
@@ -65,7 +65,7 @@
           "date": "8/30/2025",
           "customer": "سويديش جروب للاعمال المتكامله",
           "total": 20000,
-          "vat": 2600,
+          "vat": 2800,
           "type": "Invoice"
         }
       ]
@@ -128,15 +128,15 @@
     ]
   },
   "totals": {
-    "salesTax": 36021.4,
+    "salesTax": 38315.2,
     "inputTax": 32643.8,
-    "netDue": 3377.600000000002
+    "netDue": 5671.399999999998
   },
   "summary": {
     "totalSales": 273680,
-    "totalOutputVAT": 36021.4,
+    "totalOutputVAT": 38315.2,
     "totalInputVAT": 32643.8,
-    "netVATDue": 3377.600000000002,
+    "netVATDue": 5671.399999999998,
     "status": "Payable to ETA"
   }
 }

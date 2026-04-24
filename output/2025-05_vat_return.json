@@ -6,18 +6,18 @@
   "companyId": "767043545",
   "companyName": "لابك لتجاره الالكترونيات",
   "invoiceCount": 12,
-  "generatedDate": "2026-01-12T00:06:43.669Z",
+  "generatedDate": "2026-04-24T17:29:55.064Z",
   "sales": {
     "local": {
       "value": 358800,
-      "tax": 46974,
+      "tax": 50232,
       "items": [
         {
           "id": "027",
           "date": "5/11/2025",
           "customer": "العتال جروب كومبانيز",
           "total": 44000,
-          "vat": 5720,
+          "vat": 6160,
           "type": "Invoice"
         },
         {
@@ -25,7 +25,7 @@
           "date": "5/19/2025",
           "customer": "جي تي سي اي لانشاءات مشاريع الطاقه والبنيه التحتيه",
           "total": 4500,
-          "vat": 585,
+          "vat": 630,
           "type": "Invoice"
         },
         {
@@ -33,7 +33,7 @@
           "date": "5/19/2025",
           "customer": "اجرينا تك للصناعات التحويليه",
           "total": 14500,
-          "vat": 1885,
+          "vat": 2030,
           "type": "Invoice"
         },
         {
@@ -41,7 +41,7 @@
           "date": "5/19/2025",
           "customer": "العتال جروب كومبانيز",
           "total": 400,
-          "vat": 52,
+          "vat": 56,
           "type": "Invoice"
         },
         {
@@ -49,7 +49,7 @@
           "date": "5/19/2025",
           "customer": "جي تي سي اي لانشاءات مشاريع الطاقه والبنيه التحتيه",
           "total": 17500,
-          "vat": 2275,
+          "vat": 2450,
           "type": "Invoice"
         },
         {
@@ -57,7 +57,7 @@
           "date": "5/19/2025",
           "customer": "جي تي سي اي لانشاءات مشاريع الطاقه والبنيه التحتيه",
           "total": 65000,
-          "vat": 8450,
+          "vat": 9100,
           "type": "Invoice"
         },
         {
@@ -65,7 +65,7 @@
           "date": "5/27/2025",
           "customer": "إنشاء للتطوير والبناء",
           "total": 133900,
-          "vat": 17407,
+          "vat": 18746,
           "type": "Invoice"
         },
         {
@@ -81,7 +81,7 @@
           "date": "5/8/2025",
           "customer": "العتال جروب كومبانيز",
           "total": 46000,
-          "vat": 5980,
+          "vat": 6440,
           "type": "Invoice"
         }
       ]
@@ -128,15 +128,15 @@
     ]
   },
   "totals": {
-    "salesTax": 46974,
+    "salesTax": 50232,
     "inputTax": 38010,
-    "netDue": 8964
+    "netDue": 12222
   },
   "summary": {
     "totalSales": 358800,
-    "totalOutputVAT": 46974,
+    "totalOutputVAT": 50232,
     "totalInputVAT": 38010,
-    "netVATDue": 8964,
+    "netVATDue": 12222,
     "status": "Payable to ETA"
   }
 }

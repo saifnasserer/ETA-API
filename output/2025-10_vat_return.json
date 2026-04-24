@@ -6,18 +6,18 @@
   "companyId": "767043545",
   "companyName": "لابك لتجاره الالكترونيات",
   "invoiceCount": 21,
-  "generatedDate": "2026-01-12T00:06:43.671Z",
+  "generatedDate": "2026-04-24T17:29:55.066Z",
   "sales": {
     "local": {
       "value": 783550,
-      "tax": 100935.5,
+      "tax": 109697,
       "items": [
         {
           "id": "056",
           "date": "10/1/2025",
           "customer": "شركة جود بيبول كايرو للخدمات الاعلانية",
           "total": 34500,
-          "vat": 3795,
+          "vat": 4830,
           "type": "Invoice"
         },
         {
@@ -25,7 +25,7 @@
           "date": "10/1/2025",
           "customer": "سويديش جروب للاعمال المتكامله",
           "total": 40000,
-          "vat": 5200,
+          "vat": 5600,
           "type": "Invoice"
         },
         {
@@ -33,7 +33,7 @@
           "date": "10/1/2025",
           "customer": "شركة جود بيبول كايرو للخدمات الاعلانية",
           "total": 5000,
-          "vat": 550,
+          "vat": 700,
           "type": "Invoice"
         },
         {
@@ -41,7 +41,7 @@
           "date": "10/5/2025",
           "customer": "اصول للهندسه و المقاولات",
           "total": 250250,
-          "vat": 32532.5,
+          "vat": 35035,
           "type": "Invoice"
         },
         {
@@ -49,7 +49,7 @@
           "date": "10/6/2025",
           "customer": "كلاود ان للبرمجيات",
           "total": 8700,
-          "vat": 957,
+          "vat": 1218,
           "type": "Invoice"
         },
         {
@@ -57,7 +57,7 @@
           "date": "10/8/2025",
           "customer": "شركه سيستم وان",
           "total": 44000,
-          "vat": 5720,
+          "vat": 6160,
           "type": "Invoice"
         },
         {
@@ -65,7 +65,7 @@
           "date": "10/14/2025",
           "customer": "شركه سيستم وان",
           "total": 2000,
-          "vat": 260,
+          "vat": 280,
           "type": "Invoice"
         },
         {
@@ -73,7 +73,7 @@
           "date": "10/18/2025",
           "customer": "العتال جروب كومبانيز",
           "total": 88000,
-          "vat": 11440,
+          "vat": 12320,
           "type": "Invoice"
         },
         {
@@ -81,7 +81,7 @@
           "date": "10/18/2025",
           "customer": "العتال جروب كومبانيز",
           "total": 9000,
-          "vat": 1170,
+          "vat": 1260,
           "type": "Invoice"
         },
         {
@@ -97,7 +97,7 @@
           "date": "10/19/2025",
           "customer": "إنشاء للتطوير والبناء",
           "total": 86000,
-          "vat": 11180,
+          "vat": 12040,
           "type": "Invoice"
         },
         {
@@ -105,7 +105,7 @@
           "date": "10/30/2025",
           "customer": "إنشاء للتطوير والبناء",
           "total": 86000,
-          "vat": 11180,
+          "vat": 12040,
           "type": "Invoice"
         },
         {
@@ -121,7 +121,7 @@
           "date": "10/30/2025",
           "customer": "سويديش جروب للاعمال المتكامله",
           "total": 40300,
-          "vat": 5239,
+          "vat": 5642,
           "type": "Invoice"
         },
         {
@@ -129,7 +129,7 @@
           "date": "10/30/2025",
           "customer": "إنشاء للتطوير والبناء",
           "total": 86000,
-          "vat": 11180,
+          "vat": 12040,
           "type": "Invoice"
         }
       ]
@@ -200,15 +200,15 @@
     ]
   },
   "totals": {
-    "salesTax": 100935.5,
+    "salesTax": 109697,
     "inputTax": 38136,
-    "netDue": 62799.5
+    "netDue": 71561
   },
   "summary": {
     "totalSales": 783550,
-    "totalOutputVAT": 100935.5,
+    "totalOutputVAT": 109697,
     "totalInputVAT": 38136,
-    "netVATDue": 62799.5,
+    "netVATDue": 71561,
     "status": "Payable to ETA"
   }
 }

@@ -45,14 +45,20 @@ class TaxCalculator {
         // Note: metadata keys are sometimes camelCase like 'totalSales' or 'totalSalesAmount'. 
         // We check both based on observed data.
 
-        const totalSales = (invoice.totalSales || invoice.totalSalesAmount || 0) * sign;
-        const totalAmount = (invoice.total || invoice.totalAmount || 0) * sign;
-        const netAmount = (invoice.netAmount || invoice.netAmount || 0) * sign;
+        let totalSales = (invoice.totalSales || invoice.totalSalesAmount || 0) * sign;
+        let totalAmount = (invoice.total || invoice.totalAmount || 0) * sign;
+        let netAmount = (invoice.netAmount || invoice.netAmount || 0) * sign;
 
         // Approximate Tax (Total - Net)
-        // Since search results don't give tax breakdown, we assume the difference is Tax.
-        // We will assign it to VAT for simplicity unless we have better data.
         let estimatedTax = totalAmount - netAmount;
+
+        // Force exactly 14% VAT based on netAmount (ignore 13% artifacts)
+        if (Math.abs(estimatedTax) > 0.01) {
+            estimatedTax = parseFloat((netAmount * 0.14).toFixed(2));
+            totalAmount = parseFloat((netAmount + estimatedTax).toFixed(2));
+        } else {
+            estimatedTax = 0;
+        }
 
         // Handle floating point errors
         estimatedTax = parseFloat(estimatedTax.toFixed(2));

@@ -6,18 +6,18 @@
   "companyId": "767043545",
   "companyName": "لابك لتجاره الالكترونيات",
   "invoiceCount": 4,
-  "generatedDate": "2026-01-12T00:06:43.672Z",
+  "generatedDate": "2026-04-24T17:29:55.067Z",
   "sales": {
     "local": {
       "value": 50900,
-      "tax": 6617,
+      "tax": 7126,
       "items": [
         {
           "id": "071",
           "date": "11/11/2025",
           "customer": "العتال جروب كومبانيز",
           "total": 2400,
-          "vat": 312,
+          "vat": 336,
           "type": "Invoice"
         },
         {
@@ -25,7 +25,7 @@
           "date": "11/11/2025",
           "customer": "جاما للانظمة الامنيه والمقاولات",
           "total": 45000,
-          "vat": 5850,
+          "vat": 6300,
           "type": "Invoice"
         },
         {
@@ -33,7 +33,7 @@
           "date": "11/11/2025",
           "customer": "شركه سيستم وان",
           "total": 3500,
-          "vat": 455,
+          "vat": 490,
           "type": "Invoice"
         }
       ]
@@ -64,15 +64,15 @@
     ]
   },
   "totals": {
-    "salesTax": 6617,
+    "salesTax": 7126,
     "inputTax": 6160,
-    "netDue": 457
+    "netDue": 966
   },
   "summary": {
     "totalSales": 50900,
-    "totalOutputVAT": 6617,
+    "totalOutputVAT": 7126,
     "totalInputVAT": 6160,
-    "netVATDue": 457,
+    "netVATDue": 966,
     "status": "Payable to ETA"
   }
 }

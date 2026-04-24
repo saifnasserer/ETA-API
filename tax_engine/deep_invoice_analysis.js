@@ -105,6 +105,16 @@ function parseInvoice(filePath) {
         });
     }
 
+    // Tax breakdown and recalculation to enforce 14% VAT avoiding 13% artifacts
+    let netAmountCalculated = round2((doc.netAmount || 0) * sign);
+    let totalAmountCalculated = round2((doc.totalAmount || 0) * sign);
+    let vatT1Raw = round2((taxTotals['T1'] || 0) * sign);
+
+    if (Math.abs(vatT1Raw) > 0.01) {
+        vatT1Raw = round2(netAmountCalculated * 0.14);
+        totalAmountCalculated = round2(netAmountCalculated + vatT1Raw);
+    }
+
     return {
         file: path.basename(filePath),
         internalId: doc.internalID || raw.internalId || 'N/A',
@@ -127,11 +137,11 @@ function parseInvoice(filePath) {
         // Financial totals (from document, NOT metadata)
         totalSalesAmount: round2((doc.totalSalesAmount || 0) * sign),
         totalDiscountAmount: round2((doc.totalDiscountAmount || 0) * sign),
-        netAmount: round2((doc.netAmount || 0) * sign),
-        totalAmount: round2((doc.totalAmount || 0) * sign),
+        netAmount: netAmountCalculated,
+        totalAmount: totalAmountCalculated,
 
-        // Tax breakdown (from document-level taxTotals)
-        vatT1: round2((taxTotals['T1'] || 0) * sign),
+        // Tax breakdown
+        vatT1: vatT1Raw,
         whtT4: round2((taxTotals['T4'] || 0) * sign),
         tableTaxT2: round2((taxTotals['T2'] || 0) * sign),
         stampT6: round2((taxTotals['T6'] || 0) * sign),

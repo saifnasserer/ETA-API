@@ -6,18 +6,18 @@
   "companyId": "767043545",
   "companyName": "لابك لتجاره الالكترونيات",
   "invoiceCount": 6,
-  "generatedDate": "2026-01-12T00:06:43.666Z",
+  "generatedDate": "2026-04-24T17:29:55.062Z",
   "sales": {
     "local": {
       "value": 119200,
-      "tax": 15688,
+      "tax": 16688,
       "items": [
         {
           "id": "0010",
           "date": "1/18/2025",
           "customer": "العتال جروب كومبانيز",
           "total": 100000,
-          "vat": 13000,
+          "vat": 14000,
           "type": "Invoice"
         },
         {
@@ -43,7 +43,7 @@
   },
   "inputs": {
     "value": 197200,
-    "tax": 23912,
+    "tax": 27608,
     "items": [
       {
         "id": "19",
@@ -74,21 +74,21 @@
         "date": "1/22/2025",
         "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
         "total": 44000,
-        "vat": 2464,
+        "vat": 6160,
         "type": "Invoice"
       }
     ]
   },
   "totals": {
-    "salesTax": 15688,
-    "inputTax": 23912,
-    "netDue": -8224
+    "salesTax": 16688,
+    "inputTax": 27608,
+    "netDue": -10920
   },
   "summary": {
     "totalSales": 119200,
-    "totalOutputVAT": 15688,
-    "totalInputVAT": 23912,
-    "netVATDue": -8224,
+    "totalOutputVAT": 16688,
+    "totalInputVAT": 27608,
+    "netVATDue": -10920,
     "status": "Refundable"
   }
 }

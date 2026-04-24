@@ -6,18 +6,18 @@
   "companyId": "767043545",
   "companyName": "لابك لتجاره الالكترونيات",
   "invoiceCount": 4,
-  "generatedDate": "2026-01-12T00:06:43.670Z",
+  "generatedDate": "2026-04-24T17:29:55.065Z",
   "sales": {
     "local": {
       "value": 6000,
-      "tax": 780,
+      "tax": 840,
       "items": [
         {
           "id": "035",
           "date": "7/1/2025",
           "customer": "شركه الايد للاستثمار السياحي",
           "total": 6000,
-          "vat": 780,
+          "vat": 840,
           "type": "Invoice"
         }
       ]
@@ -64,15 +64,15 @@
     ]
   },
   "totals": {
-    "salesTax": 780,
+    "salesTax": 840,
     "inputTax": 12411,
-    "netDue": -11631
+    "netDue": -11571
   },
   "summary": {
     "totalSales": 6000,
-    "totalOutputVAT": 780,
+    "totalOutputVAT": 840,
     "totalInputVAT": 12411,
-    "netVATDue": -11631,
+    "netVATDue": -11571,
     "status": "Refundable"
   }
 }

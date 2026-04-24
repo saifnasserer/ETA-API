@@ -1,6 +1,6 @@
 {
-  "generatedDate": "2026-01-12T00:06:43.673Z",
-  "totalReturns": 14,
+  "generatedDate": "2026-04-24T17:29:55.071Z",
+  "totalReturns": 17,
   "legalBasis": "Law 5/2025 Article 3 - Voluntary Late Submission",
   "deadline": "2026-08-12",
   "periods": [
@@ -8,106 +8,127 @@
       "period": "2024-11",
       "periodName": "November 2024",
       "invoiceCount": 9,
-      "netVATDue": -11361.490000000005,
+      "netVATDue": -6539.680000000008,
       "status": "Refundable"
     },
     {
       "period": "2024-12",
       "periodName": "December 2024",
       "invoiceCount": 4,
-      "netVATDue": 268.5,
+      "netVATDue": 315,
       "status": "Payable to ETA"
     },
     {
       "period": "2025-01",
       "periodName": "January 2025",
       "invoiceCount": 6,
-      "netVATDue": -8224,
+      "netVATDue": -10920,
       "status": "Refundable"
     },
     {
       "period": "2025-02",
       "periodName": "February 2025",
       "invoiceCount": 2,
-      "netVATDue": -340,
-      "status": "Refundable"
+      "netVATDue": 210,
+      "status": "Payable to ETA"
     },
     {
       "period": "2025-03",
       "periodName": "March 2025",
       "invoiceCount": 7,
-      "netVATDue": -653.7999999999993,
-      "status": "Refundable"
+      "netVATDue": 508.2000000000007,
+      "status": "Payable to ETA"
     },
     {
       "period": "2025-04",
       "periodName": "April 2025",
-      "invoiceCount": 12,
-      "netVATDue": 617.6999999999971,
+      "invoiceCount": 11,
+      "netVATDue": 5534.199999999997,
       "status": "Payable to ETA"
     },
     {
       "period": "2025-05",
       "periodName": "May 2025",
       "invoiceCount": 12,
-      "netVATDue": 8964,
+      "netVATDue": 12222,
       "status": "Payable to ETA"
     },
     {
       "period": "2025-06",
       "periodName": "June 2025",
       "invoiceCount": 2,
-      "netVATDue": -284,
-      "status": "Refundable"
+      "netVATDue": 0,
+      "status": "Payable to ETA"
     },
     {
       "period": "2025-07",
       "periodName": "July 2025",
       "invoiceCount": 4,
-      "netVATDue": -11631,
+      "netVATDue": -11571,
       "status": "Refundable"
     },
     {
       "period": "2025-08",
       "periodName": "August 2025",
       "invoiceCount": 12,
-      "netVATDue": 3377.600000000002,
+      "netVATDue": 5671.399999999998,
       "status": "Payable to ETA"
     },
     {
       "period": "2025-09",
       "periodName": "September 2025",
       "invoiceCount": 16,
-      "netVATDue": -51081,
+      "netVATDue": -50435,
       "status": "Refundable"
     },
     {
       "period": "2025-10",
       "periodName": "October 2025",
       "invoiceCount": 21,
-      "netVATDue": 62799.5,
+      "netVATDue": 71561,
       "status": "Payable to ETA"
     },
     {
       "period": "2025-11",
       "periodName": "November 2025",
       "invoiceCount": 4,
-      "netVATDue": 457,
+      "netVATDue": 966,
       "status": "Payable to ETA"
     },
     {
       "period": "2025-12",
       "periodName": "December 2025",
       "invoiceCount": 16,
-      "netVATDue": -77650,
+      "netVATDue": -73290,
+      "status": "Refundable"
+    },
+    {
+      "period": "2026-02",
+      "periodName": "February 2026",
+      "invoiceCount": 9,
+      "netVATDue": -4570.299999999999,
+      "status": "Refundable"
+    },
+    {
+      "period": "2026-03",
+      "periodName": "March 2026",
+      "invoiceCount": 5,
+      "netVATDue": -5649,
+      "status": "Refundable"
+    },
+    {
+      "period": "2026-04",
+      "periodName": "April 2026",
+      "invoiceCount": 12,
+      "netVATDue": -19124,
       "status": "Refundable"
     }
   ],
   "totals": {
-    "totalInvoices": 127,
-    "totalSales": 3334341,
-    "totalOutputVAT": 435454.63,
-    "totalInputVAT": 520195.62,
-    "totalNetVATDue": -84740.99
+    "totalInvoices": 152,
+    "totalSales": 3577441,
+    "totalOutputVAT": 500841.74,
+    "totalInputVAT": 585952.92,
+    "totalNetVATDue": -85111.18
   }
 }

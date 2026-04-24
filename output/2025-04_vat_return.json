@@ -5,12 +5,12 @@
   "legalBasis": "Law 5/2025 Article 3",
   "companyId": "767043545",
   "companyName": "لابك لتجاره الالكترونيات",
-  "invoiceCount": 12,
-  "generatedDate": "2026-01-12T00:06:43.668Z",
+  "invoiceCount": 11,
+  "generatedDate": "2026-04-24T17:29:55.064Z",
   "sales": {
     "local": {
       "value": 304650,
-      "tax": 40254.5,
+      "tax": 42651,
       "items": [
         {
           "id": "017",
@@ -25,7 +25,7 @@
           "date": "4/12/2025",
           "customer": "اصول للهندسه و المقاولات",
           "total": 44500,
-          "vat": 5785,
+          "vat": 6230,
           "type": "Invoice"
         },
         {
@@ -33,7 +33,7 @@
           "date": "4/13/2025",
           "customer": "مارجينز للتنميه العمرانيه واداره المشروعات",
           "total": 115500,
-          "vat": 15015,
+          "vat": 16170,
           "type": "Invoice"
         },
         {
@@ -41,7 +41,7 @@
           "date": "4/13/2025",
           "customer": "مارجينز للتنميه العمرانيه واداره المشروعات",
           "total": 4800,
-          "vat": 624,
+          "vat": 672,
           "type": "Invoice"
         },
         {
@@ -49,7 +49,7 @@
           "date": "4/14/2025",
           "customer": "مارجينز للتنميه العمرانيه واداره المشروعات",
           "total": 5850,
-          "vat": 760.5,
+          "vat": 819,
           "type": "Invoice"
         },
         {
@@ -57,7 +57,7 @@
           "date": "4/15/2025",
           "customer": "العتال جروب كومبانيز",
           "total": 69000,
-          "vat": 8970,
+          "vat": 9660,
           "type": "Invoice"
         },
         {
@@ -82,8 +82,8 @@
     }
   },
   "inputs": {
-    "value": 283120,
-    "tax": 39636.8,
+    "value": 265120,
+    "tax": 37116.8,
     "items": [
       {
         "id": "231",
@@ -110,14 +110,6 @@
         "type": "Invoice"
       },
       {
-        "id": "269",
-        "date": "4/22/2025",
-        "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
-        "total": 18000,
-        "vat": 2520,
-        "type": "Invoice"
-      },
-      {
         "id": "306",
         "date": "4/29/2025",
         "customer": "ايوال لتوريد اجهزه الكمبيوتر والمحمول",
@@ -128,15 +120,15 @@
     ]
   },
   "totals": {
-    "salesTax": 40254.5,
-    "inputTax": 39636.8,
-    "netDue": 617.6999999999971
+    "salesTax": 42651,
+    "inputTax": 37116.8,
+    "netDue": 5534.199999999997
   },
   "summary": {
     "totalSales": 304650,
-    "totalOutputVAT": 40254.5,
-    "totalInputVAT": 39636.8,
-    "netVATDue": 617.6999999999971,
+    "totalOutputVAT": 42651,
+    "totalInputVAT": 37116.8,
+    "netVATDue": 5534.199999999997,
     "status": "Payable to ETA"
   }
 }
